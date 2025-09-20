@@ -18,7 +18,6 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import UnauthenticatedNavbar from "@/components/navigation/UnauthenticatedNavbar";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

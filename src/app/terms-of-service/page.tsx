@@ -1,5 +1,3 @@
-import UnauthenticatedNavbar from "@/components/navigation/UnauthenticatedNavbar";
-
 export default function TermsOfServicePage() {
   return (
     <div>
