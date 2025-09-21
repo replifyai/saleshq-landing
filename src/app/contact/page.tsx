@@ -88,7 +88,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "Raipur, Chhattisgarh",
+      content: "Bangalore, Karnataka",
       description: "India",
       action: null
     },
