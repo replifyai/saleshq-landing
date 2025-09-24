@@ -92,7 +92,7 @@ const ChallengesSection = () => {
             Common Sales Challenges
           </div>
           
-          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 leading-tight">
             <span className="text-gray-900 dark:text-white">
               The Hidden Costs of
             </span>
@@ -102,7 +102,7 @@ const ChallengesSection = () => {
             </span>
           </h2>
           
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Most sales teams face these critical challenges that silently drain productivity, 
             reduce revenue, and create unnecessary friction in the sales process.
           </p>
@@ -113,12 +113,12 @@ const ChallengesSection = () => {
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className={`text-center p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 ${
+              className={`text-center p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-md bg-white/10 dark:bg-gray-900/10 border border-white/20 dark:border-gray-700/30 shadow-lg hover:shadow-xl hover:bg-white/20 dark:hover:bg-gray-900/20 transition-all duration-300 ${
                 isVisible ? 'animate-fade-in-up' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center text-white">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center text-white shadow-lg">
                 {stat.icon}
               </div>
               <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
@@ -136,7 +136,7 @@ const ChallengesSection = () => {
           {challenges.map((challenge, index) => (
             <Card
               key={index}
-              className={`group cursor-pointer transition-all duration-300 hover:shadow-xl ${
+              className={`group cursor-pointer transition-all duration-300 hover:shadow-xl backdrop-blur-md bg-white/20 dark:bg-gray-900/20 border-white/20 dark:border-gray-700/30 shadow-xl hover:shadow-2xl hover:bg-white/30 dark:hover:bg-gray-900/30 ${
                 isVisible ? 'animate-fade-in-up' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 150}ms` }}

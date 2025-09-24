@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface TOCItem {
   id: string;
@@ -14,6 +15,7 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
   const [activeSection, setActiveSection] = useState<string>('');
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   
   const defaultItems = [
     { id: 'hero', title: 'Overview' },
@@ -90,41 +92,79 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
 
   return (
     <nav className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:block animate-in">
-      <div className="glass-card rounded-2xl p-3 shadow-lg backdrop-blur-xl border border-white/10 dark:border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105 min-w-[200px] max-w-[240px]">
-        <div className="space-y-1">
-          <div className="text-xs font-semibold text-muted-foreground mb-2 px-1">
-            Contents
+      <div className={cn(
+        "glass-card rounded-2xl shadow-lg backdrop-blur-xl border border-white/10 dark:border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105",
+        isCollapsed ? "p-2 min-w-[40px] max-w-[40px]" : "p-3 min-w-[200px] max-w-[240px]"
+      )}>
+        {/* Toggle Button */}
+        <button
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="w-full flex items-center justify-center mb-2 p-1 rounded-md hover:bg-primary/10 transition-colors duration-200"
+          aria-label={isCollapsed ? "Expand table of contents" : "Collapse table of contents"}
+        >
+          {isCollapsed ? (
+            <ChevronRight className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
+          ) : (
+            <ChevronLeft className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
+          )}
+        </button>
+
+        {/* Contents */}
+        {!isCollapsed && (
+          <div className="space-y-1">
+            <div className="text-xs font-semibold text-muted-foreground mb-2 px-1">
+              Contents
+            </div>
+            {items.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={cn(
+                  "group relative w-full text-left px-2 py-1.5 rounded-md text-xs font-medium transition-all duration-300 ease-out toc-item-hover",
+                  "hover:bg-primary/10 hover:text-primary hover:scale-105",
+                  "focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-primary/10",
+                  activeSection === item.id
+                    ? "text-primary bg-primary/10 scale-105 shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                <div className="flex items-center space-x-2">
+                  <div className={cn(
+                    "w-1.5 h-1.5 rounded-full transition-all duration-300 flex-shrink-0",
+                    activeSection === item.id 
+                      ? "bg-primary scale-125 shadow-sm shadow-primary/50" 
+                      : "bg-muted-foreground/40 group-hover:bg-primary/60 group-hover:scale-110"
+                  )} />
+                  <span className="truncate text-xs">{item.title}</span>
+                </div>
+                
+                {/* Active indicator line */}
+                {activeSection === item.id && (
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-4 bg-gradient-to-b from-primary to-primary/60 rounded-r-full" />
+                )}
+              </button>
+            ))}
           </div>
-          {items.map((item, index) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={cn(
-                "group relative w-full text-left px-2 py-1.5 rounded-md text-xs font-medium transition-all duration-300 ease-out toc-item-hover",
-                "hover:bg-primary/10 hover:text-primary hover:scale-105",
-                "focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-primary/10",
-                activeSection === item.id
-                  ? "text-primary bg-primary/10 scale-105 shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-            >
-              <div className="flex items-center space-x-2">
-                <div className={cn(
-                  "w-1.5 h-1.5 rounded-full transition-all duration-300 flex-shrink-0",
+        )}
+
+        {/* Collapsed state - show only active section indicator */}
+        {isCollapsed && (
+          <div className="flex flex-col items-center space-y-2">
+            {items.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={cn(
+                  "w-2 h-2 rounded-full transition-all duration-300",
                   activeSection === item.id 
                     ? "bg-primary scale-125 shadow-sm shadow-primary/50" 
-                    : "bg-muted-foreground/40 group-hover:bg-primary/60 group-hover:scale-110"
-                )} />
-                <span className="truncate text-xs">{item.title}</span>
-              </div>
-              
-              {/* Active indicator line */}
-              {activeSection === item.id && (
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-4 bg-gradient-to-b from-primary to-primary/60 rounded-r-full" />
-              )}
-            </button>
-          ))}
-        </div>
+                    : "bg-muted-foreground/40 hover:bg-primary/60 hover:scale-110"
+                )}
+                aria-label={`Go to ${item.title}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -78,31 +78,30 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Hero Section */}
-      <section className="relative pb-8 py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4 text-sm">
+      <div className="relative overflow-hidden pt-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-emerald-600/10" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center">
+            <Badge variant="outline" className="mb-4 text-sm font-medium">
+              <Heart className="w-4 h-4 mr-2" />
               About SalesHQ
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 dark:from-white dark:via-blue-100 dark:to-purple-100 bg-clip-text text-transparent mb-6">
               Quick, Flexible & Adaptive
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                {" "}Sales Solutions
-              </span>
+              <span className="block">Sales Solutions</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
               We deliver real value through tailored solutions that increase sales performance and 
               enhance learning management. Quick to adapt, flexible in approach, and focused on your success.
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* What is SalesHQ Section */}
-      <section className="pt-0 py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -138,34 +137,32 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
                 <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Quick Setup</h3>
                 <p className="text-sm text-muted-foreground">Fast implementation and deployment</p>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
                 <Target className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Tailored Solutions</h3>
                 <p className="text-sm text-muted-foreground">Customized for your business needs</p>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
                 <Users className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">LMS Focus</h3>
                 <p className="text-sm text-muted-foreground">Comprehensive learning management</p>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
                 <TrendingUp className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Sales Growth</h3>
                 <p className="text-sm text-muted-foreground">Proven results and value delivery</p>
               </Card>
             </div>
           </div>
-        </div>
-      </section>
+      </div>
 
       {/* Why We Started Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Why Did We Start SalesHQ?
@@ -177,8 +174,8 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Card className="p-8 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
+              <div className="w-16 h-16 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">The Challenge</h3>
@@ -188,8 +185,8 @@ export default function AboutPage() {
               </p>
             </Card>
 
-            <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Card className="p-8 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Our Approach</h3>
@@ -199,8 +196,8 @@ export default function AboutPage() {
               </p>
             </Card>
 
-            <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Card className="p-8 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Rocket className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">The Result</h3>
@@ -211,7 +208,7 @@ export default function AboutPage() {
             </Card>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 md:p-12 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
             <div className="text-center">
               <Heart className="w-16 h-16 text-red-500 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
@@ -222,12 +219,10 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+      </div>
 
       {/* Where We're Headed Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Where Are We Headed?
@@ -299,7 +294,7 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold mb-6">Our Values</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {values.map((value, index) => (
-                <Card key={index} className="p-6 text-center">
+                <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
                   {value.icon}
                   <h4 className="font-semibold mt-4 mb-2">{value.title}</h4>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
@@ -307,12 +302,10 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+      </div>
 
       {/* Team Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Quick, Flexible & Adaptive Solutions
@@ -333,7 +326,7 @@ export default function AboutPage() {
           </div>
 
           <div className="text-center">
-            <Card className="p-8 md:p-12 max-w-4xl mx-auto">
+            <Card className="p-8 md:p-12 max-w-4xl mx-auto hover:shadow-lg transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
               <Award className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">Ready for Real Value?</h3>
               <p className="text-lg text-muted-foreground mb-8">
@@ -341,13 +334,13 @@ export default function AboutPage() {
                 that increase your sales performance and enhance your learning management capabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
                   <Link href="/contact">
                     Get in Touch
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="border-slate-300 dark:border-slate-600">
                   <Link href="https://calendly.com/saleshqai/30min">
                     Book a Demo
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -356,8 +349,7 @@ export default function AboutPage() {
               </div>
             </Card>
           </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

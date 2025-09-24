@@ -36,7 +36,7 @@ export default function UseCasesSection() {
   ];
 
   return (
-    <section aria-label="Use cases" className="py-12 sm:py-20 lg:py-32 relative overflow-hidden" id="use-cases">
+    <section aria-label="Use cases" className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900 relative overflow-hidden" id="use-cases">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-indigo-50/30 dark:from-blue-950/10 dark:via-transparent dark:to-indigo-950/10" />
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl" />
@@ -48,7 +48,7 @@ export default function UseCasesSection() {
             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-2" /> 
             Use Cases
           </Badge>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent">
               Where SalesHQ
             </span>{" "}
@@ -56,7 +56,7 @@ export default function UseCasesSection() {
               excels
             </span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
             Transform your sales process with AI-powered workflows that deliver instant, accurate answers and boost team confidence on every call.
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function UseCasesSection() {
           {items.map(({ title, description, icon: Icon, color, bgColor, borderColor, features }, index) => (
             <div 
               key={title} 
-              className={`group relative ${bgColor} rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 ${borderColor} transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10`}
+              className={`group relative ${bgColor} backdrop-blur-md bg-white/20 dark:bg-gray-900/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/20 dark:border-gray-700/30 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:scale-105 hover:bg-white/30 dark:hover:bg-gray-900/30`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card number */}

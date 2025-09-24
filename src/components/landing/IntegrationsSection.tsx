@@ -245,7 +245,7 @@ export default function IntegrationsSection() {
             <Link2 className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
             Powerful Integrations
           </Badge>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent">
               Connect Your Entire
             </span>
@@ -254,7 +254,7 @@ export default function IntegrationsSection() {
               Sales Ecosystem
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Seamlessly integrate with 50+ tools. No complex setup, no coding required. 
             <span className="font-semibold text-gray-900 dark:text-white"> Get started in minutes.</span>
           </p>
@@ -299,7 +299,7 @@ export default function IntegrationsSection() {
             filteredIntegrations.map((integration, index) => (
             <Card
               key={integration.id}
-              className="hover:shadow-2xl hover:scale-105 group relative overflow-hidden border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm h-full transition-all duration-300"
+              className="hover:shadow-2xl hover:scale-105 group relative overflow-hidden border border-white/20 dark:border-gray-700/30 bg-white/20 dark:bg-gray-900/20 backdrop-blur-md shadow-xl hover:shadow-2xl hover:bg-white/30 dark:hover:bg-gray-900/30 h-full transition-all duration-300"
               onMouseEnter={() => setHoveredCard(integration.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >

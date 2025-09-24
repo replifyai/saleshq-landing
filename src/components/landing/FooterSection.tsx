@@ -19,9 +19,9 @@ export default function FooterSection() {
         <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div>
+              <div className="bg-gray-100 dark:bg-white rounded-lg p-4">
                 <Image src="/logo.png" alt="SalesHQ" width={150} height={150} />
-                <p className="text-sm text-gray-600 dark:text-gray-300">Self-Learning AI Platform</p>
+                <p className="text-sm text-gray-600 dark:text-gray-800">Self-Learning AI Platform</p>
               </div>
             </div>
             <p className="mb-6 max-w-md text-gray-600 dark:text-gray-300">

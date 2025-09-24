@@ -13,7 +13,7 @@ export default function ROISection() {
             Proven ROI Results
           </Badge>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
               Transform Your Sales
             </span>
@@ -23,7 +23,7 @@ export default function ROISection() {
             </span>
           </h2>
           
-          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed px-4">
             Join 500+ sales teams who've achieved measurable productivity gains with AI-powered sales intelligence. 
             See the data that proves our platform delivers real results.
           </p>
@@ -47,10 +47,10 @@ export default function ROISection() {
                   <h4 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Time Saved Daily</h4>
                   <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-emerald-600 mb-2">3.2+</p>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">Hours per sales rep</p>
-                  <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-emerald-600 font-medium">
+                  {/* <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-emerald-600 font-medium">
                     <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                     +127% efficiency gain
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -63,10 +63,10 @@ export default function ROISection() {
                   <h4 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Deal Velocity</h4>
                   <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-2">40%</p>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">Faster closing</p>
-                  <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-blue-600 font-medium">
+                  {/* <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-blue-600 font-medium">
                     <BarChart3 className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                     +$2.3M avg revenue
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -79,10 +79,10 @@ export default function ROISection() {
                   <h4 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Query Resolution</h4>
                   <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-600 mb-2">95%</p>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">Accuracy rate</p>
-                  <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-purple-600 font-medium">
+                  {/* <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-purple-600 font-medium">
                     <DollarSign className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                     -60% support costs
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -95,10 +95,10 @@ export default function ROISection() {
                   <h4 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2">Average ROI</h4>
                   <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">340%</p>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">Within 6 months</p>
-                  <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-orange-600 font-medium">
+                  {/* <div className="mt-3 sm:mt-4 flex items-center text-xs sm:text-sm text-orange-600 font-medium">
                     <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                     $3.4M avg savings
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -145,7 +145,7 @@ export default function FAQSection() {
             FAQ
           </Badge>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
               Frequently Asked
             </span>
@@ -155,7 +155,7 @@ export default function FAQSection() {
             </span>
           </h2>
           
-          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed px-4">
             Everything you need to know about SalesHQ. Can't find what you're looking for? 
             Our team is here to help you succeed.
           </p>
@@ -203,13 +203,13 @@ export default function FAQSection() {
 
         {/* FAQ Accordion */}
         <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
-          <Card className="p-4 sm:p-6 lg:p-8 bg-white dark:bg-slate-800 shadow-xl border-0 rounded-2xl sm:rounded-3xl">
+          <Card className="p-4 sm:p-6 lg:p-8 bg-white/20 dark:bg-slate-900/20 backdrop-blur-md shadow-xl border border-white/20 dark:border-gray-700/30 rounded-2xl sm:rounded-3xl">
             <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
               {filteredFAQs?.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`} 
-                  className="border border-slate-200 dark:border-slate-700 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-2 hover:shadow-md transition-all duration-300"
+                  className="border border-white/20 dark:border-gray-700/30 bg-white/10 dark:bg-gray-900/10 backdrop-blur-sm rounded-xl sm:rounded-2xl px-4 sm:px-6 py-2 hover:shadow-md hover:bg-white/20 dark:hover:bg-gray-900/20 transition-all duration-300"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-4 sm:py-6">
                     <div className="flex items-start gap-3 sm:gap-4">

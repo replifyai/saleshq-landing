@@ -165,7 +165,7 @@ export default function ProductOverviewSection() {
             Enterprise-Grade Solutions
           </div>
           
-          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 leading-tight">
             <span className="text-gray-900 dark:text-white">
               Comprehensive AI Platform for
             </span>
@@ -175,7 +175,7 @@ export default function ProductOverviewSection() {
             </span>
           </h2>
           
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Transform your sales process with our integrated suite of AI-powered tools designed for enterprise-scale performance, 
             security, and reliability.
           </p>
@@ -195,10 +195,10 @@ export default function ProductOverviewSection() {
                 style={{ animationDelay: `${index * 150}ms` }}
                 onClick={() => setActiveFeature(index)}
               >
-                <div className={`h-full p-4 sm:p-6 rounded-xl sm:rounded-2xl border transition-all duration-300 flex flex-col ${
+                <div className={`h-full p-4 sm:p-6 rounded-xl sm:rounded-2xl border transition-all duration-300 flex flex-col backdrop-blur-md shadow-xl hover:shadow-2xl ${
                   activeFeature === index 
-                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/20 shadow-lg' 
-                    : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-md'
+                    ? 'border-blue-500/50 bg-blue-50/80 dark:bg-blue-950/30 shadow-blue-500/20' 
+                    : 'border-white/20 dark:border-gray-700/30 bg-white/20 dark:bg-gray-900/20 hover:border-blue-300/50 dark:hover:border-blue-600/50 hover:bg-white/30 dark:hover:bg-gray-900/30'
                 }`}>
                   <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 flex-1">
                     <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform flex-shrink-0`}>
