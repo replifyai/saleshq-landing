@@ -298,7 +298,7 @@ const FragmentedWorkflowSection = () => {
                         {/* Flowing tree branches background - Left side (Efficiency) */}
                         <div className="w-3/4 h-auto pointer-events-none hidden lg:block" style={{ zIndex: 0 }}>
                             <img
-                                src="https://cdn.prod.website-files.com/5de236b4d41434460ade73ac/67b453ab7ba679c17431a801_Group%202147224744%20(1).svg"
+                                src="/lines2.svg"
                                 alt=""
                                 className="w-full h-full object-contain"
                                 style={{ transform: 'scale(1.2) translateX(-5%)' }}
@@ -308,7 +308,7 @@ const FragmentedWorkflowSection = () => {
                         {/* Flowing tree branches background - Right side (Effectiveness) */}
                         <div className="w-3/4 h-auto pointer-events-none hidden lg:block" style={{ zIndex: 0 }}>
                             <img
-                                src="https://cdn.prod.website-files.com/5de236b4d41434460ade73ac/67b45402b2783d6ea97c11d9_Group%202147224745%20(1).svg"
+                                src="/lines1.svg"
                                 alt=""
                                 className="w-full h-full object-contain"
                                 style={{ transform: 'scale(1.2) translateX(5%)' }}
@@ -376,7 +376,7 @@ const FragmentedWorkflowSection = () => {
                                     mixBlendMode: 'multiply',
                                 }}
                             >
-                                <source src="https://cdn.prod.website-files.com/5de236b4d41434460ade73ac%2F676f1ef0db13b542f40e46f2_Stroke-transcode.mp4" type="video/mp4" />
+                                <source src="/lines.mp4" type="video/mp4" />
                             </video>
                         </div>
 
