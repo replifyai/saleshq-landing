@@ -9,3 +9,4 @@ export { default as HowItWorksSection } from './HowItWorksSection';
 export { default as FAQSection } from './FAQSection';
 export { default as ProblemStatementSection } from './ProductOverviewSection';
 export { default as FeaturesSection } from './IntegrationsSection';
+export { default as FragmentedWorkflowSection } from './FragmentedWorkflowSection';

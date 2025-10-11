@@ -12,6 +12,7 @@ import {
   HowItWorksSection,
   FAQSection,
   FeaturesSection,
+  FragmentedWorkflowSection,
 } from "@/components/landing";
 import { TableOfContents } from "@/components/landing/TableOfContent";
 
@@ -122,9 +123,10 @@ export default function LandingPage() {
       <div className="relative z-10">
         <TableOfContents />
         <HeroSection />
-        <ProblemStatementSection />
-        <ChallengesSection />
         <HowItWorksSection />
+        <FragmentedWorkflowSection />
+        {/* <ProblemStatementSection /> */}
+        {/* <ChallengesSection /> */}
         <UseCasesSection />
         <ROISection />
         <FAQSection />
