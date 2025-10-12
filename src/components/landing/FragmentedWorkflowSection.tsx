@@ -170,7 +170,7 @@ const FragmentedWorkflowSection = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10 dark:bg-black rounded-2xl pb-20">
+            <div className="max-w-7xl mx-auto relative z-10 dark:bg-black bg-white rounded-2xl pb-20">
                 {/* Problem Statement */}
                 <div className="text-center mb-16 sm:mb-20 lg:mb-24 bg-gradient-to-b from-gray-900 to-gray-950 pb-20 rounded-2xl">
                     <div className="mb-8 pt-20">
