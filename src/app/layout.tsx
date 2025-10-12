@@ -156,7 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <ThemeProvider>
-          <ThreeJSProvider />
+          {/* <ThreeJSProvider /> */}
           <div className="min-h-screen bg-background">
             <div className="px-4 sticky top-0 z-50">
               <LandingNavigation />

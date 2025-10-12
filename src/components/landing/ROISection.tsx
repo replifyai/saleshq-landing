@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function ROISection() {
   return (
-    <section className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/20" id="roi">
+    <section className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8" id="roi">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 sm:mb-16">

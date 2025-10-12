@@ -153,7 +153,7 @@ export default function HeroSection() {
   return (
     <>
       <LandingNavigation />
-      <section ref={heroRef} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 dark:from-gray-950 dark:via-gray-900 dark:to-blue-950/20 pt-20">
+      <section ref={heroRef} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           {/* Grid Pattern */}

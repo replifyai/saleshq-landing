@@ -122,14 +122,17 @@ export default function LandingPage() {
 
       <div className="relative z-10">
         <TableOfContents />
-        <HeroSection />
-        <HowItWorksSection />
-        <FragmentedWorkflowSection />
-        {/* <ProblemStatementSection /> */}
-        {/* <ChallengesSection /> */}
-        <UseCasesSection />
-        <ROISection />
-        <FAQSection />
+        {/* Sections wrapper with unified background */}
+        <div className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+          <HeroSection />
+          <HowItWorksSection />
+          <FragmentedWorkflowSection />
+          {/* <ProblemStatementSection /> */}
+          {/* <ChallengesSection /> */}
+          <UseCasesSection />
+          <ROISection />
+          <FAQSection />
+        </div>
       </div>
 
       {/* Global styles for animations */}

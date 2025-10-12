@@ -36,7 +36,7 @@ export default function UseCasesSection() {
   ];
 
   return (
-    <section aria-label="Use cases" className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900 relative overflow-hidden" id="use-cases">
+    <section aria-label="Use cases" className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="use-cases">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-indigo-50/30 dark:from-blue-950/10 dark:via-transparent dark:to-indigo-950/10" />
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl" />

@@ -25,7 +25,7 @@ export function CaseStudiesSection() {
     const study = caseStudyData.find(s => s.id === selectedCaseStudy);
     if (study) {
       return (
-        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/20">
+        <section className="py-12 sm:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-4 sm:mb-6 lg:mb-8">
               <Button
@@ -64,7 +64,7 @@ export function CaseStudiesSection() {
   }
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/20">
+    <section className="py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         {/* <div className="text-center mb-16">

@@ -130,7 +130,7 @@ export default function HowItWorksSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="how-it-works" className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900 relative overflow-hidden">
+    <section ref={sectionRef} id="how-it-works" className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200/50 to-transparent dark:via-blue-800/30" />
@@ -213,7 +213,7 @@ export default function HowItWorksSection() {
           <div className="process-animate opacity-0 translate-x-[-20px] transition-all duration-700 order-2 lg:order-1">
             <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center shadow-lg`}>
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center shadow-lg text-white`}>
                   {steps[activeStep].icon}
                 </div>
                 <div>

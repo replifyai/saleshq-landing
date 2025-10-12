@@ -141,7 +141,7 @@ const FragmentedWorkflowSection = () => {
         <section
             ref={sectionRef}
             id="fragmented-workflow-section"
-            className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 relative overflow-hidden"
+            className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
         >
             {/* Background Elements - matching theme */}
             <div className="absolute inset-0 -z-10">
@@ -170,7 +170,7 @@ const FragmentedWorkflowSection = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-7xl mx-auto relative z-10 dark:bg-black rounded-2xl pb-20">
                 {/* Problem Statement */}
                 <div className="text-center mb-16 sm:mb-20 lg:mb-24 bg-gradient-to-b from-gray-900 to-gray-950 pb-20 rounded-2xl">
                     <div className="mb-8 pt-20">
@@ -178,7 +178,7 @@ const FragmentedWorkflowSection = () => {
                             ref={titleRef}
                             className="text-xl sm:text-4xl md:text-3xl lg:text-5xl font-bold text-white dark:text-gray-600 mb-4 relative inline-block opacity-0"
                         >
-                            <span className="relative bg-gradient-to-t from-gray-800 to-gray-500 p-2 px-6 rounded-3xl">
+                            <span className="relative bg-gradient-to-t from-gray-800 to-gray-500 dark:text-gray-400 p-2 px-6 rounded-3xl">
                                 We love losing deals due to slow responses
                             </span>
                         </h2>
@@ -318,7 +318,7 @@ const FragmentedWorkflowSection = () => {
 
                     <div ref={solutionGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-16 relative" style={{ zIndex: 10,marginTop: '-65px' }}>
                         {/* Card 1 - Real-Time Responses (Yellow/Gold) */}
-                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-yellow-100 via-yellow-50 to-yellow-50/50 dark:from-yellow-900/20 dark:to-yellow-800/20 border-2 border-yellow-200/60 dark:border-yellow-700/50 hover:border-yellow-300 dark:hover:border-yellow-600 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
+                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-yellow-100 via-yellow-50 to-yellow-50/50 dark:from-yellow-900/20 dark:via-yellow-800/10 dark:to-transparent backdrop-blur-sm border-2 border-yellow-200/60 dark:border-yellow-700/30 hover:border-yellow-300 dark:hover:border-yellow-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30 dark:hover:from-yellow-900/30 dark:hover:via-yellow-800/20 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg mx-auto">
                                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z" />
@@ -329,7 +329,7 @@ const FragmentedWorkflowSection = () => {
                         </div>
 
                         {/* Card 2 - Centralized Knowledge (Blue) */}
-                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-blue-100 via-blue-50 to-blue-50/50 dark:from-blue-900/20 dark:to-blue-800/20 border-2 border-blue-200/60 dark:border-blue-700/50 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
+                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-blue-100 via-blue-50 to-blue-50/50 dark:from-blue-900/20 dark:via-blue-800/10 dark:to-transparent backdrop-blur-sm border-2 border-blue-200/60 dark:border-blue-700/30 hover:border-blue-300 dark:hover:border-blue-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 dark:hover:from-blue-900/30 dark:hover:via-blue-800/20 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg mx-auto">
                                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-1 6h-3v3h-2v-3h-3v-2h3V7h2v3h3v2z" />
@@ -340,7 +340,7 @@ const FragmentedWorkflowSection = () => {
                         </div>
 
                         {/* Card 3 - Source-Backed Answers (Purple) */}
-                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-purple-100 via-purple-50 to-purple-50/50 dark:from-purple-900/20 dark:to-purple-800/20 border-2 border-purple-200/60 dark:border-purple-700/50 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
+                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-purple-100 via-purple-50 to-purple-50/50 dark:from-purple-900/20 dark:via-purple-800/10 dark:to-transparent backdrop-blur-sm border-2 border-purple-200/60 dark:border-purple-700/30 hover:border-purple-300 dark:hover:border-purple-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 dark:hover:from-purple-900/30 dark:hover:via-purple-800/20 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-400 to-purple-500 flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg mx-auto">
                                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
@@ -351,7 +351,7 @@ const FragmentedWorkflowSection = () => {
                         </div>
 
                         {/* Card 4 - Performance Analytics (Green/Teal) */}
-                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-emerald-100 via-emerald-50 to-emerald-50/50 dark:from-emerald-900/20 dark:to-emerald-800/20 border-2 border-emerald-200/60 dark:border-emerald-700/50 hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
+                        <div className="group p-8 rounded-3xl bg-gradient-to-br from-emerald-100 via-emerald-50 to-emerald-50/50 dark:from-emerald-900/20 dark:via-emerald-800/10 dark:to-transparent backdrop-blur-sm border-2 border-emerald-200/60 dark:border-emerald-700/30 hover:border-emerald-300 dark:hover:border-emerald-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 dark:hover:from-emerald-900/30 dark:hover:via-emerald-800/20 opacity-0 hover:scale-105 min-h-[200px] flex flex-col justify-center shadow-lg">
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-500 flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform shadow-lg mx-auto">
                                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
@@ -371,10 +371,7 @@ const FragmentedWorkflowSection = () => {
                                 loop
                                 muted
                                 playsInline
-                                className="w-full h-full object-contain"
-                                style={{
-                                    mixBlendMode: 'multiply',
-                                }}
+                                className="w-full h-full object-contain [mix-blend-mode:multiply] dark:[mix-blend-mode:screen] dark:invert"
                             >
                                 <source src="/lines.mp4" type="video/mp4" />
                             </video>
