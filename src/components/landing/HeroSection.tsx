@@ -21,7 +21,6 @@ import {
   Clock
 } from "lucide-react";
 import Link from "next/link";
-import { LandingNavigation } from "@/components/landing";
 import { gsap } from "gsap";
 
 export default function HeroSection() {
@@ -152,7 +151,6 @@ export default function HeroSection() {
 
   return (
     <>
-      <LandingNavigation />
       <section ref={heroRef} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
