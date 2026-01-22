@@ -102,23 +102,6 @@ export default function HowItWorksSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const router = useRouter();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.process-animate');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
 
   // Auto-advance steps
   useEffect(() => {
@@ -141,9 +124,9 @@ export default function HowItWorksSection() {
 
       <div className="max-w-7xl mx-auto">
         {/* Enhanced section header */}
-        <div className="text-center mb-12 sm:mb-16 process-animate opacity-0 translate-y-4 transition-all duration-700">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-3 py-2 sm:px-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-full border border-blue-200/50 dark:border-blue-800/50">
-            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" />
             <span className="text-xs sm:text-sm font-medium text-blue-700 dark:text-blue-300">How It Works</span>
             <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 dark:text-blue-400" />
           </div>
@@ -180,7 +163,7 @@ export default function HowItWorksSection() {
                 >
                   <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center transition-all duration-300 ${
                     index === activeStep
-                      ? 'bg-white/20 backdrop-blur-sm'
+                      ? 'bg-white/30'
                       : `bg-gradient-to-r ${step.color} text-white`
                   }`}>
                     {index === activeStep ? (
@@ -194,7 +177,7 @@ export default function HowItWorksSection() {
                     <div className="text-xs opacity-80">{step.duration}</div>
                   </div>
                   {index === activeStep && (
-                    <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full animate-pulse" />
+                    <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full" />
                   )}
                 </button>
                 
@@ -210,8 +193,8 @@ export default function HowItWorksSection() {
         {/* Enhanced step content */}
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center hidden md:block">
           {/* Step details */}
-          <div className="process-animate opacity-0 translate-x-[-20px] transition-all duration-700 order-2 lg:order-1">
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
+          <div className="order-2 lg:order-1">
+            <div className="bg-white/80 dark:bg-gray-800/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
                 <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center shadow-lg text-white`}>
                   {steps[activeStep].icon}
@@ -238,7 +221,7 @@ export default function HowItWorksSection() {
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {steps[activeStep].details.map((detail, i) => (
                   <div key={i} className="flex items-start gap-3 sm:gap-4 group">
-                    <div className={`w-5 h-5 sm:w-6 sm:h-6 rounded-md sm:rounded-lg bg-gradient-to-br ${steps[activeStep].color} flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md group-hover:scale-110 transition-transform duration-200`}>
+                    <div className={`w-5 h-5 sm:w-6 sm:h-6 rounded-md sm:rounded-lg bg-gradient-to-br ${steps[activeStep].color} flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md`}>
                       <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
                     </div>
                     <span className="text-sm sm:text-base text-gray-700 dark:text-gray-200 leading-relaxed group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200">{detail}</span>
@@ -254,7 +237,7 @@ export default function HowItWorksSection() {
                   disabled={activeStep === 0}
                   className="w-full sm:w-auto group border-2 hover:border-gray-300 dark:hover:border-gray-600 text-sm"
                 >
-                  <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                  <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                   Previous
                 </Button>
                 <Button
@@ -262,7 +245,7 @@ export default function HowItWorksSection() {
                   className={`group w-full sm:w-auto bg-gradient-to-r ${steps[activeStep].color} hover:opacity-90 shadow-lg hover:shadow-xl transition-all duration-200 text-sm`}
                 >
                   {activeStep === steps.length - 1 ? 'Start Over' : 'Next Step'}
-                  <ChevronRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
               </div>
             </div>

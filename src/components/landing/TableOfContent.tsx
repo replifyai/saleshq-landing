@@ -60,17 +60,26 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
   }, [items]);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsVisible(scrollY > 300);
-      
-      // Calculate scroll progress
-      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = Math.min(100, Math.max(0, (scrollY / documentHeight) * 100));
-      setScrollProgress(progress);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          setIsVisible(scrollY > 300);
+          
+          // Calculate scroll progress
+          const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = Math.min(100, Math.max(0, (scrollY / documentHeight) * 100));
+          setScrollProgress(progress);
+          
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -93,7 +102,7 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
   return (
     <nav className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:block animate-in">
       <div className={cn(
-        "glass-card rounded-2xl shadow-lg backdrop-blur-xl border border-white/10 dark:border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105",
+        "glass-card rounded-2xl shadow-lg border border-white/10 dark:border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105",
         isCollapsed ? "p-2 min-w-[40px] max-w-[40px]" : "p-3 min-w-[200px] max-w-[240px]"
       )}>
         {/* Toggle Button */}

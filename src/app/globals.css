@@ -3,9 +3,18 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @config "../../tailwind.config.ts";
 
-/* Smooth scrolling for the entire document */
+/* Smooth scrolling for the entire document - optimized */
 html {
   scroll-behavior: smooth;
+  /* Performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Contain layout for better performance - only for sections */
+section {
+  contain: layout style;
 }
 
 /* Custom animations for How It Works section */

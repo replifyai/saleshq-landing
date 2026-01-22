@@ -128,6 +128,13 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/icon/browserconfig.xml" />
+        {/* Preload critical resources for better performance */}
+        <link rel="preload" href="/logo.png" as="image" />
+        <link rel="preload" href="/initials.png" as="image" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        {/* Prefetch critical CSS */}
+        <link rel="prefetch" href="/_next/static/css/app/layout.css" as="style" />
       </head>
       <body
         suppressHydrationWarning
