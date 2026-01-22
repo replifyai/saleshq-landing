@@ -1,0 +1,791 @@
+# saleshq.ai
+
+This is an llms.txt file for saleshq.ai.
+Generated on: 2026-01-22 11:52:18 UTC
+Source: https://www.saleshq.ai/
+
+## About saleshq.ai
+URL: https://www.saleshq.ai/
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+AI-Powered Sales Intelligence
+Transform Your Sales Team with
+AI Powered Intelligence
+Give your sales reps
+instant access
+to product knowledge, competitive intelligence, and AI-powered responses that close deals faster.
+Instant Answers
+Real-time AI responses
+40% Faster
+Deal closure rate
+95% Accuracy
+Source-backed responses
+Start Free Trial
+Dashboard
+Live Analytics
+Online
+Queries Today
+2,847
++12% from yesterday
+Accuracy
+95
+%
++2% this week
+What's the warranty on Product X?
+Product X comes with a 2-year comprehensive warranty covering all manufacturing defects.
+Source: Product Manual p.15
+Active conversations
+47
+Scroll to explore
+How It Works
+Transform Your Sales
+in 4 Simple Steps
+From knowledge upload to AI-powered sales success in under 5 minutes.
+No technical expertise required.
+Upload Your Knowledge
+2 minutes
+AI Processes & Learns
+Instant
+Get Instant Answers
+Real-time
+Continuous Improvement
+Continuous
+Step
+1
+2 minutes
+Upload Your Knowledge
+Seamlessly import documents, product catalogs, and connect your data sources in seconds.
+Drag & drop files (PDF, DOC, XLS, PPT)
+Connect Google Drive, Dropbox, OneDrive
+Sync Shopify, WooCommerce, BigCommerce
+Import FAQs, guides, and training materials
+Previous
+Next Step
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+We love losing deals due to slow responses
+- said no sales team ever
+But scattered knowledge, slow information access, and inconsistent messaging are costing you deals.
+Stop losing deals because reps can't find answers fast enough
+Stop wasting hours searching through documents and Slack threads
+Stop giving inconsistent information that hurts your brand
+To close more deals faster,
+your sales team needs –
+Instant answers
+with
+AI-powered knowledge
+Find any product info, pricing, or competitive intel in seconds
+Consistent messaging
+with verified sources
+Every rep gives accurate, brand-aligned answers every time
+LIGHTNING-FAST
+Real-Time AI Responses
+UNIFIED
+Centralized Knowledge
+VERIFIED
+Source-Backed Answers
+INSIGHTS
+Performance Analytics
+Use Cases
+Where SalesHQ
+excels
+Transform your sales process with AI-powered workflows that deliver instant, accurate answers and boost team confidence on every call.
+1
+Answer product questions instantly
+Ask in plain English and get source‑backed answers with links—no more tab hopping.
+Natural language queries
+Source-backed answers
+Real-time responses
+Learn more
+2
+Build LSM-powered battlecards
+Pull competitive diffs and LSM-scored talking points while you're on a call.
+Competitive intelligence
+LSM scoring
+Live call support
+Learn more
+3
+Keep specs and pricing current
+SalesHQ learns continuously from your docs and LSM data so reps never share outdated info.
+Auto-updating content
+Version control
+Data accuracy
+Learn more
+Explore all features
+Proven ROI Results
+Transform Your Sales
+Performance
+Join 500+ sales teams who've achieved measurable productivity gains with AI-powered sales intelligence. See the data that proves our platform delivers real results.
+Industry-Leading Performance Metrics
+Time Saved Daily
+3.2+
+Hours per sales rep
+Deal Velocity
+40%
+Faster closing
+Query Resolution
+95%
+Accuracy rate
+Average ROI
+340%
+Within 6 months
+Impact Calculator
+100
+Sales Team Size
+Monthly time saved
+6,400+ hours
+Deals closed faster
+40% increase
+Query resolution
+95% accuracy
+Support tickets
+-60% reduction
+FAQ
+Frequently Asked
+Questions
+Everything you need to know about SalesHQ. Can't find what you're looking for? Our team is here to help you succeed.
+General
+Features
+Security & Privacy
+Pricing & Billing
+What is SalesHQ and how does it work?
+How quickly can I get started with SalesHQ?
+What makes SalesHQ different from other sales tools?
+Still have questions?
+Our team is here to help you get started and succeed with SalesHQ.
+Chat with Support
+Schedule Demo
+================================================================================
+URL: https://www.saleshq.ai/features
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Powerful Features
+Everything You Need to
+Accelerate Sales
+Discover our comprehensive suite of AI-powered tools designed to transform your sales process, boost team performance, and drive measurable results.
+All Features
+Core AI
+Analytics
+Communication
+Content
+Collaboration
+Integration
+Intelligence
+Training
+Available
+AI-Powered Intelligence
+Advanced natural language processing that understands context and provides accurate, source-backed responses to complex sales questions.
+Key Benefits:
+Context-aware responses
+Source citations
+Multi-language support
+Continuous learning
+Available
+Real-Time Communication
+Instant AI responses during calls, meetings, and customer interactions with seamless integration across all channels.
+Key Benefits:
+Live transcription
+Instant suggestions
+Multi-channel support
+Team collaboration
+Available
+Advanced Analytics
+Comprehensive insights into team performance, query patterns, and knowledge gaps with actionable recommendations.
+Key Benefits:
+Performance tracking
+Gap analysis
+ROI measurement
+Custom reports
+Available
+Knowledge Management
+Centralized repository for all sales materials, product information, and best practices with intelligent search and recommendations.
+Key Benefits:
+Centralized content
+Smart search
+Version control
+Access control
+Available
+Seamless Integrations
+Connect with your existing tools including CRM, marketing automation, and communication platforms for a unified workflow.
+Key Benefits:
+CRM sync
+API access
+Webhook support
+Custom connectors
+Available
+Online Store Integration
+Deep Shopify integration for comprehensive order management, cart management, and real-time e-commerce data synchronization.
+Key Benefits:
+Order management
+Cart management
+Product synchronization
+Inventory tracking
+Customer data sync
+Real-time updates
+Coming Soon
+Real-Time Product Insights
+Connect with your online store to get real-time product reviews, customer sentiments, and market intelligence to inform your sales strategy.
+Expected Benefits:
+Live review monitoring
+Sentiment analysis
+Competitive intelligence
+Market trends
+Coming Soon
+Query Intelligence
+Get deep insights on user queries asked by agents on the platform, helping you understand knowledge gaps and training opportunities.
+Expected Benefits:
+Query pattern analysis
+Knowledge gap identification
+Training recommendations
+Performance insights
+Coming Soon
+Deal Briefing & Handover
+Generate comprehensive briefs of ongoing deals and customer calls for seamless handovers between agents and effective knowledge transfer.
+Expected Benefits:
+Automated deal summaries
+Context preservation
+Handover templates
+Knowledge transfer
+Coming Soon
+Sales Scenario Simulation
+Practice realistic sales scenarios with AI-powered simulations that help teams master winning techniques and improve performance.
+Expected Benefits:
+Realistic scenarios
+AI-powered coaching
+Performance feedback
+Skill development
+Coming Soon
+Revenue Prediction
+Predict future revenue based on customer conversations and current sales data using advanced AI algorithms and machine learning.
+Expected Benefits:
+Conversation analysis
+Revenue forecasting
+Risk assessment
+Strategic planning
+Ready to Transform Your Sales Process?
+Join thousands of sales teams already using our AI-powered platform to accelerate growth and achieve better results.
+Get Started Free
+Schedule Demo
+================================================================================
+URL: https://www.saleshq.ai/about
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+About SalesHQ
+Quick, Flexible & Adaptive
+Sales Solutions
+We deliver real value through tailored solutions that increase sales performance and enhance learning management. Quick to adapt, flexible in approach, and focused on your success.
+What is SalesHQ?
+SalesHQ is your agile partner in sales success. We specialize in creating tailored solutions that adapt to your unique business needs. Our quick implementation, flexible approach, and adaptive technology help you increase sales performance while building a robust learning management system.
+Quick Implementation
+Get up and running fast with our streamlined setup process and rapid deployment.
+Flexible Solutions
+Tailored LMS and sales tools that adapt to your specific business requirements and workflows.
+Real Value Delivery
+Measurable results that directly impact your sales performance and team learning outcomes.
+Quick Setup
+Fast implementation and deployment
+Tailored Solutions
+Customized for your business needs
+LMS Focus
+Comprehensive learning management
+Sales Growth
+Proven results and value delivery
+Why Did We Start SalesHQ?
+Our journey began with a clear mission: to be quick, flexible, and adaptive in delivering real value through tailored solutions that increase sales and enhance learning management.
+The Challenge
+Businesses needed solutions that could quickly adapt to their unique needs, deliver real value, and provide flexible learning management systems.
+Our Approach
+We believe in being quick to respond, flexible in our methods, and adaptive to deliver tailored solutions that provide real value to our clients.
+The Result
+SalesHQ delivers tailored solutions that increase sales performance and provide comprehensive LMS capabilities with measurable results.
+Our Mission
+To be quick, flexible, and adaptive in delivering real value to our clients through tailored solutions that increase their sales performance and enhance their learning management capabilities. We believe in results that matter.
+Our Values
+Quick Response
+We deliver fast implementation and rapid results to meet your urgent business needs.
+Flexible Solutions
+Our approach adapts to your unique requirements, ensuring tailored solutions that work.
+Real Value
+We focus on delivering measurable results that directly impact your sales and LMS success.
+Adaptive Approach
+We continuously evolve our solutions to match your changing business needs and goals.
+Quick, Flexible & Adaptive Solutions
+We specialize in delivering tailored solutions that provide real value, helping you increase sales and enhance your learning management capabilities.
+Quick
+Implementation
+Flexible
+Solutions
+Adaptive
+Approach
+Real
+Value Delivery
+Ready for Real Value?
+Let us show you how our quick, flexible, and adaptive approach can deliver tailored solutions that increase your sales performance and enhance your learning management capabilities.
+Get in Touch
+Book a Demo
+================================================================================
+URL: https://www.saleshq.ai/contact
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Get in Touch
+Have questions about SalesHQ? We're here to help. Send us a message and we'll get back to you within 24 hours.
+Contact Information
+Email Us
+[email protected]
+Send us an email anytime
+Call Us
++91 96178 74449
+Mon-Fri from 8am to 5pm
+Visit Us
+Bangalore, Karnataka
+India
+Working Hours
+Mon-Fri: 8AM-5PM
+IST (GMT+5:30)
+Send us a Message
+Fill out the form below and we'll get back to you within 24 hours.
+================================================================================
+URL: https://www.saleshq.ai/solutions
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Tailored Solutions
+Solutions Built for
+Every Team
+Discover how our AI-powered platform transforms workflows and drives results for Sales, Customer Support, and Revenue Operations teams.
+Start Free Trial
+Contact Sales
+Sales Teams
+Empower your sales team with AI-powered intelligence, real-time insights, and automated workflows to close more deals faster.
+Key Features
+AI-Powered Sales Intelligence
+Real-Time Deal Insights
+Automated Follow-ups
+Performance Analytics
+Key Results
+Faster Deals
+40%
+Higher Win Rate
+25%
+Learn More
+Customer Support
+Enhance customer satisfaction with intelligent support tools, instant knowledge access, and automated ticket resolution.
+Key Features
+Instant Knowledge Access
+Automated Ticket Resolution
+Customer Sentiment Analysis
+Multi-Channel Support
+Key Results
+Faster Resolution
+50%
+Customer Satisfaction
+90%
+Learn More
+Revenue Operations
+Optimize revenue processes with advanced analytics, predictive insights, and automated revenue management workflows.
+Key Features
+Revenue Forecasting
+Pipeline Analytics
+Automated Reporting
+Performance Dashboards
+Key Results
+Forecast Accuracy
+30%
+Faster Reporting
+45%
+Learn More
+Common Challenges We Solve
+Every team faces unique challenges. Our solutions are designed to address the most common pain points across different departments.
+Sales Teams
+Inconsistent sales performance across team members
+Time-consuming manual research and preparation
+Difficulty accessing up-to-date product information
+Lack of real-time insights during customer calls
+10
+total challenges addressed
+Customer Support
+Long resolution times for customer issues
+Inconsistent support quality across agents
+Difficulty finding relevant product information
+High escalation rates to senior staff
+10
+total challenges addressed
+Revenue Operations
+Inaccurate revenue forecasting
+Manual and time-consuming reporting processes
+Lack of real-time revenue visibility
+Data silos across different systems
+10
+total challenges addressed
+Ready to Transform Your Team?
+Join thousands of teams already using our AI-powered platform to accelerate growth and achieve better results.
+Get Started Free
+Schedule Demo
+================================================================================
+URL: https://www.saleshq.ai/solutions/sales
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Loading...
+================================================================================
+URL: https://www.saleshq.ai/solutions/customer-support
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Loading...
+================================================================================
+URL: https://www.saleshq.ai/solutions/revops
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Loading...
+================================================================================
+URL: https://www.saleshq.ai/case-studies
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+AI-Powered Sales Enablement Case Studies
+Discover how organizations are transforming their sales operations with AI-powered enablement solutions. Learn from real-world implementations and measurable results.
+What Challenges Can You Solve with AI-Powered Enablement?
+A comprehensive case study exploring critical challenges organizations face and how AI-powered enablement provides comprehensive solutions that drive measurable business outcomes.
+83%
+Higher Revenue Growth
+25%
+Productivity Increase
+30%
+Deal Closure Rate
+245%
+ROI Achievement
+AI-Powered Sales Enablement
+Team Onboarding
+Workflow Automation
++
+2
+more
+Read Full Case Study
+The Evolution of AI-Powered Sales Enablement
+Advanced strategies for revenue intelligence and customer engagement through sophisticated AI applications that transform how organizations understand, predict, and engage with customers.
+89%
+Deal Failure Prediction
+25%
+Revenue Increase
+30%
+Faster Sales Cycles
+300%
+ROI Achievement
+Revenue Intelligence
+Dynamic Pricing
+Conversational AI
++
+3
+more
+Read Full Case Study
+Industry Impact at a Glance
+83%
+Higher Revenue Growth
+25%
+Productivity Increase
+30%
+Deal Closure Improvement
+40%
+Faster Ramp-up Time
+================================================================================
+URL: https://www.saleshq.ai/privacy-policy
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Privacy Policy
+This privacy policy ("
+Policy
+") explains how Copico Tech Solutions, its subsidiaries, and affiliates ("
+SalesHQ
+", "
+we
+", "
+us
+", "
+our
+") processes Personal Data that SalesHQ collects from you. This Policy applies to all the products, services, websites - www.SalesHQ.ai (the "
+Website
+"), and apps offered by SalesHQ and its affiliates/partners, except if specified otherwise. In this document, we explain what personal information of yours will be collected when you access the Services, how such Personal Data will be used when it might be disclosed, and how you can control the collection, correction, and/or deletion of your Personal Data. This Privacy Policy is part of and governed by our Terms of Service.
+This policy DOES NOT apply to information collected offline, through any other apps or websites (including websites you may access through the Website or SalesHQ software), or by any third party, including through any application or content (including advertising) that may link to or be accessible from or on the Website. These other websites, apps, or third parties may have their own privacy policies, which we encourage you to read before providing information through them.
+NOTICE REGARDING DISPUTE RESOLUTION:
+Any disputes or claims arising under this Privacy Policy, or relating in any way to your use of the Website or SalesHQ software, will be resolved by final and binding arbitration as provided for in our Terms of Service. Unless you opt out, you will only be able to pursue claims against SalesHQ on an individual basis, not as part of any class or representative action or proceeding, and you will only be permitted to seek relief (including monetary, injunctive, and declaratory relief) on an individual basis.
+1. Definitions
+Controller
+means the natural or legal person, public authority, agency, or other body that alone or jointly with others, determines the purposes and means of the processing of Personal Data.
+End-User
+means any person or entity with whom the Subscriber interacts using the Service(s).
+Personal Data
+means any information relating to an identified or identifiable natural person ('data subject'); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.
+Service(s)
+means the services offered by SalesHQ through their proprietary collaborative customer onboarding platform.
+Subscriber
+means the natural or legal person that has subscribed to the Service(s) by signing up for the Service(s).
+Website(s)
+means the website(s) that SalesHQ operates.
+2. How is your data collected?
+You directly provide SalesHQ with most of the data we collect. SalesHQ collects Personal Data from you when you:
+subscribe to any of SalesHQ's Service(s) by signing up;
+use or view SalesHQ's Website which may result in Personal Data being collected via your browser's Cookies;
+submit web forms on our Website(s) or as you use interactive features of the Website(s), including participation in surveys, contests, promotions, sweepstakes,
+request customer support, or otherwise communicate with us; or
+when you use the Service(s), SalesHQ automatically collects information on the type of device you use, and the operating system version, to perform our agreement with you.
+SalesHQ may also receive your Personal Data indirectly as follows:
+from third-party sources like databases and social media but only where we have checked that these third parties either have your consent or are otherwise legally permitted or required to disclose your personal information to us;
+if you authorize SalesHQ to connect with a third-party service, SalesHQ will access and store your name, email address(es), current city, profile picture URL, and other Personal Data that the third-party service makes available to SalesHQ, and use and disclose it in accordance with this Policy.
+The Website includes social media features and widgets that are either hosted by a third party or hosted directly on the Website and your interaction with these social media features and widgets is governed by the privacy statement of the companies that provide them. You should check your privacy settings on these third-party services to understand and change the information sent to SalesHQ through these services. This data may be combined with the other information SalesHQ collects and might include aggregate level or specific data.
+When you access or use the Website or Services, or access their content, certain third parties, such as advertisers, analytics companies, your mobile device manufacturer, your mobile service provider, and End-Users may use automatic information collection technologies to collect information about you, your computer or your device. The information these third parties collect may be associated with your personal information or your online or mobile activities over time and across different websites, apps, and other online services websites. Such third parties may use this information to provide you with interest-based (behavioral) advertising or other targeted content. We do not control third parties tracking technologies or how they may be used. If you have any questions about an advertisement or other targeted content, you should contact the responsible provider directly.
+3. Processing of Personal Data
+SalesHQ processes your Personal Data in the following scenarios:
+to facilitate your access and use of the Websites and Services;
+to improve the Websites and the Services;
+to process and complete payment transactions;
+to provide onboarding services, customer success services, customer service, and support;
+to market and advertise in compliance with applicable law;
+to perform analytics in connection with the Website and Services;
+to investigate and prevent fraudulent transactions, unauthorized access to the Websites and Service(s), and other illegal activities;
+to personalize the Websites and Service(s);
+in the event SalesHQ merges with or is acquired by another company, sells SalesHQ's Websites, or business units, or if all or a substantial portion of SalesHQ's assets are acquired by another company. In such cases, your information will likely be one of the assets that are transferred;
+to notify you when updates are available, and of changes to any products or services we offer or provide through the Website and Services;
+to perform internal training and quality assurance; and
+for other purposes for which SalesHQ obtains your consent;
+Legal basis for processing (UK and EEA Region)
+If you are a data subject from the UK or European Economic Area, SalesHQ's legal basis for collecting and using the Personal Data described above will depend on the Personal Data concerned and the specific context in which SalesHQ collects it.
+SalesHQ will normally collect Personal Data from you only where it needs it to perform a contract with you, where the processing is in SalesHQ's legitimate interests and not overridden by your data protection interests or fundamental rights and freedoms, or where SalesHQ has your consent. In some cases, SalesHQ may also have a legal obligation to collect Personal Data from you. If SalesHQ processes Personal Data with reliance on your consent, you may withdraw your consent at any time.
+If you have questions or need further information concerning the legal basis on which SalesHQ collects and uses your Personal Data, please contact SalesHQ using the contact details provided under Clause 12.2.
+"
+Aggregated Information
+" is a combination and/or analysis of information from multiple sources (as well as the information that you share) that helps identify or creates trends, benchmarks, summary metrics, or predictive algorithms. When creating aggregated information we take reasonable steps to prevent a specific individual or the individual's data from being identified. We may create Aggregated Information from information that other customers choose to share with us, along with Your Information.
+We may use Aggregated Information in the following scenarios:
+to deliver, develop and improve our products;
+to enable general marketing and advertising statements about our products; and
+for other purposes to which you expressly consent
+The information we collect about End-Users enables us to:
+offer our Subscribers Services that they use to communicate with, interact with, and deliver content to End-Users on their websites; and
+provide feedback and run reports related to the browsing, purchasing, and online behavior and activities of End-Users
+4. Sharing of Personal Data
+You acknowledge that SalesHQ will share your Personal Data with its group companies and third-party service providers so that they may offer you SalesHQ's Service(s) and/or send information or updates to the Service(s) if you are a Subscriber.
+When SalesHQ processes your order where you are a Subscriber, it may send your Personal Data to and also use the resulting information from credit reference agencies to prevent fraudulent purchases.
+SalesHQ shares Personal Data with our third-party service providers that host and maintain the SalesHQ Websites, applications, backup, storage, payment processing, analytics, and other services. These third-party service providers may have access to or process your Personal Data for the purpose of providing these services for us.
+SalesHQ may share your Personal Data with third-party providers for marketing purposes in compliance with laws applicable in this regard.
+SalesHQ may be required to disclose your Personal Data in response to a) lawful requests by public authorities, including to meet national security or law enforcement requirements, and/or b) subpoenas, court orders, or legal process, or to establish or exercise SalesHQ's legal rights or defend against legal claims.
+SalesHQ may also share Personal Data to assist investigation and prevention of illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of SalesHQ's terms, or as otherwise required by law.
+5. International Transfer
+SalesHQ processes Personal Data in the USA and other countries. If you are a resident of the UK or the European Economic Area and when your Personal Data is processed outside the UK or the EEA, SalesHQ will ensure that the recipient of your Personal Data offers an adequate level of protection, for instance by entering into standard contractual clauses for the transfer of Personal Data as approved by the European Commission (Article 46 General Data Privacy Regulation, 2016), or SalesHQ will ask you for your prior consent to such international data transfers.
+6. Retention of Personal Data
+SalesHQ retains the Personal Data collected where an ongoing legitimate business requires the retention of such Personal Data.
+In the absence of a need to retain Personal Data under Clause 6.1. above, SalesHQ will either delete or aggregate it or, if this is not possible then SalesHQ will securely store your Personal Data and isolate it from any further processing until deletion is possible.
+You can request SalesHQ for access, correction, update or request deletion of your Personal Data by mailing the team at
+[email protected]
+.
+7. Security of Personal Data
+SalesHQ uses appropriate technical and organizational measures to protect the Personal Data that it collects and processes. The measures SalesHQ uses are designed to provide a level of security appropriate to the risk of processing your Personal Data. If you have questions about the security of your Personal Data, please contact us immediately as described in this Policy.
+In spite of all the control mechanisms and security processes in place, there can still be instances of data theft and/or any consequential losses suffered as a result of a breach caused by hackers and/or any other third party that actively engage themselves to disrupt and/or circumvent the security systems set up by SalesHQ. As such circumstances are beyond our control, you understand that we will not be liable for any direct, indirect, consequential, or incidental losses that you may suffer in this regard.
+8. Rights of the Data Subjects
+You can request SalesHQ for access, correction, update or request deletion of your Personal Data.
+9. Privacy of Children
+SalesHQ recognizes the importance of children's safety and privacy and is sensitive to these issues. SalesHQ does not request, or knowingly collect, any Personal Data from children under the age of 18. If a parent or guardian becomes aware that his or her child has provided us with Personal Data, they should write to us at the email address provided in Clause 12.2
+10. Cookie Policy
+Cookies are text files that are placed on your computer to collect standard internet log information and visitor behavior information by SalesHQ. When you visit the Website(s), SalesHQ may collect Personal Data automatically from you through cookies or similar technology.
+Essential Cookies:
+SalesHQ sets essential cookies that enable core functionality such as security, network management, and accessibility. you may not opt out of these cookies. However, you may disable these by changing your browser settings, but this may affect how the Website(s) functions.
+Analytics, Customisation, and Advertising Cookies:
+SalesHQ sets Google Analytics cookies to help it improve its Website(s) by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone. SalesHQ also sets cookies to collect information that is used either in aggregate form to help SalesHQ understand how our Website(s) is being used or how effective their marketing campaigns are, to help customize the Website(s) for you, or to make advertising messages more relevant to you.
+11. Notice to End-User and other Exclusions
+SalesHQ's Service(s) are intended for use by enterprises. Where the Service(s) are made available to you through a Subscriber, that enterprise is the Controller of your Personal Data. Your data privacy questions and request should be submitted to the SalesHQ Subscriber in its capacity as your Controller. If you are an individual who interacts with a Subscriber using our Services, then you will be directed to contact our Subscriber for assistance with any requests or questions relating to your personal information. SalesHQ is not responsible for Subscribers' privacy or security practices which may be different from this Policy. Subscribers to our Services are solely responsible for establishing policies for and ensuring compliance with all applicable laws and regulations, as well as all privacy policies, agreements, or other obligations, relating to the collection of personal information in connection with the use of our Services by End Users. We collect information under the direction of our Subscribers and have no direct relationship with individuals whose personal information we process in connection with our Subscriber's use of our Service(s)
+With the exception of Personal Data collected when you register for an account to access or utilize SalesHQ's Service(s) and other information we collect in connection with your registration or authentication into our Service(s), this Policy does not apply in connection with access and use of SalesHQ's Service(s).
+SalesHQ's Website(s) and Service(s) may contain links to other Websites. If you click on a third-party link, you should read their privacy policy. SalesHQ encourages you to review the privacy statements of any such other websites to understand their Personal Data practices.
+12. Miscellaneous
+SalesHQ keeps this Policy under regular review and may update this webpage at any time. This Policy may be amended at any time and you shall be notified only if there are material changes to this Policy.
+If you have any questions about this Policy please do not hesitate to contact SalesHQ at
+[email protected]
+================================================================================
+URL: https://www.saleshq.ai/terms-of-service
+TITLE: SalesHQ – Real-Time AI Sales Assistant
+
+Terms of Service
+These Terms of Use ("
+Terms
+") describe the terms under which Copico Tech Solutions ("
+SalesHQ
+" "
+Us
+", "
+We
+", "
+Our
+") provides a subscriber ("
+You
+", "
+Your
+", "
+Yourself
+") access to and use of Our Services. ‍
+By accessing and/or using Our Service
+You agree to be bound by these Terms and acknowledge having read the Privacy Policy located here https://www.saleshq.ai/privacy-policy/
+You warrant to Us that You are aged 18 years or above and are competent to enter into this agreement.
+That, in the event You are entering into these Terms on behalf of any entity/company or its group, You possess the requisite authority to bind such entities, company, or its groups to these Terms. You and SalesHQ shall be hereinafter collectively referred to as "
+Parties
+" and individually as "
+Party
+".`
+1. Definitions
+1.1. Account
+means any accounts or instances created by You or on Your behalf for access and use of the Services.
+1.2. API
+means the application programming interfaces developed, enabled by, or licensed to SalesHQ that permit certain functionalities provided by the Services.
+1.3. Customer Data
+means all electronic data, text, messages, personal data, or other materials, including without limitation Personal Data of Users and End Users, submitted to the Services by You through Your Account in connection with Your use of the Services.
+1.4. Confidential Information
+means all information disclosed by one Party to the other Party which is in tangible form and labeled "confidential" (or with a similar legend) or which a reasonable person would understand to be confidential given the nature of the information and circumstances of disclosure. Notwithstanding the foregoing, Confidential Information shall not include any information which (a) was publicly known and made generally available in the public domain prior to the time of disclosure by the disclosing party; (b) becomes publicly known and made generally available after disclosure by the disclosing party to the receiving party through no action or inaction of the receiving party; (c) is already in the possession of the receiving party at the time of disclosure by the disclosing party as shown by the receiving party's files and records prior to the time of disclosure; (d) is obtained by the receiving party from a third-party without a breach of such third-party's obligations of confidentiality; (e) is independently developed by the receiving party without use of or reference to the disclosing party's Confidential Information, as shown by documents and other competent evidence in the receiving party's possession; or (f) is required by law to be disclosed by the receiving party, provided that the receiving party shall, to the extent legally permitted, give the disclosing party written notice of such requirement prior to disclosing so that the disclosing party may seek a protective order or other appropriate relief.
+1.5. Documentation
+means any written or electronic documentation, images, video, text, or sounds specifying the functionalities of the Services provided or made available by SalesHQ to You or Your Users through the Services or otherwise.
+1.6. DPA
+means the Data Processing Agreement at https://www.saleshq.ai/legal/data-processing-agreement
+1.7. End User
+means any person or entity other than You or Your Users with whom You interact using the Service(s).
+1.8. Order Form
+means any service order form specifying the Services provided, particular features, and functionalities in the Services that You wish to avail.
+1.9. Personal Data
+means any information relating to an identified or identifiable natural person that is submitted by You to the Services as part of Customer Data.
+1.10. Process
+means any operation or set of operations that is performed on Personal Data or on sets of Personal Data, whether or not by automated means, such as collection, recording, organization, structuring, storage, adaptation, or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction.
+1.11. Sensitive Personal Information
+means information that relates to an individual's racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health, or data concerning a natural person's sex life or sexual orientation. It also includes information about an individual's criminal offenses or convictions, as well as any other information deemed sensitive under applicable data protection laws.
+1.12. Services
+means the cloud-based proprietary collaborative customer onboarding platform of SalesHQ and any new services that SalesHQ may introduce as a Service to which You may subscribe, and any updates, modifications, or improvements thereto, including individually and collectively, the API, Software and any Documentation.
+1.13. Software
+means any software provided by SalesHQ (either by download or access through the internet) that allows You to use any functionality in connection with the Service(s).
+1.14. Subscription Charges
+means all charges associated with Your Account and use of the Services.
+1.15. Subscription Plan
+means the pricing plan and any limitations for the Services that You have subscribed to.
+1.16. Subscription Term
+means the period during which You have agreed to subscribe to the Services as specified in the relevant Order Form or as mentioned in a relevant Subscription Plan.
+1.17. Third-Party Services
+shall mean third-party application(s) or service(s) integrating with the Services through APIs or otherwise enabled through the Services.
+1.18. User
+means a designated user within the Services, including an Account administrator, employee, shareholder, auditor, lawyer, founder, and other designated users.
+1.19. Website(s)
+shall mean the websites owned and operated by SalesHQ including saleshq.ai
+2. Your rights
+Subject to Your compliance with these Terms and solely during the Subscription Term, You have the limited, non-exclusive, revocable right to access and use the Services for your internal business purposes in accordance with the Subscription Plan set forth in an Order Form.
+3. Your Obligations
+3.1. Your Account
+Your access and use of the Service(s) is restricted to the specified number of individual Users mentioned in the relevant Order Form executed between Yourself and SalesHQ. Each User shall be identified using unique login information such as usernames and passwords ("
+User Login
+") and such User Login shall be used only by one individual.
+3.2. Acceptable Use
+You agree not to:
+license, sublicense, sell, resell, rent, lease, transfer, assign, distribute, time share or otherwise commercially exploit or make the Services available to any third party, other than Users in furtherance of your internal business purposes as expressly permitted by these Terms;
+modify, adapt, or hack the Services or otherwise attempt to gain or gain unauthorized access to the Services or related systems or networks;
+use the Services to Process any Personal Data;
+violate any law or regulation, including, without limitation, any applicable export control laws, privacy laws, or any other purpose not reasonably intended by SalesHQ;
+use the Services to store or process any content that infringes upon any person's intellectual property rights or is unlawful, racist, hateful, abusive, libelous, obscene, or discriminatory; or
+"crawl," "scrape," or "spider" any page, data, or portion of or relating to the Services (through the use of manual or automated means);
+4. Services
+Any enhancements, new features, or updates ("
+Updates
+") to the Services are also subject to these Terms, and SalesHQ reserves the right to deploy Updates at any time.
+The Services may temporarily be unavailable due to scheduled downtime for upgrades and maintenance in which case SalesHQ shall use commercially reasonable endeavors to notify You in advance.
+Notwithstanding anything to the contrary contained elsewhere, SalesHQ shall not be liable for unavailability of the Services caused by circumstances beyond SalesHQ’s reasonable control, such as but not limited to, acts of God, acts of government, acts of terror or civil unrest, technical failures beyond SalesHQ’s reasonable control (including, without limitation, inability to access the internet), or acts undertaken by third-parties, including without limitation, distributed denial of service attacks.
+5. Intellectual Property Rights
+Except for the rights granted to You under clause 2, all rights, title, and interest in and to all intellectual property and/or proprietary rights, title, and interest in or related to the Services, including patents, inventions, copyrights, trademarks, domain names, trade secrets or know-how shall belong to and remain exclusively with SalesHQ.
+You own the rights to the Customer Data that You provide to SalesHQ. SalesHQ does not claim ownership over such Customer Data. SalesHQ shall have a right and license to incorporate into the Services or otherwise use any suggestions, enhancement requests, recommendations, or other feedback it receives from You.
+SalesHQ reserves its rights to re-use any and all techniques and know-how gathered by SalesHQ while providing the Services to You.
+All rights not expressly provided to You herein are reserved.
+6. Third-party services
+You acknowledge and agree that Your use of Third-Party Services will be subject to the terms and conditions and privacy policies of such third-party and that SalesHQ shall not be liable for Your enablement, access, or use of such Third-Party Services, including for the processing of Customer Data by such third-party. You should contact that Third-Party Service provider for any issues arising in connection with the use of such Third-Party Service.
+7. Charges and Payments
+7.1. Subscription Charges
+Unless otherwise mentioned in an Order Form, the Subscription Charges are due in full and payable at the end of the month, in accordance with clause 7.2, when You subscribe to the Services. The Subscription Charges shall be specified on Our Website(s) or in an Order Form.
+7.2. Payment
+You hereby authorize SalesHQ or SalesHQ's authorized agents, as applicable, to bill You upon Your subscription to the Services (and any renewal thereof). Unless otherwise stated in an Order Form, Your payment is due within thirty (30) days of SalesHQ's invoice date.
+7.3. Refunds
+Unless otherwise specified in these Terms, all Subscription Charges are non-refundable. No refunds shall be issued for partial use or non-use of the Services by You.
+7.4. Late Payments/Non-payment of Subscription Charges
+SalesHQ will notify You if SalesHQ does not receive payment towards the Subscription Charges within the due date for Your Account. SalesHQ must receive payments within a maximum of ten (10) days from the date of SalesHQ's notice. If SalesHQ does not receive a payment within the foregoing time period, in addition to its right to other remedies available under law, SalesHQ may (i) charge interest for late payment @ 1.5% per month and/or; (ii) suspend Your access to and use of the Services until SalesHQ receives Your payment towards the Subscription Charges as specified herein and/or; (iii) terminate Your Account.
+7.5. Applicable Taxes
+Unless otherwise stated, the Subscription Charges do not include any taxes, levies, duties, or similar governmental assessments, including value-added, sales, use, or withholding taxes assessable by any local, state, provincial, or foreign jurisdiction (collectively "Taxes").
+8. Terms, Termination, Suspension
+The Subscription Term shall be as set forth in the relevant Order Form.
+8.1. Termination by You
+You may terminate your Account and subscription to the Services at any time, but will remain liable for all Subscription Charges for the Subscription Term. Unless Your Account and subscription to the Services are terminated, Your subscription to the Services will renew for a Subscription Term equivalent in length to the then-expiring Subscription Term at SalesHQ's then-prevailing Subscription Charges.
+8.2. Termination and Suspension by SalesHQ
+In addition to suspension for late payment or non-payment of Subscription Charges, SalesHQ may at its discretion, suspend or terminate Your access to and use of the Your Account or the Services if You are in violation of the terms of these Terms. SalesHQ will notify You of activities that violate these Terms and provide You with a period of thirty (30) days to cure or cease such activities ("
+Cure Period
+"). If You do not cure or cease such activities within the said Cure Period or if SalesHQ believes that Your breach of these Terms cannot be cured, Your Account shall be terminated immediately. Further, SalesHQ also reserves the right to terminate Your Account at any time by written notice due to business reasons which shall include discontinuation of the Services.
+8.3. Termination for Insolvency
+Notwithstanding anything contained herein, either Party may terminate these Terms with notice if the other Party becomes insolvent, makes or has made an assignment for the benefit of creditors, is the subject of proceedings in voluntary or involuntary bankruptcy instituted on behalf of or against such Party (except for involuntary bankruptcies) which are dismissed within sixty (60) days, or has a receiver or trustee appointed for substantially all of its property.
+8.4. Effect of Terminating Your Account
+Following the termination of Your Account either by You or SalesHQ, You may request us to reinstate your Account within thirty (30) days of the effective termination of Your Account ("
+Data Retention Period
+"). Beyond the Data Retention Period, SalesHQ reserves the right to delete all the Customer Data in its possession.
+9. Confidentiality
+Confidentiality obligations
+Each of the Parties will protect the other's Confidential Information from unauthorized use, access, or disclosure in the same manner as each of the Parties protects its own Confidential Information, and in any event, no less than reasonable care. Except as otherwise expressly permitted under these Terms, each of the Parties may use the other's Confidential Information solely to exercise its respective rights and perform its respective obligations under these Terms and shall disclose such Confidential Information solely to those of its respective employees, representatives, and agents who have a need to know such Confidential Information for such purposes and who are bound to maintain the confidentiality of, and not misuse such Confidential Information. The provisions of this sub-section shall supersede any non-disclosure agreement by and between the Parties entered prior to these Terms that would purport to address the confidentiality of any Confidential Information and such agreement shall have no further force or effect with respect to the Confidential Information.
+10. Data protection and privacy
+You understand and acknowledge that, in connection with the use of the Services, SalesHQ may Process any Personal Data in accordance with these Terms and SalesHQ's Privacy Policy. Additionally, any Personal Data that originates from the EEA, United Kingdom, and/or Switzerland shall be processed in accordance with the terms of the DPA.
+SalesHQ may Process Customer Data to provide, maintain and improve the Services, or prevent or address any technical problems, or at Your request in connection with support requests.
+SalesHQ may perform analytics on Customer Data to improve, enhance, support, and operate the Services and compile statistical reports and record insights.
+You shall not disclose (and shall not permit any individual to disclose) any Sensitive Personal Information to Us for Processing.
+We shall ensure that any person We authorize to Process Customer Data shall protect the Customer Data in accordance with Our confidentiality obligations under these Terms.
+You acknowledge and agree that We may access or disclose information about You, Your Account, and Users, including Customer Data in order to (a) comply with the law or respond to lawful requests or legal processes; or (b) prevent any infringement of group companies' or Our customers' proprietary rights. Further, at Our sole discretion, any suspected fraudulent, abusive, or illegal activity by You may be referred to law enforcement authorities.
+We shall use appropriate technical and organizational measures to protect the Customer Data as specified in applicable laws. The measures used are designed to provide a level of security appropriate to the risk of Processing Customer Data.
+We shall, without undue delay, notify You of any accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to the Customer Data processed by Us. We shall reasonably assist You, at Your expense, in meeting Your obligations under applicable data protection laws.
+11. Disclaimer of Warranties
+THE SERVICES, INCLUDING ALL SERVER AND NETWORK COMPONENTS, ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. ALL EXPRESS OR IMPLIED REPRESENTATIONS AND WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, OR NON-INFRINGEMENT, ARE HEREBY EXCLUDED.
+YOU ACKNOWLEDGE THAT SalesHQ DOES NOT WARRANT THAT THE ACCESS TO THE SERVICE, WHICH IS PROVIDED OVER THE INTERNET AND VARIOUS TELECOMMUNICATIONS NETWORKS, ALL OF WHICH ARE BEYOND SalesHQ'S CONTROL, WILL BE UNINTERRUPTED, TIMELY, SECURE, ERROR-FREE OR FREE FROM VIRUSES OR OTHER MALICIOUS SOFTWARE.
+12. Limitation of liabilities
+TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL EITHER PARTY, ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, SUPPLIERS OR LICENSORS BE LIABLE TO ANY PERSON FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, COVER OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOST PROFITS, LOST REVENUE, LOST SALES, LOST GOODWILL, IMPACT ON BUSINESS, BUSINESS INTERRUPTION, LOSS OF ANTICIPATED SAVINGS, LOSS OF BUSINESS OPPORTUNITY) HOWEVER CAUSED, UNDER ANY THEORY OF LIABILITY, INCLUDING, WITHOUT LIMITATION, CONTRACT, TORT, WARRANTY, BREACH OF STATUTORY DUTY, NEGLIGENCE OR OTHERWISE, EXCEPT PAYMENT OBLIGATIONS OF YOU EVEN IF EITHER PARTY HAS BEEN ADVISED AS TO THE POSSIBILITY OF SUCH DAMAGES OR COULD HAVE FORESEEN SUCH DAMAGES. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SalesHQ'S AGGREGATE LIABILITY AND THAT OF ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, SUPPLIERS AND LICENSORS, RELATING TO THE SERVICES, WILL BE LIMITED TO AN AMOUNT EQUAL TO TWELVE MONTHS OF THE SUBSCRIPTION CHARGES PAID FOR THE SERVICES PRIOR TO THE FIRST EVENT OR OCCURRENCE GIVING RISE TO SUCH LIABILITY.
+13. Indemnification
+13.1. Indemnification by You
+You will indemnify and hold SalesHQ harmless against any claim brought by a third party against SalesHQ, and its respective employees, officers, directors, and agents arising from Your acts or omissions in connection with clause 3 of these Terms provided that (a) SalesHQ promptly notifies You of the threat or notice of such a claim, (b) You have or will have the sole and exclusive control and authority to select defense attorneys, defend and/or settle any such claim; and (c) SalesHQ fully cooperates with You in connection therewith. You will have no obligation or liability with respect to any such claim arising out of the gross negligence or wilful misconduct of SalesHQ.
+13.2. Indemnification by SalesHQ
+Subject to the Customer's compliance with this Agreement, SalesHQ will indemnify and hold the Customer harmless, from and against any claim brought against the Customer by a third-party alleging that the Services subscribed to infringes or misappropriates such third-party's valid patent, copyright, or trademark (an "
+IP Claim
+"). SalesHQ shall, at its expense, defend such IP Claim and pay damages finally awarded against the Customer in connection therewith, including the reasonable fees and expenses of the attorneys, provided that (a) the Customer promptly notifies SalesHQ of the threat or notice of such IP Claim; (b) SalesHQ has or will have the sole and exclusive control and authority to select defense attorneys, defend and/or settle any such IP Claim; and (c) Customer fully cooperates with SalesHQ in connection therewith. SalesHQ will have no liability or obligation with respect to any IP Claim if such claim is caused by (i) compliance with designs, data, instructions, or specifications provided by the Customer; (ii) modification of the Services by anyone other than SalesHQ; or (iii) the combination, operation or use of the Services with other hardware or software where the Services would not by themselves be infringing. If the use of the Services by the Customer has become, or in SalesHQ's opinion is likely to become, the subject of any IP Claim, SalesHQ may at its own option and expense (a) procure for the Customer the right to continue using the Services as set forth hereunder; (b) replace or modify the Services to make it non-infringing; or (c) if options (a) or (b) are not commercially and reasonably practicable as determined by SalesHQ, terminate the Customer's subscription to the Services and repay the Customer, on a pro-rated basis, any Subscription Charges the Customer has previously paid SalesHQ for the corresponding unused portion. This clause states SalesHQ's sole, exclusive and entire liability to the Customer and constitutes the Customer's sole remedy with respect to an IP Claim brought by reason of access to or use of the Services.
+14. Miscellaneous
+14.1. Assignment
+Any rights or obligations hereunder may be assigned by SalesHQ without the prior written consent of the other Party. However, You shall not assign any rights or obligations hereunder without the prior written consent of SalesHQ. These Terms bind, and inure to the benefit of, the Parties and their respective successors and permitted assigns.
+14.2. Entire Agreement
+These Terms together with any supplementary terms, constitute the entire agreement, and supersede any and all prior agreements between You and SalesHQ with regard to the subject matter hereof. These Terms shall prevail over the terms or conditions in any purchase order or other order documentation You or any entity that You represent provides (all such terms or conditions being null and void), and, except as expressly stated herein, there are no other agreements, representations, warranties, or commitments which may be relied upon by either Party with respect to the subject matter hereof. In case of a conflict between these Terms and an Order Form, these Terms shall prevail. In case of a conflict between two Order Forms, the Order Form later in date shall prevail.
+14.3. Amendment
+We may amend these Terms from time to time, in which case the new Terms will supersede prior versions. We will notify You of any material revisions not less than ten (10) days prior to the effective date of any amendments to these Terms and Your continued use of the Services following the effective date of any such amendment may be relied upon by Us as Your acceptance of any such amendment. You can review the most current version of the Terms at any time by visiting this page.
+14.4. Severability; No Waiver
+If any provision in these Terms is held by a court of competent jurisdiction to be unenforceable, such provision shall be modified by the court and interpreted so as to best accomplish the original provision to the fullest extent permitted by applicable law, and the remaining provisions of these Terms shall remain in effect. SalesHQ's non-exercise of any right under any provision of these Terms does not constitute a waiver of that right or provision of these Terms.
+14.5. Relationship of the Parties
+The Parties are independent contractors. These Terms do not create a partnership, franchise, joint venture, agency, fiduciary, or employment relationship among the Parties.
+14.6. Survival
+All clauses which, by their nature are intended to survive, including without limitation clauses 1 (Definitions), 5 (Intellectual Property Rights), 7 (Charges and Payment), 9 (Confidentiality), 11 (Disclaimer of Warranties), 12 (Limitation of Liability), 13 (Indemnification), 14 (Miscellaneous) shall survive any termination of SalesHQ's agreement with respect to use of the Services by You. Termination shall not limit either Party's liability for obligations accrued as of or prior to such termination or for any breach of these Terms.
+14.7. Notices and Consent to Electronic Communications
+All notices to be provided by SalesHQ to You under these Terms may be delivered in writing (i) by a nationally recognized overnight delivery service ("Courier") or to the contact mailing address provided by You on any Order Form while subscribing to the Services; or (ii) electronic mail to the e-mail address provided for Your Account. SalesHQ's address for a notice to SalesHQ in writing by Courier is M-6, Krishna Nagar, Dagania, Raipur, Chhattisgarh, 492001 with a CC to
+[email protected]
+for electronic mail. All notices shall be deemed to have been given immediately upon delivery by electronic mail, or if otherwise delivered upon receipt or, if earlier, two (2) business days after being deposited in the mail or with a Courier as permitted above.
+14.8. Publicity Rights
+You hereby grant SalesHQ the right to identify Yourself as SalesHQ's customer on SalesHQ's websites and/or marketing collateral and to include Your use of the Services in case studies.
+14.9. Governing Law and Dispute Resolution
+This Agreement shall be governed by the laws of the State of Chhattisgarh, India without regard to its conflict of laws provisions, and the civil courts of Raipur, India have exclusive jurisdiction over any and all disputes that may arise from this Agreement. Any disputes or differences arising under, relating to, or connected with these Terms shall be resolved by mediation first, failing which they shall be resolved by final and binding arbitration administered by the Indian Arbitration Association, in accordance with its commercial arbitration rules for the time being in force. The arbitration shall be presided over by a sole arbitrator appointed mutually by the Parties.

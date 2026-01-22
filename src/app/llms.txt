@@ -1,0 +1,22 @@
+# saleshq.ai
+
+> SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+
+This website contains 11 documented pages with information about saleshq.ai.
+
+## Docs
+
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+
+## Optional
+
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/features): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/about): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/contact): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/solutions): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/solutions/sales): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/solutions/customer-support): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/solutions/revops): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/case-studies): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/privacy-policy): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
+- [SalesHQ – Real-Time AI Sales Assistant](https://www.saleshq.ai/terms-of-service): SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.
