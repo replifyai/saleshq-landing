@@ -16,22 +16,22 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isCollapsed, setIsCollapsed] = useState(true);
-  
+
   const defaultItems = [
     { id: 'hero', title: 'Overview' },
-    { id: 'product-overview', title: 'Product Overview' },
-    { id: 'challenges-section', title: 'Challenges' },
     { id: 'how-it-works', title: 'How It Works' },
+    { id: 'fragmented-workflow-section', title: 'The Problem' },
     { id: 'use-cases', title: 'Use Cases' },
+    { id: 'referral-affiliate', title: 'Referral & Affiliate' },
     { id: 'roi', title: 'ROI' },
     { id: 'faq', title: 'FAQ' },
   ];
-  
+
   const items = customItems || defaultItems;
 
   useEffect(() => {
     const observers = new Map();
-    
+
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -61,18 +61,18 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
 
   useEffect(() => {
     let ticking = false;
-    
+
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const scrollY = window.scrollY;
           setIsVisible(scrollY > 300);
-          
+
           // Calculate scroll progress
           const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
           const progress = Math.min(100, Math.max(0, (scrollY / documentHeight) * 100));
           setScrollProgress(progress);
-          
+
           ticking = false;
         });
         ticking = true;
@@ -140,13 +140,13 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
                 <div className="flex items-center space-x-2">
                   <div className={cn(
                     "w-1.5 h-1.5 rounded-full transition-all duration-300 flex-shrink-0",
-                    activeSection === item.id 
-                      ? "bg-primary scale-125 shadow-sm shadow-primary/50" 
+                    activeSection === item.id
+                      ? "bg-primary scale-125 shadow-sm shadow-primary/50"
                       : "bg-muted-foreground/40 group-hover:bg-primary/60 group-hover:scale-110"
                   )} />
                   <span className="truncate text-xs">{item.title}</span>
                 </div>
-                
+
                 {/* Active indicator line */}
                 {activeSection === item.id && (
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-4 bg-gradient-to-b from-primary to-primary/60 rounded-r-full" />
@@ -165,8 +165,8 @@ export const TableOfContents = ({ items: customItems }: TableOfContentsProps) =>
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
                   "w-2 h-2 rounded-full transition-all duration-300",
-                  activeSection === item.id 
-                    ? "bg-primary scale-125 shadow-sm shadow-primary/50" 
+                  activeSection === item.id
+                    ? "bg-primary scale-125 shadow-sm shadow-primary/50"
                     : "bg-muted-foreground/40 hover:bg-primary/60 hover:scale-110"
                 )}
                 aria-label={`Go to ${item.title}`}

@@ -25,7 +25,7 @@ export default function FooterSection() {
               </div>
             </div>
             <p className="mb-6 max-w-md text-gray-600 dark:text-gray-300">
-              Transform your sales team with AI-powered document intelligence. Get instant answers, 
+              Transform your sales team with AI-powered document intelligence. Get instant answers,
               train your AI in real-time, and close more deals faster.
             </p>
           </div>
@@ -45,6 +45,7 @@ export default function FooterSection() {
               <li><Link href="/solutions/sales" className="transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Sales Teams</Link></li>
               <li><Link href="/solutions/customer-support" className="transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Customer Support</Link></li>
               <li><Link href="/solutions/revops" className="transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">RevOps Teams</Link></li>
+              <li><Link href="/referral-affiliate" className="transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Referral & Affiliate</Link></li>
             </ul>
           </div>
           <div>
@@ -83,7 +84,7 @@ export default function FooterSection() {
             <span className="text-sm" style={{color: '#2C2C2C'}}>Privacy-first by design</span>
           </div>
         </div> */}
-        
+
         <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="mb-4 md:mb-0 text-gray-500 dark:text-gray-400">

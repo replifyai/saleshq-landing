@@ -11,8 +11,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { 
-  Bot, 
+import {
+  Bot,
   Menu,
   X,
   ChevronDown,
@@ -67,27 +67,33 @@ const navigationItems = [
   //     }
   //   ]
   // },
-  { 
-    label: "Solutions", 
+  {
+    label: "Solutions",
     href: "/solutions",
     dropdown: [
-      { 
-        label: "Sales Teams", 
-        href: "/solutions/sales", 
+      {
+        label: "Sales Teams",
+        href: "/solutions/sales",
         description: "Boost sales performance",
         icon: <Target className="w-4 h-4" />
       },
-      { 
-        label: "Customer Support", 
-        href: "/solutions/customer-support", 
+      {
+        label: "Customer Support",
+        href: "/solutions/customer-support",
         description: "Enhance customer experience",
         icon: <MessageSquare className="w-4 h-4" />
       },
-      { 
-        label: "RevOps Teams", 
-        href: "/solutions/revops", 
+      {
+        label: "RevOps Teams",
+        href: "/solutions/revops",
         description: "Optimize your operations",
         icon: <Shield className="w-4 h-4" />
+      },
+      {
+        label: "D2C Brands (Referral & Affiliate)",
+        href: "/referral-affiliate",
+        description: "Referral & affiliate platform for D2C",
+        icon: <Sparkles className="w-4 h-4" />
       },
     ]
   },
@@ -120,17 +126,21 @@ const navigationItems = [
   //     }
   //   ]
   // },
-  { 
-    label: "Features", 
-    href: "/features" 
+  {
+    label: "Features",
+    href: "/features"
   },
-  { 
-    label: "About Us", 
-    href: "/about" 
+  {
+    label: "Referral & Affiliate",
+    href: "/referral-affiliate"
   },
-  { 
-    label: "Contact Us", 
-    href: "/contact" 
+  {
+    label: "About Us",
+    href: "/about"
+  },
+  {
+    label: "Contact Us",
+    href: "/contact"
   }
 ];
 
@@ -155,7 +165,7 @@ export default function ModernNavigation() {
 
   useEffect(() => {
     let ticking = false;
-    
+
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -171,11 +181,10 @@ export default function ModernNavigation() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 dark:bg-gray-900/95 shadow-lg border-b border-gray-200/50 dark:border-gray-700/50' 
-        : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+      ? 'bg-white/95 dark:bg-gray-900/95 shadow-lg border-b border-gray-200/50 dark:border-gray-700/50'
+      : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -247,8 +256,8 @@ export default function ModernNavigation() {
                 key={button.label}
                 variant={button.variant}
                 asChild
-                className={button.variant === 'default' 
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105' 
+                className={button.variant === 'default'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105'
                   : 'border-gray-300 dark:border-gray-600 text-gray-700 hover:text-black dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-700 hover:scale-105'
                 }
               >
@@ -279,7 +288,7 @@ export default function ModernNavigation() {
                     <span>SalesHQ</span>
                   </SheetTitle>
                 </SheetHeader>
-                
+
                 <div className="mt-8 space-y-6">
                   {/* Mobile Navigation Links */}
                   <div className="space-y-4">
@@ -317,14 +326,13 @@ export default function ModernNavigation() {
                         key={button.label}
                         variant={button.variant}
                         asChild
-                        className={`w-full ${
-                          button.variant === 'default' 
-                            ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white' 
-                            : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
-                        }`}
+                        className={`w-full ${button.variant === 'default'
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
+                          : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
+                          }`}
                       >
-                        <Link 
-                          href={button.href} 
+                        <Link
+                          href={button.href}
                           className="flex items-center justify-center gap-2"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
