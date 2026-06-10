@@ -1,118 +1,72 @@
-'use client'
-import { Badge } from "../ui/badge";
-import { Search, Sparkles, RefreshCcw, ArrowRight, CheckCircle } from "lucide-react";
-import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
-export default function UseCasesSection() {
-  const router = useRouter();
-  const items = [
-    {
-      title: "Answer product questions instantly",
-      description: "Ask in plain English and get source‑backed answers with links—no more tab hopping.",
-      icon: Search,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-50 dark:bg-blue-950/20",
-      borderColor: "border-blue-200 dark:border-blue-800",
-      features: ["Natural language queries", "Source-backed answers", "Real-time responses"],
-    },
-    {
-      title: "Build LSM-powered battlecards",
-      description: "Pull competitive diffs and LSM-scored talking points while you're on a call.",
-      icon: Sparkles,
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "bg-indigo-50 dark:bg-indigo-950/20",
-      borderColor: "border-indigo-200 dark:border-indigo-800",
-      features: ["Competitive intelligence", "LSM scoring", "Live call support"],
-    },
-    {
-      title: "Keep specs and pricing current",
-      description: "SalesHQ learns continuously from your docs and LSM data so reps never share outdated info.",
-      icon: RefreshCcw,
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50 dark:bg-purple-950/20",
-      borderColor: "border-purple-200 dark:border-purple-800",
-      features: ["Auto-updating content", "Version control", "Data accuracy"],
-    },
-  ];
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Search, Swords, RefreshCcw, ArrowRight, Check } from "lucide-react";
 
+const items = [
+  {
+    title: "Answer product questions instantly",
+    description:
+      "Ask in plain English and get source-backed answers with links — no more tab-hopping mid-conversation.",
+    icon: Search,
+    features: ["Natural-language search", "Citations on every answer", "Works during live calls"],
+  },
+  {
+    title: "Win competitive deals",
+    description:
+      "Pull up-to-date battlecards and competitor comparisons the moment a rival comes up on a call.",
+    icon: Swords,
+    features: ["Always-current battlecards", "Objection handling", "Side-by-side comparisons"],
+  },
+  {
+    title: "Keep specs and pricing current",
+    description:
+      "SalesHQ re-learns as your docs change, so reps never quote last quarter's pricing or retired SKUs.",
+    icon: RefreshCcw,
+    features: ["Auto-syncing knowledge", "Single source of truth", "Gap detection"],
+  },
+];
+
+export default function UseCasesSection() {
   return (
-    <section aria-label="Use cases" className="py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="use-cases">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-indigo-50/30 dark:from-blue-950/10 dark:via-transparent dark:to-indigo-950/10" />
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-indigo-400/10 rounded-full blur-3xl" />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12 sm:mb-16">
-          <Badge className="mb-4 sm:mb-6 px-3 py-2 sm:px-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white border-0 shadow-lg text-xs sm:text-sm">
-            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-2" /> 
-            Use Cases
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent">
-              Where SalesHQ
-            </span>{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              excels
-            </span>
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-            Transform your sales process with AI-powered workflows that deliver instant, accurate answers and boost team confidence on every call.
+    <section id="use-cases" aria-label="Use cases" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border">
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mb-12 sm:mb-16">
+          <p className="section-eyebrow">Use cases</p>
+          <h2 className="section-title mb-4">Built for the moments that decide deals</h2>
+          <p className="section-subtitle">
+            Wherever a rep needs the right answer fast — SalesHQ is already there.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-          {items.map(({ title, description, icon: Icon, color, bgColor, borderColor, features }, index) => (
-            <div 
-              key={title} 
-              className={`group relative ${bgColor} backdrop-blur-md bg-white/20 dark:bg-gray-900/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/20 dark:border-gray-700/30 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:scale-105 hover:bg-white/30 dark:hover:bg-gray-900/30`}
-              style={{ animationDelay: `${index * 150}ms` }}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {items.map(({ title, description, icon: Icon, features }) => (
+            <div
+              key={title}
+              className="flex flex-col rounded-xl border border-border bg-card p-6 sm:p-8 hover:border-foreground/20 transition-colors"
             >
-              {/* Card number */}
-              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 rounded-full flex items-center justify-center text-white dark:text-gray-900 text-xs sm:text-sm font-bold">
-                {index + 1}
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Icon className="w-5 h-5" />
               </div>
-              
-              {/* Icon */}
-              <div className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-r ${color} flex items-center justify-center mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                <Icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                {title}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                {description}
-              </p>
-              
-              {/* Features list */}
-              <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                {features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-xs sm:text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+              <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">{description}</p>
+              <ul className="mt-auto space-y-2.5">
+                {features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2.5 text-sm text-foreground/80">
+                    <Check className="w-4 h-4 text-primary shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
-              
-              {/* CTA */}
-              <div className="flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300 text-sm sm:text-base">
-                Learn more
-                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
-              
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 sm:mt-16">
-          <Button onClick={() => router.push('/features')} className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl sm:rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer text-sm sm:text-base">
-            Explore all features
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+        <div className="mt-12 text-center">
+          <Button asChild variant="outline" className="rounded-full px-6">
+            <Link href="/features">
+              Explore all features
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </Button>
         </div>
       </div>

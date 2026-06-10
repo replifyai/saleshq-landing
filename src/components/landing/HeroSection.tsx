@@ -1,230 +1,110 @@
-'use client'
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import Image from "next/image";
-import {
-  ArrowRight,
-  Play,
-  Calendar,
-  Sparkles,
-  Zap,
-  TrendingUp,
-  Shield,
-  Users,
-  Star,
-  CheckCircle,
-  BarChart3,
-  Brain,
-  MessageSquare,
-  Clock
-} from "lucide-react";
 import Link from "next/link";
+import { ArrowRight, FileText, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
-  const stats = {
-    users: 2847,
-    accuracy: 95,
-    timeSaved: 3.2
-  };
-
-  // Static headline phrase
-  const headlinePhrase = "AI Powered Intelligence";
-
   return (
-    <>
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          {/* Grid Pattern */}
-          <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] bg-[linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] [background-size:4rem_4rem]" />
+    <section id="hero" className="relative pt-32 sm:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Subtle background */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,hsl(221,83%,53%,0.08),transparent)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] [background-size:4rem_4rem] opacity-[0.35] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_0%,black,transparent)]" />
+      </div>
 
-          {/* Gradient Orbs */}
-          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 rounded-full blur-3xl" />
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Announcement */}
+          <Link
+            href="/referral-affiliate"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-sm text-muted-foreground hover:border-foreground/20 hover:text-foreground transition-colors mb-8"
+          >
+            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            New: Referral &amp; Affiliate platform for D2C brands
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+
+          {/* Headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+            Every answer your sales team needs, the moment they need it
+          </h1>
+
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
+            SalesHQ turns your product docs, pricing sheets, and battlecards into an AI assistant
+            that gives reps instant, source-backed answers — on calls, in chats, everywhere they sell.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+            <Button asChild size="lg" className="rounded-full px-7 h-12 text-base">
+              <Link href="/contact">
+                Start free trial
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="rounded-full px-7 h-12 text-base">
+              <Link href="https://calendly.com/saleshqai/30min" target="_blank" rel="noopener noreferrer">
+                Book a demo
+              </Link>
+            </Button>
+          </div>
+          <p className="text-sm text-muted-foreground">14-day free trial · No credit card required</p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Column - Content */}
-            <div className="text-center lg:text-left">
-              {/* Trust Badge */}
-              <div className="mb-8">
-                <Badge className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/50 rounded-full">
-                  <Sparkles className="w-4 h-4" />
-                  <span className="font-semibold">AI-Powered Sales Intelligence</span>
-                  <div className="w-2 h-2 bg-green-500 rounded-full" />
-                </Badge>
-              </div>
-
-              {/* Main Headline */}
-              <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight mb-8">
-                <span className="text-gray-900 dark:text-white">
-                  Transform Your Sales Team with
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  {headlinePhrase}
-                </span>
-              </h1>
-
-              {/* Subheadline */}
-              <div className="mb-12">
-                <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Give your sales reps <span className="font-semibold text-blue-600 dark:text-blue-400">instant access</span> to product knowledge,
-                  competitive intelligence, and AI-powered responses that close deals faster.
-                </p>
-              </div>
-
-              {/* Key Benefits */}
-              <div className="mb-12">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0">
-                  <div className="flex items-center gap-3 p-3 rounded-xl bg-white/80 dark:bg-gray-800/80 border border-gray-200/50 dark:border-gray-700/50">
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white text-sm">Instant Answers</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Real-time AI responses</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 p-3 rounded-xl bg-white/80 dark:bg-gray-800/80 border border-gray-200/50 dark:border-gray-700/50">
-
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white text-sm">40% Faster</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Deal closure rate</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 p-3 rounded-xl bg-white/80 dark:bg-gray-800/80 border border-gray-200/50 dark:border-gray-700/50">
-
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white text-sm">95% Accuracy</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Source-backed responses</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="mb-12">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link href="/contact">
-                    <Button
-                      size="lg"
-                      className="px-8 py-6 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-2xl rounded-xl"
-                    >
-                      Start Free Trial
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </Link>
-                  {/* <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="group px-8 py-6 text-lg font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 rounded-xl"
-                  onClick={() => window.open('https://calendly.com/saleshqai/30min', '_blank')}
-                >
-                  <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                  Book Demo
-                </Button> */}
-                </div>
-              </div>
+        {/* Product preview */}
+        <div className="mt-16 sm:mt-20 max-w-4xl mx-auto">
+          <div className="rounded-2xl border border-border bg-card shadow-[0_24px_60px_-24px_rgb(0_0_0/0.18)] overflow-hidden">
+            {/* Window chrome */}
+            <div className="flex items-center gap-2 border-b border-border bg-muted/50 px-4 py-3">
+              <span className="h-3 w-3 rounded-full bg-border" />
+              <span className="h-3 w-3 rounded-full bg-border" />
+              <span className="h-3 w-3 rounded-full bg-border" />
+              <span className="ml-3 text-xs text-muted-foreground">SalesHQ — Ask anything</span>
             </div>
 
-            {/* Right Column - Interactive Dashboard */}
-            <div>
-              <Card className="relative p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 border-0 shadow-2xl overflow-hidden">
-                {/* Dashboard Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-16 h-16 rounded-xl flex items-center justify-center">
-                      <Image src="/initials.png" alt="SalesHQ" width={50} height={50} priority />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-gray-900 dark:text-white">Dashboard</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Live Analytics</p>
-                    </div>
+            <div className="p-5 sm:p-8 space-y-4">
+              {/* Question */}
+              <div className="flex justify-end">
+                <div className="max-w-[85%] sm:max-w-[70%] rounded-2xl rounded-br-md bg-primary px-4 py-3 text-sm text-primary-foreground">
+                  Customer is asking how our warranty compares to Competitor X. What do I say?
+                </div>
+              </div>
+
+              {/* Answer */}
+              <div className="flex justify-start">
+                <div className="max-w-[90%] sm:max-w-[80%] rounded-2xl rounded-bl-md border border-border bg-muted/50 px-4 py-3 text-sm">
+                  <div className="flex items-center gap-1.5 mb-2 text-xs font-medium text-primary">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    SalesHQ
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
-                    <span className="text-xs text-green-600 dark:text-green-400 font-medium">Online</span>
+                  <p className="text-foreground leading-relaxed mb-3">
+                    We offer a 2-year comprehensive warranty covering parts and labour.
+                    Competitor X covers 1 year, parts only. Lead with the labour coverage —
+                    it&apos;s the gap customers care about most.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs text-muted-foreground">
+                      <FileText className="w-3 h-3" />
+                      Warranty Policy, p.4
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs text-muted-foreground">
+                      <FileText className="w-3 h-3" />
+                      Battlecard: Competitor X
+                    </span>
                   </div>
                 </div>
+              </div>
 
-                {/* Real-time Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/50 dark:to-blue-900/50 border border-blue-200 dark:border-blue-800/50">
-                    <div className="flex items-center gap-2 mb-2">
-                      <BarChart3 className="w-4 h-4 text-blue-600" />
-                      <span className="text-xs font-medium text-blue-700 dark:text-blue-300">Queries Today</span>
-                    </div>
-                    <div className="text-2xl font-bold text-blue-900 dark:text-blue-100">2,847</div>
-                    <div className="text-xs text-green-600 dark:text-green-400">+12% from yesterday</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-950/50 dark:to-emerald-900/50 border border-emerald-200 dark:border-emerald-800/50">
-                    <div className="flex items-center gap-2 mb-2">
-                      <TrendingUp className="w-4 h-4 text-emerald-600" />
-                      <span className="text-xs font-medium text-emerald-700 dark:text-emerald-300">Accuracy</span>
-                    </div>
-                    <div className="text-2xl font-bold text-emerald-900 dark:text-emerald-100">{stats.accuracy}%</div>
-                    <div className="text-xs text-green-600 dark:text-green-400">+2% this week</div>
-                  </div>
-                </div>
-
-                {/* Live Chat Preview */}
-                <div className="space-y-3">
-                  <div className="flex justify-end">
-                    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm p-3 rounded-2xl rounded-br-md max-w-[80%]">
-                      What's the warranty on Product X?
-                    </div>
-                  </div>
-
-                  <div className="flex justify-start">
-                    <div className="bg-gray-100 dark:bg-gray-700 text-sm p-3 rounded-2xl rounded-bl-md max-w-[85%]">
-                      <p className="text-gray-800 dark:text-gray-200 mb-2">Product X comes with a 2-year comprehensive warranty covering all manufacturing defects.</p>
-                      <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-600 rounded-lg p-2">
-                        <CheckCircle className="w-3 h-3 text-green-500" />
-                        <span>Source: Product Manual p.15</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-start">
-                    <div className="bg-gray-100 dark:bg-gray-700 text-sm p-3 rounded-2xl rounded-bl-md max-w-[70%]">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full" />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full" />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Stats */}
-                <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-2">
-                      <MessageSquare className="w-4 h-4 text-gray-500" />
-                      <span className="text-gray-600 dark:text-gray-400">Active conversations</span>
-                    </div>
-                    <span className="font-semibold text-gray-900 dark:text-white">47</span>
-                  </div>
-                </div>
-              </Card>
+              {/* Input bar */}
+              <div className="flex items-center gap-3 rounded-xl border border-border bg-background px-4 py-3">
+                <span className="text-sm text-muted-foreground flex-1">Ask about pricing, specs, competitors…</span>
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </span>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500">
-            <span className="text-xs font-medium">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-gray-300 dark:border-gray-600 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-gray-400 dark:bg-gray-500 rounded-full mt-2" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

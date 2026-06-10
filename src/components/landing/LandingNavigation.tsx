@@ -1,9 +1,9 @@
 'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/providers/theme-toggle";
-import Image from "next/image";
 import {
   Sheet,
   SheetContent,
@@ -11,22 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import {
-  Bot,
-  Menu,
-  X,
-  ChevronDown,
-  ArrowRight,
-  Sparkles,
-  Users,
-  BarChart3,
-  Target,
-  MessageSquare,
-  Calendar,
-  Globe,
-  Shield,
-  Zap
-} from "lucide-react";
+import { Menu, ArrowRight, Target, MessageSquare, Shield, Gift } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -36,318 +21,212 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const navigationItems = [
-  // { 
-  //   label: "Product", 
-  //   href: "#product",
-  //   dropdown: [
-  //     { 
-  //       label: "AI Intelligence", 
-  //       href: "#product", 
-  //       description: "Advanced AI-powered responses",
-  //       icon: <Bot className="w-4 h-4" />
-  //     },
-  //     { 
-  //       label: "Analytics Dashboard", 
-  //       href: "#product", 
-  //       description: "Real-time performance insights",
-  //       icon: <BarChart3 className="w-4 h-4" />
-  //     },
-  //     { 
-  //       label: "Team Collaboration", 
-  //       href: "#product", 
-  //       description: "Seamless team workflows",
-  //       icon: <Users className="w-4 h-4" />
-  //     },
-  //     { 
-  //       label: "Integrations", 
-  //       href: "#integrations", 
-  //       description: "Connect your favorite tools",
-  //       icon: <Globe className="w-4 h-4" />
-  //     }
-  //   ]
-  // },
+const solutions = [
   {
-    label: "Solutions",
-    href: "/solutions",
-    dropdown: [
-      {
-        label: "Sales Teams",
-        href: "/solutions/sales",
-        description: "Boost sales performance",
-        icon: <Target className="w-4 h-4" />
-      },
-      {
-        label: "Customer Support",
-        href: "/solutions/customer-support",
-        description: "Enhance customer experience",
-        icon: <MessageSquare className="w-4 h-4" />
-      },
-      {
-        label: "RevOps Teams",
-        href: "/solutions/revops",
-        description: "Optimize your operations",
-        icon: <Shield className="w-4 h-4" />
-      },
-      {
-        label: "D2C Brands (Referral & Affiliate)",
-        href: "/referral-affiliate",
-        description: "Referral & affiliate platform for D2C",
-        icon: <Sparkles className="w-4 h-4" />
-      },
-    ]
+    label: "Sales Teams",
+    href: "/solutions/sales",
+    description: "Instant answers on every call",
+    icon: <Target className="w-4 h-4" />,
   },
-  // { 
-  //   label: "Resources",
-  //   dropdown: [
-  //     { 
-  //       label: "Documentation", 
-  //       href: "/docs", 
-  //       description: "Complete API and setup guides",
-  //       icon: <Globe className="w-4 h-4" />
-  //     },
-  //     { 
-  //       label: "Case Studies", 
-  //       href: "/cases", 
-  //       description: "Success stories from customers",
-  //       icon: <BarChart3 className="w-4 h-4" />
-  //     },
-  //     { 
-  //       label: "Help Center", 
-  //       href: "/help", 
-  //       description: "Get support and answers",
-  //       icon: <MessageSquare className="w-4 h-4" />
-  //     },
-  //     { 
-  //       label: "Blog", 
-  //       href: "/blog", 
-  //       description: "Latest insights and updates",
-  //       icon: <Sparkles className="w-4 h-4" />
-  //     }
-  //   ]
-  // },
   {
-    label: "Features",
-    href: "/features"
+    label: "Customer Support",
+    href: "/solutions/customer-support",
+    description: "Faster, consistent responses",
+    icon: <MessageSquare className="w-4 h-4" />,
+  },
+  {
+    label: "RevOps Teams",
+    href: "/solutions/revops",
+    description: "One source of truth for revenue",
+    icon: <Shield className="w-4 h-4" />,
   },
   {
     label: "Referral & Affiliate",
-    href: "/referral-affiliate"
+    href: "/referral-affiliate",
+    description: "Growth platform for D2C brands",
+    icon: <Gift className="w-4 h-4" />,
   },
-  {
-    label: "About Us",
-    href: "/about"
-  },
-  {
-    label: "Contact Us",
-    href: "/contact"
-  }
 ];
 
-const ctaButtons = [
-  {
-    label: "Book Demo",
-    href: "https://calendly.com/saleshqai/30min",
-    variant: "outline" as const,
-    icon: <Calendar className="w-4 h-4" />
-  },
-  {
-    label: "Start Free Trial",
-    href: "/contact",
-    variant: "default" as const,
-    icon: <Zap className="w-4 h-4" />
-  }
+const links = [
+  { label: "Features", href: "/features" },
+  { label: "Referral & Affiliate", href: "/referral-affiliate" },
+  { label: "About", href: "/about" },
 ];
 
-export default function ModernNavigation() {
+export default function LandingNavigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
-
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 20);
+          setIsScrolled(window.scrollY > 8);
           ticking = false;
         });
         ticking = true;
       }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-      ? 'bg-white/95 dark:bg-gray-900/95 shadow-lg border-b border-gray-200/50 dark:border-gray-700/50'
-      : 'bg-transparent'
-      }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+        isScrolled
+          ? 'bg-background/80 backdrop-blur-xl border-b border-border'
+          : 'bg-transparent border-b border-transparent'
+      }`}
+    >
+      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="bg-white rounded-lg p-2">
-              <Image src="/logo.png" alt="SalesHQ" width={100} height={100} />
-            </div>
+          <Link href="/" className="flex items-center shrink-0">
+            <Image src="/logo.png" alt="SalesHQ" width={120} height={32} className="h-8 w-auto dark:bg-white dark:rounded-md dark:px-1.5 dark:py-0.5" priority />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-1">
             <NavigationMenu>
               <NavigationMenuList>
-                {navigationItems.map((item) => (
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-muted-foreground hover:text-foreground data-[state=open]:text-foreground">
+                    Solutions
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid grid-cols-2 gap-1 p-2 w-[480px]">
+                      {solutions.map((item) => (
+                        <NavigationMenuLink key={item.label} asChild>
+                          <Link
+                            href={item.href}
+                            className="flex items-start gap-3 rounded-lg p-3 no-underline outline-none transition-colors hover:bg-muted focus:bg-muted"
+                          >
+                            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-border bg-background text-foreground">
+                              {item.icon}
+                            </div>
+                            <div>
+                              <div className="text-sm font-medium text-foreground">{item.label}</div>
+                              <p className="text-xs text-muted-foreground mt-0.5">{item.description}</p>
+                            </div>
+                          </Link>
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                {links.map((item) => (
                   <NavigationMenuItem key={item.label}>
-                    {item.dropdown ? (
-                      <>
-                        <NavigationMenuTrigger className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                          {item.label}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <div className="grid gap-3 p-6 w-[500px]">
-                            {item.dropdown.map((dropdownItem) => (
-                              <NavigationMenuLink key={dropdownItem.label} asChild>
-                                <Link
-                                  href={dropdownItem.href}
-                                  className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-gray-900 dark:focus:text-white"
-                                >
-                                  <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white">
-                                      {dropdownItem.icon}
-                                    </div>
-                                    <div>
-                                      <div className="text-sm font-medium leading-none">
-                                        {dropdownItem.label}
-                                      </div>
-                                      <p className="line-clamp-2 text-sm leading-snug text-gray-600 dark:text-gray-400 mt-1">
-                                        {dropdownItem.description}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </Link>
-                              </NavigationMenuLink>
-                            ))}
-                          </div>
-                        </NavigationMenuContent>
-                      </>
-                    ) : (
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href={item.href}
-                          className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-gray-900 dark:focus:text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                        >
-                          {item.label}
-                        </Link>
-                      </NavigationMenuLink>
-                    )}
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href={item.href}
+                        className="inline-flex h-9 items-center rounded-md px-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:bg-muted focus:outline-none"
+                      >
+                        {item.label}
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
           </div>
 
-          {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center gap-2">
             <ThemeToggle />
-            {ctaButtons.map((button) => (
-              <Button
-                key={button.label}
-                variant={button.variant}
-                asChild
-                className={button.variant === 'default'
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105'
-                  : 'border-gray-300 dark:border-gray-600 text-gray-700 hover:text-black dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-700 hover:scale-105'
-                }
-              >
-                <Link href={button.href} className="flex items-center gap-2">
-                  {button.icon}
-                  {button.label}
-                </Link>
-              </Button>
-            ))}
+            <Button variant="ghost" asChild className="text-muted-foreground hover:text-foreground">
+              <Link href="https://calendly.com/saleshqai/30min" target="_blank" rel="noopener noreferrer">
+                Book a demo
+              </Link>
+            </Button>
+            <Button asChild className="rounded-full px-5">
+              <Link href="/contact">
+                Get started
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center gap-4">
+          {/* Mobile */}
+          <div className="lg:hidden flex items-center gap-2">
             <ThemeToggle />
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="p-2">
-                  <Menu className="w-6 h-6" />
+                <Button variant="ghost" size="icon">
+                  <Menu className="w-5 h-5" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] sm:w-[360px]">
                 <SheetHeader>
-                  <SheetTitle className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-white" />
-                    </div>
-                    <span>SalesHQ</span>
+                  <SheetTitle>
+                    <Image src="/logo.png" alt="SalesHQ" width={100} height={28} className="h-7 w-auto dark:bg-white dark:rounded-md dark:px-1.5 dark:py-0.5" />
                   </SheetTitle>
                 </SheetHeader>
 
-                <div className="mt-8 space-y-6">
-                  {/* Mobile Navigation Links */}
-                  <div className="space-y-4">
-                    {navigationItems.map((item) => (
-                      <div key={item.label}>
-                        <Link
-                          href={item.href || ''}
-                          className="block text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {item.label}
-                        </Link>
-                        {item.dropdown && (
-                          <div className="mt-2 ml-4 space-y-2">
-                            {item.dropdown.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.label}
-                                href={dropdownItem.href}
-                                className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                              >
-                                {dropdownItem.label}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
+                <div className="mt-8 flex flex-col gap-6">
+                  <div className="flex flex-col gap-1">
+                    <div className="px-1 pb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      Solutions
+                    </div>
+                    {solutions.map((item) => (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
                     ))}
                   </div>
 
-                  {/* Mobile CTA Buttons */}
-                  <div className="space-y-3 pt-6 border-t border-gray-200 dark:border-gray-700">
-                    {ctaButtons.map((button) => (
-                      <Button
-                        key={button.label}
-                        variant={button.variant}
-                        asChild
-                        className={`w-full ${button.variant === 'default'
-                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
-                          : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
-                          }`}
+                  <div className="flex flex-col gap-1 border-t border-border pt-4">
+                    {links.map((item) => (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <Link
-                          href={button.href}
-                          className="flex items-center justify-center gap-2"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {button.icon}
-                          {button.label}
-                        </Link>
-                      </Button>
+                        {item.label}
+                      </Link>
                     ))}
+                    <Link
+                      href="/contact"
+                      className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Contact
+                    </Link>
+                  </div>
+
+                  <div className="flex flex-col gap-2 border-t border-border pt-4">
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://calendly.com/saleshqai/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Book a demo
+                      </Link>
+                    </Button>
+                    <Button asChild>
+                      <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                        Get started
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </SheetContent>
             </Sheet>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

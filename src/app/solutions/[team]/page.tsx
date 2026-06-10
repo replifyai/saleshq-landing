@@ -1,436 +1,177 @@
-'use client'
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/navigation';
-import { notFound } from 'next/navigation';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Users,
-  Target,
-  Zap,
-  MessageSquare,
-  DollarSign,
-  Clock,
-  Brain,
-  Globe,
-  BarChart3,
-  BookOpen,
-  Shield,
-  ArrowLeft,
-  Play,
-  Award,
-  TrendingDown,
-  Activity,
-  PieChart,
-  LineChart,
-  Database,
-  Settings,
-  AlertCircle,
-  Phone,
-  Mail,
-  AlertTriangle,
-  Calculator,
-  Heart,
-  TrendingUp,
-  Link,
-  FileText,
-  Monitor,
-  Headphones,
-  Bot,
-  Search,
-  RefreshCw,
-  BarChart,
-  InspectIcon,
-  Share2,
-  MessageCircle
-} from 'lucide-react';
-import { getTeamById, getAllTeams } from '@/data/teamSolutions';
-import { useEffect, useState } from 'react';
+import { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ArrowLeft, Check } from "lucide-react";
+import { getTeamById, getAllTeams } from "@/data/teamSolutions";
 
 interface TeamSolutionPageProps {
-  params: Promise<{
-    team: string;
-  }>;
+  params: Promise<{ team: string }>;
 }
 
-export default function TeamSolutionPage({ params }: TeamSolutionPageProps) {
-  const router = useRouter();
-  const [teamData, setTeamData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export function generateStaticParams() {
+  return getAllTeams().map((team) => ({ team: team.id }));
+}
 
-  useEffect(() => {
-    const loadTeam = async () => {
-      const resolvedParams = await params;
-      const team = getTeamById(resolvedParams.team);
-      if (!team) {
-        notFound();
-      }
-      setTeamData(team);
-      setIsLoading(false);
-    };
-    
-    loadTeam();
-  }, [params]);
+export async function generateMetadata({ params }: TeamSolutionPageProps): Promise<Metadata> {
+  const { team } = await params;
+  const teamData = getTeamById(team);
+  if (!teamData) return {};
+  return {
+    title: `${teamData.name} | Solutions`,
+    description: teamData.description,
+  };
+}
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-slate-600 dark:text-slate-300">Loading...</p>
-        </div>
-      </div>
-    );
-  }
+export default async function TeamSolutionPage({ params }: TeamSolutionPageProps) {
+  const { team } = await params;
+  const teamData = getTeamById(team);
 
   if (!teamData) {
     notFound();
   }
 
-  const getTeamIcon = (teamId: string) => {
-    switch (teamId) {
-      case 'sales':
-        return <TrendingUp className="w-4 h-4 mr-2" />;
-      case 'customer-support':
-        return <MessageSquare className="w-4 h-4 mr-2" />;
-      case 'revops':
-        return <BarChart3 className="w-4 h-4 mr-2" />;
-      default:
-        return <Target className="w-4 h-4 mr-2" />;
-    }
-  };
-
-  const getTeamGradient = (teamId: string) => {
-    switch (teamId) {
-      case 'sales':
-        return 'from-blue-600 via-blue-700 to-blue-800';
-      case 'customer-support':
-        return 'from-emerald-600 via-emerald-700 to-emerald-800';
-      case 'revops':
-        return 'from-purple-600 via-purple-700 to-purple-800';
-      default:
-        return 'from-slate-600 via-slate-700 to-slate-800';
-    }
-  };
-
-  const getTeamColor = (teamId: string) => {
-    switch (teamId) {
-      case 'sales':
-        return 'from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-200';
-      case 'customer-support':
-        return 'from-emerald-600 via-emerald-700 to-emerald-800 dark:from-emerald-400 dark:via-emerald-300 dark:to-emerald-200';
-      case 'revops':
-        return 'from-purple-600 via-purple-700 to-purple-800 dark:from-purple-400 dark:via-purple-300 dark:to-purple-200';
-      default:
-        return 'from-slate-600 via-slate-700 to-slate-800 dark:from-slate-400 dark:via-slate-300 dark:to-slate-200';
-    }
-  };
-  const getIcons = (name: string) => {
-    switch (name) {
-      case 'Activity':
-        return <TrendingUp className="w-6 h-6" />;
-      case 'MessageSquare':
-        return <MessageSquare className="w-6 h-6" />;
-      case 'BarChart3':
-        return <BarChart3 className="w-6 h-6" />;
-      case 'BookOpen':
-        return <BookOpen className="w-6 h-6" />;
-      case 'Shield':
-        return <Shield className="w-6 h-6" />;
-      case 'Zap':
-        return <Zap className="w-6 h-6" />;
-      case 'Heart':
-        return <Heart className="w-6 h-6" />;
-      case 'Globe':
-        return <Globe className="w-6 h-6" />;
-      case 'Calculator':
-        return <Calculator className="w-6 h-6" />;
-      case 'Phone':
-        return <Phone className="w-6 h-6" />;
-      case 'Mail':
-        return <Mail className="w-6 h-6" />;
-      case 'AlertTriangle':
-        return <AlertTriangle className="w-6 h-6" />;
-      case 'LineChart':
-        return <LineChart className="w-6 h-6" />;
-      case 'Database':
-        return <Database className="w-6 h-6" />;
-      case 'Settings':
-        return <Settings className="w-6 h-6" />;
-      case 'AlertCircle':
-        return <AlertCircle className="w-6 h-6" />;
-      case 'PieChart':
-        return <PieChart className="w-6 h-6" />;
-      case 'Headphones':
-        return <Headphones className="w-6 h-6" />;
-      case 'Brain':
-        return <Brain className="w-6 h-6" />;
-      case 'Link':
-        return <Link className="w-6 h-6" />;
-      case 'FileText':
-        return <FileText className="w-6 h-6" />;
-      case 'Monitor':
-        return <Monitor className="w-6 h-6" />;
-      case 'TrendingDown':
-        return <TrendingDown className="w-6 h-6" />;
-      case 'DollarSign':
-        return <DollarSign className="w-6 h-6" />;
-      case 'TrendingUp':
-        return <TrendingUp className="w-6 h-6" />;
-      case 'Bot':
-        return <Bot className="w-6 h-6" />;
-      case 'Search':
-        return <Search className="w-6 h-6" />;
-      case 'RefreshCw':
-        return <RefreshCw className="w-6 h-6" />;
-      case 'BarChart':
-        return <BarChart className="w-6 h-6" />;
-      case 'CrystalBall':
-        return <InspectIcon className="w-6 h-6" />;
-      case 'Share2':
-        return <Share2 className="w-6 h-6" />;
-      case 'MessageCircle':
-        return <MessageCircle className="w-6 h-6" />;
-      default:
-        return name;
-    }
-  }
-
-  const getTeamHoverColor = (teamId: string) => {
-    switch (teamId) {
-      case 'sales':
-        return 'group-hover:text-blue-600 dark:group-hover:text-blue-400';
-      case 'customer-support':
-        return 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400';
-      case 'revops':
-        return 'group-hover:text-purple-600 dark:group-hover:text-purple-400';
-      default:
-        return 'group-hover:text-slate-600 dark:group-hover:text-slate-400';
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      {/* Header Section */}
-      <div className="relative overflow-hidden pt-6">
-        <div className={`absolute inset-0 bg-gradient-to-r ${teamData.color.replace('from-', '').replace(' to-', '-600/10 via-').replace('-600', '-500/10 to-').replace('-600', '-400/10')}`} />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex items-center mb-6">
-            <Button 
-              variant="ghost" 
-              onClick={() => router.push('/solutions')}
-              className="mr-4 text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Solutions
-            </Button>
-          </div>
-          
-          <div className="text-center">
-            <Badge variant="outline" className="mb-4 text-sm font-medium">
-              {getTeamIcon(teamData.id)}
-              {teamData.name}
-            </Badge>
-            <h1 className={`text-4xl md:text-6xl font-bold bg-gradient-to-r ${getTeamColor(teamData.id)} bg-clip-text text-transparent mb-6`}>
-              {teamData.id === 'sales' && 'Accelerate Sales with'}
-              {teamData.id === 'customer-support' && 'Elevate Customer'}
-              {teamData.id === 'revops' && 'Optimize Revenue'}
-              <span className="block">
-                {teamData.id === 'sales' && 'AI-Powered Intelligence'}
-                {teamData.id === 'customer-support' && 'Support Excellence'}
-                {teamData.id === 'revops' && 'Operations Excellence'}
-              </span>
-            </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              {teamData.description}
-            </p>
-            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className={`bg-gradient-to-r ${teamData.color} hover:opacity-90 text-white`}>
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-slate-300 dark:border-slate-600">
-                <Play className="w-4 h-4 mr-2" />
-                Watch Demo
-              </Button>
-            </div> */}
-          </div>
+    <div className="min-h-screen">
+      {/* Hero */}
+      <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute inset-x-0 top-0 h-[500px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,hsl(221,83%,53%,0.08),transparent)]" />
         </div>
-      </div>
-
-      {/* Key Metrics Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {teamData.metrics.map((metric: any, index: number) => (
-            <div key={index} className="text-center">
-              <div className={`text-4xl font-bold ${teamData.color.replace('from-', 'text-').replace(' to-', '-600 dark:text-').replace('-600', '-400')} mb-2`}>
-                {metric.value}
-              </div>
-              <div className="text-lg text-slate-600 dark:text-slate-300">{metric.label}</div>
-              {metric.trend && (
-                <div className="text-sm text-green-600 dark:text-green-400">{metric.trend}</div>
-              )}
-            </div>
-          ))}
+        <div className="max-w-3xl mx-auto">
+          <Link
+            href="/solutions"
+            className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            All solutions
+          </Link>
+          <p className="section-eyebrow">{teamData.name}</p>
+          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+            SalesHQ for {teamData.name}
+          </h1>
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+            {teamData.description}
+          </p>
         </div>
+      </section>
 
-        {/* Features Grid */}
-        <div className="space-y-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Everything Your {teamData.name} Needs
+      {/* Features */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-2xl mb-12">
+            <h2 className="section-title mb-4">
+              Everything your {teamData.name.toLowerCase()} need
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Powerful features designed specifically for {teamData.name.toLowerCase()} to boost performance, streamline processes, and drive results.
-            </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamData.features.map((feature: any) => (
-              <Card key={feature.id} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm relative overflow-hidden">
-                <CardHeader className="pb-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${feature.color} text-white shadow-lg mb-4`}>
-                    {getIcons(feature.icon)}
-                  </div>
-                  <CardTitle className={`text-xl font-semibold text-slate-900 dark:text-white ${getTeamHoverColor(teamData.id)} transition-colors`}>
-                    {feature.title}
-                  </CardTitle>
-                  <CardDescription className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                    {feature.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-slate-900 dark:text-white">Key Benefits:</h4>
-                    <ul className="space-y-1">
-                      {feature.benefits.map((benefit: string, index: number) => (
-                        <li key={index} className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                          <CheckCircle className="w-3 h-3 mr-2 text-green-500 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  {/* {feature.metrics && (
-                    <div className="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
-                      <div className="text-2xl font-bold text-slate-900 dark:text-white">{feature.metrics.value}</div>
-                      <div className="text-sm text-slate-600 dark:text-slate-300">{feature.metrics.label}</div>
-                    </div>
-                  )} */}
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamData.features.map((feature) => (
+              <div key={feature.id} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+                <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2.5">
+                  {feature.benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-center gap-2.5 text-sm text-foreground/80">
+                      <Check className="w-4 h-4 text-primary shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Team-Specific Sections */}
+      {/* Support channels (customer support team) */}
       {teamData.supportChannels && (
-        <div className="bg-slate-50 dark:bg-slate-800/50 py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                Multi-Channel Support Excellence
-              </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-                Deliver consistent, high-quality support across all customer touchpoints with unified knowledge and intelligent routing.
+        <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-2xl mb-12">
+              <h2 className="section-title mb-4">One knowledge base, every channel</h2>
+              <p className="section-subtitle">
+                Deliver consistent answers across every customer touchpoint.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {teamData.supportChannels.map((channel: any, index: number) => (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                  <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-r ${channel.color} text-white flex items-center justify-center`}>
-                    {getIcons(channel.icon)}
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">{channel.name}</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">{channel.description}</p>
-                </Card>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {teamData.supportChannels.map((channel) => (
+                <div key={channel.name} className="rounded-xl border border-border bg-card p-6">
+                  <h3 className="text-base font-semibold text-foreground mb-2">{channel.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{channel.description}</p>
+                </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
       )}
 
+      {/* Key metrics (revops team) */}
       {teamData.keyMetrics && (
-        <div className="bg-slate-50 dark:bg-slate-800/50 py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                Comprehensive Revenue Intelligence
-              </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-                Get complete visibility into your revenue operations with advanced analytics, forecasting, and optimization tools.
+        <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-2xl mb-12">
+              <h2 className="section-title mb-4">Complete revenue visibility</h2>
+              <p className="section-subtitle">
+                Analytics, forecasting, and optimization tools in one place.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {teamData.keyMetrics.map((metric: any, index: number) => (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                  <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-r ${metric.color} text-white flex items-center justify-center`}>
-                    {getIcons(metric.icon)}
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">{metric.name}</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">{metric.description}</p>
-                </Card>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {teamData.keyMetrics.map((metric) => (
+                <div key={metric.name} className="rounded-xl border border-border bg-card p-6">
+                  <h3 className="text-base font-semibold text-foreground mb-2">{metric.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{metric.description}</p>
+                </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
       )}
 
-      {/* Problems We Solve Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Common {teamData.name} Challenges We Solve
-          </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Every {teamData.name.toLowerCase()} faces these challenges. Our AI-powered platform helps you overcome them and achieve better results.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {teamData.problemsSolved.map((problem: string, index: number) => (
-            <div key={index} className="flex items-start space-x-3 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
-              <div className="w-6 h-6 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <AlertCircle className="w-3 h-3 text-red-600 dark:text-red-400" />
+      {/* Problems */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-2xl mb-12">
+            <h2 className="section-title mb-4">
+              The challenges we solve for {teamData.name.toLowerCase()}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {teamData.problemsSolved.map((problem) => (
+              <div key={problem} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
+                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                <p className="text-sm text-foreground/80">{problem}</p>
               </div>
-              <p className="text-slate-700 dark:text-slate-300">{problem}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* CTA Section */}
-      <div className={`bg-gradient-to-r ${getTeamGradient(teamData.id)} text-white py-16`}>
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your {teamData.name}?
+      {/* CTA */}
+      <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="section-title mb-4">
+            Ready to put SalesHQ behind your {teamData.name.toLowerCase()}?
           </h2>
-          <p className={`text-xl ${teamData.id === 'sales' ? 'text-blue-100' : teamData.id === 'customer-support' ? 'text-emerald-100' : 'text-purple-100'} mb-8`}>
-            Join thousands of {teamData.name.toLowerCase()} already using our AI-powered platform to achieve better results.
+          <p className="section-subtitle mb-8 max-w-md mx-auto">
+            Start a free trial or see it live on your own knowledge base.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-slate-900 hover:bg-slate-50" onClick={() => router.push('/contact')}>
-              Get Started Free
-              <ArrowRight className="w-4 h-4 ml-2" />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button asChild size="lg" className="rounded-full px-7 h-12">
+              <Link href="/contact">
+                Start free trial
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white bg-white/10 text-white hover:bg-white hover:text-slate-900" onClick={() => {
-              window.open('https://calendly.com/saleshqai/30min', '_blank');
-            }}>
-              <MessageSquare className="w-4 h-4 mr-2" />
-              Schedule Demo
+            <Button asChild size="lg" variant="outline" className="rounded-full px-7 h-12">
+              <Link href="https://calendly.com/saleshqai/30min" target="_blank" rel="noopener noreferrer">
+                Book a demo
+              </Link>
             </Button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

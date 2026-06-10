@@ -4,18 +4,23 @@ import Link from "next/link";
 import {
     ArrowRight,
     Check,
-    Zap,
+    Share2,
+    Award,
+    MessageCircle,
+    Wallet,
+    Link2,
+    LayoutDashboard,
+    BadgePercent,
     TrendingUp,
     Shield,
     Eye,
     Users,
-    ChevronRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Referral & Affiliate for D2C Brands | SalesHQ",
     description:
-        "Referral and affiliate platform for India's D2C brands. WhatsApp-first, UPI payouts, TDS/PAN/GST. Turn customers and creators into a sales channel.",
+        "Referral and affiliate platform for India's D2C brands. WhatsApp-first sharing, instant UPI payouts, TDS/PAN/GST compliance. Turn customers and creators into a sales channel.",
     keywords: [
         "referral program",
         "affiliate marketing",
@@ -34,26 +39,74 @@ export const metadata: Metadata = {
     },
 };
 
+const steps = [
+    {
+        number: "01",
+        title: "Launch your program",
+        description:
+            "Set reward rules, branding, and payout terms in a no-code dashboard. Go live in under 30 minutes.",
+    },
+    {
+        number: "02",
+        title: "Customers & creators share",
+        description:
+            "Unique links and codes spread over WhatsApp, Instagram, and SMS. Every click and conversion is tracked automatically.",
+    },
+    {
+        number: "03",
+        title: "Rewards pay out instantly",
+        description:
+            "Confirmed conversions trigger same-day UPI payouts, with TDS deducted and documented automatically.",
+    },
+];
+
 const features = [
     {
-        title: "Customer Referrals",
-        description: "Turn customers into advocates with shareable links and instant rewards.",
-        items: ["WhatsApp & SMS sharing", "Instant UPI rewards", "QR codes for packaging"],
+        icon: Share2,
+        title: "Customer referrals",
+        description: "Turn buyers into advocates the moment they check out.",
+        items: ["WhatsApp, SMS & email sharing", "Thank-you page widgets", "QR codes for packaging inserts"],
     },
     {
-        title: "Affiliate Program",
-        description: "Scale creator partnerships without spreadsheets.",
-        items: ["Custom discount codes", "Tiered commissions", "Real-time analytics"],
+        icon: Award,
+        title: "Affiliate & creator program",
+        description: "Scale influencer partnerships without spreadsheets.",
+        items: ["Branded landing pages & custom codes", "Tiered commission structures", "Real-time performance dashboard"],
     },
     {
-        title: "WhatsApp-First",
-        description: "Run your program where customers already are.",
-        items: ["Native flows", "Pre-approved templates", "Auto status updates"],
+        icon: MessageCircle,
+        title: "WhatsApp-first",
+        description: "Run the entire program where your customers already are.",
+        items: ["Native WhatsApp flows", "Pre-approved message templates", "Automated reward status updates"],
     },
     {
-        title: "UPI & Compliance",
-        description: "Instant payouts with built-in tax compliance.",
-        items: ["Same-day UPI payouts", "Auto TDS deduction", "PAN & GST verification"],
+        icon: Wallet,
+        title: "UPI payouts & compliance",
+        description: "Instant rewards with Indian tax compliance built in.",
+        items: ["Same-day UPI payouts", "Automatic TDS deduction & certificates", "PAN & GST verification, ITR-ready exports"],
+    },
+];
+
+const affiliatePerks = [
+    {
+        icon: Link2,
+        title: "Your own link & code",
+        description: "Every affiliate gets a branded landing page, unique link, and custom discount code to share anywhere.",
+    },
+    {
+        icon: LayoutDashboard,
+        title: "Live earnings dashboard",
+        description: "Clicks, conversions, and commissions update in real time — no waiting for a monthly report.",
+    },
+    {
+        icon: Wallet,
+        title: "Same-day UPI payouts",
+        description: "Earnings land directly in any Indian bank account via UPI, with TDS certificates generated for you.",
+    },
+    {
+        icon: BadgePercent,
+        title: "Transparent commissions",
+        description: "Clear tier rules and per-order breakdowns, so affiliates always know exactly what they earn.",
     },
 ];
 
@@ -61,7 +114,7 @@ const plans = [
     {
         name: "Starter",
         price: "₹2,999",
-        description: "For early-stage creators",
+        description: "For early-stage brands",
         revenue: "Up to ₹20L",
         commission: "1.8%",
         features: ["Basic reports", "Email support", "Limited affiliates"],
@@ -73,12 +126,11 @@ const plans = [
         revenue: "Up to ₹50L",
         commission: "1.8% → 1%",
         features: ["Advanced analytics", "Priority support", "Medium affiliates"],
-        popular: false,
     },
     {
         name: "Scale",
         price: "₹9,999",
-        description: "For high-volume partners",
+        description: "For high-volume brands",
         revenue: "Up to ₹1Cr",
         commission: "1.8% → 0.75%",
         features: ["API access", "Priority + onboarding", "Unlimited affiliates"],
@@ -94,72 +146,124 @@ const plans = [
     },
 ];
 
+const slabs = [
+    { slab: "Up to ₹20,00,000", rate: "1.8%" },
+    { slab: "₹20,00,001 – ₹50,00,000", rate: "1.0%" },
+    { slab: "₹50,00,001 – ₹1,00,00,000", rate: "0.75%" },
+    { slab: "Above ₹1,00,00,000", rate: "0.5%" },
+];
+
+const exampleRows = [
+    { slab: "First ₹20L", amount: "₹20,00,000", rate: "1.8%", commission: "₹36,000" },
+    { slab: "Next ₹30L", amount: "₹30,00,000", rate: "1.0%", commission: "₹30,000" },
+    { slab: "Next ₹25L", amount: "₹25,00,000", rate: "0.75%", commission: "₹18,750" },
+];
+
 const faqs = [
     {
         question: "How quickly can I launch?",
-        answer: "Go live in under 30 minutes. No technical setup required.",
+        answer: "Go live in under 30 minutes. No technical setup or engineering time required.",
     },
     {
         question: "What payout methods are supported?",
-        answer: "Instant UPI payouts to any Indian bank account. Bank transfers for affiliates.",
+        answer: "Instant UPI payouts to any Indian bank account, with bank transfer available for affiliates.",
     },
     {
         question: "How does TDS compliance work?",
-        answer: "We automatically deduct TDS on payouts above ₹20,000/year and generate certificates.",
+        answer: "We automatically deduct TDS on payouts above ₹20,000 per year and generate certificates for every payee.",
     },
     {
-        question: "Can I run this on WhatsApp only?",
-        answer: "Yes. Everything from referral sharing to rewards runs natively on WhatsApp.",
+        question: "Can I run my program entirely on WhatsApp?",
+        answer: "Yes. Referral sharing, status updates, and reward notifications all run natively on WhatsApp.",
+    },
+    {
+        question: "How are affiliates onboarded?",
+        answer: "Invite them with a link. They verify PAN and bank details once, get their branded page and code, and can start sharing immediately.",
+    },
+    {
+        question: "What does the beta include?",
+        answer: "Beta partners get the full platform with no platform fee — only the usage-based commission applies. Beta pricing is locked in for early adopters.",
     },
 ];
 
 export default function ReferralAffiliatePage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-neutral-950">
+        <div className="min-h-screen">
             {/* Hero */}
-            <section className="pt-32 sm:pt-40 lg:pt-48 pb-24 sm:pb-32 px-4 sm:px-6 lg:px-8">
+            <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <div className="pointer-events-none absolute inset-0 -z-10">
+                    <div className="absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,hsl(160,84%,39%,0.08),transparent)]" />
+                </div>
+
                 <div className="max-w-3xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-8 rounded-full bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                        Coming Soon
+                    <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-sm text-muted-foreground mb-8">
+                        <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                        Now in beta — ₹0 platform fee for early partners
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 dark:text-white mb-6">
-                        Referral & Affiliate
-                        <span className="block text-neutral-400 dark:text-neutral-500">for D2C Brands</span>
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+                        Turn customers and creators into your best sales channel
                     </h1>
 
-                    <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto mb-10">
-                        Turn customers and creators into a 24/7 sales channel. WhatsApp-first. Instant UPI payouts. Full compliance.
+                    <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
+                        The referral &amp; affiliate platform built for India&apos;s D2C brands.
+                        WhatsApp-first sharing, instant UPI payouts, and TDS/PAN/GST compliance — handled.
                     </p>
 
-                    <Button
-                        asChild
-                        size="lg"
-                        className="h-12 px-8 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 rounded-full font-medium transition-all"
-                    >
-                        <Link href="/contact" className="inline-flex items-center gap-2">
-                            Join the Beta
-                            <ArrowRight className="w-4 h-4" />
-                        </Link>
-                    </Button>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <Button asChild size="lg" className="rounded-full px-7 h-12 text-base bg-emerald-600 hover:bg-emerald-700 text-white">
+                            <Link href="/contact">
+                                Join the beta
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </Button>
+                        <Button asChild size="lg" variant="outline" className="rounded-full px-7 h-12 text-base">
+                            <Link href="https://calendly.com/saleshqai/30min" target="_blank" rel="noopener noreferrer">
+                                Book a demo
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </section>
 
             {/* Stats */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-y border-neutral-200 dark:border-neutral-800">
+            <section className="py-14 px-4 sm:px-6 lg:px-8 border-y border-border bg-muted/30">
                 <div className="max-w-4xl mx-auto">
                     <div className="grid grid-cols-3 gap-8 text-center">
                         {[
-                            { value: "30%", label: "customers from referrals" },
-                            { value: "<30 min", label: "to go live" },
-                            { value: "₹0", label: "beta platform fee" },
+                            { value: "<30 min", label: "to launch your program" },
+                            { value: "Same day", label: "UPI reward payouts" },
+                            { value: "₹0", label: "platform fee during beta" },
                         ].map(({ value, label }) => (
                             <div key={label}>
-                                <div className="text-2xl sm:text-4xl font-semibold text-neutral-900 dark:text-white mb-1">
+                                <div className="text-2xl sm:text-4xl font-semibold tracking-tight text-foreground mb-1">
                                     {value}
                                 </div>
-                                <div className="text-sm text-neutral-500 dark:text-neutral-400">{label}</div>
+                                <div className="text-sm text-muted-foreground">{label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* How it works */}
+            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto">
+                    <div className="max-w-2xl mb-12 sm:mb-16">
+                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4">
+                            How it works
+                        </p>
+                        <h2 className="section-title mb-4">From setup to first payout in three steps</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {steps.map(({ number, title, description }) => (
+                            <div key={number} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+                                <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400 tabular-nums">
+                                    {number}
+                                </span>
+                                <h3 className="text-lg font-semibold text-foreground mt-4 mb-2">{title}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
                             </div>
                         ))}
                     </div>
@@ -167,33 +271,30 @@ export default function ReferralAffiliatePage() {
             </section>
 
             {/* Features */}
-            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-white mb-4">
-                            Everything you need
-                        </h2>
-                        <p className="text-neutral-600 dark:text-neutral-400 max-w-lg mx-auto">
-                            A complete platform to run referral and affiliate programs at scale.
+            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
+                <div className="max-w-6xl mx-auto">
+                    <div className="max-w-2xl mb-12 sm:mb-16">
+                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4">
+                            Platform
+                        </p>
+                        <h2 className="section-title mb-4">Everything you need to run referrals at scale</h2>
+                        <p className="section-subtitle">
+                            One platform for customer referrals and creator affiliates — built for how India shops.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {features.map(({ title, description, items }) => (
-                            <div
-                                key={title}
-                                className="group p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors"
-                            >
-                                <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">
-                                    {title}
-                                </h3>
-                                <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-6">
-                                    {description}
-                                </p>
+                        {features.map(({ icon: Icon, title, description, items }) => (
+                            <div key={title} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+                                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                                    <Icon className="w-5 h-5" />
+                                </div>
+                                <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
+                                <p className="text-sm text-muted-foreground mb-6">{description}</p>
                                 <ul className="space-y-2.5">
-                                    {items.map((item, i) => (
-                                        <li key={i} className="flex items-center gap-2.5 text-sm text-neutral-700 dark:text-neutral-300">
-                                            <Check className="w-4 h-4 text-neutral-400 dark:text-neutral-500" />
+                                    {items.map((item) => (
+                                        <li key={item} className="flex items-start gap-2.5 text-sm text-foreground/80">
+                                            <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                                             {item}
                                         </li>
                                     ))}
@@ -204,55 +305,85 @@ export default function ReferralAffiliatePage() {
                 </div>
             </section>
 
-            {/* Pricing */}
-            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-neutral-900/50">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-white mb-4">
-                            Simple, transparent pricing
-                        </h2>
-                        <p className="text-neutral-600 dark:text-neutral-400 max-w-lg mx-auto">
-                            Monthly platform fee + progressive commission. Lower rates as you scale.
+            {/* For affiliates */}
+            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border">
+                <div className="max-w-6xl mx-auto">
+                    <div className="max-w-2xl mb-12 sm:mb-16">
+                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4">
+                            For affiliates &amp; creators
+                        </p>
+                        <h2 className="section-title mb-4">An experience your partners will actually love</h2>
+                        <p className="section-subtitle">
+                            Programs grow when sharing is effortless and payouts are fast. We obsess over the
+                            affiliate side so your partners keep promoting.
                         </p>
                     </div>
 
-                    {/* Plans Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {affiliatePerks.map(({ icon: Icon, title, description }) => (
+                            <div key={title} className="rounded-xl border border-border bg-card p-6 hover:border-foreground/20 transition-colors">
+                                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                                    <Icon className="w-5 h-5" />
+                                </div>
+                                <h3 className="text-base font-semibold text-foreground mb-2">{title}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing */}
+            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
+                <div className="max-w-6xl mx-auto">
+                    <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4 justify-center">
+                            Pricing
+                        </p>
+                        <h2 className="section-title mb-4">Simple, transparent pricing</h2>
+                        <p className="section-subtitle">
+                            Monthly platform fee plus a progressive commission that drops as you scale.
+                        </p>
+                    </div>
+
+                    {/* Plans */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
                         {plans.map((plan) => (
                             <div
                                 key={plan.name}
-                                className={`relative p-6 rounded-2xl bg-white dark:bg-neutral-900 border transition-all ${plan.popular
-                                        ? "border-neutral-900 dark:border-white shadow-lg"
-                                        : "border-neutral-200 dark:border-neutral-800"
-                                    }`}
+                                className={`relative rounded-xl bg-card p-6 border transition-colors ${
+                                    plan.popular
+                                        ? "border-emerald-500 shadow-[0_0_0_1px_theme(colors.emerald.500)]"
+                                        : "border-border"
+                                }`}
                             >
                                 {plan.popular && (
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-medium rounded-full">
-                                        Popular
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-3 py-1 text-xs font-medium text-white">
+                                        Most popular
                                     </div>
                                 )}
                                 <div className="mb-4">
-                                    <h3 className="text-lg font-semibold text-neutral-900 dark:text-white">{plan.name}</h3>
-                                    <p className="text-sm text-neutral-500 dark:text-neutral-400">{plan.description}</p>
+                                    <h3 className="text-lg font-semibold text-foreground">{plan.name}</h3>
+                                    <p className="text-sm text-muted-foreground">{plan.description}</p>
                                 </div>
                                 <div className="mb-6">
-                                    <span className="text-3xl font-semibold text-neutral-900 dark:text-white">{plan.price}</span>
-                                    {plan.price !== "Custom" && <span className="text-neutral-500 dark:text-neutral-400 text-sm">/mo</span>}
+                                    <span className="text-3xl font-semibold tracking-tight text-foreground">{plan.price}</span>
+                                    {plan.price !== "Custom" && <span className="text-sm text-muted-foreground">/mo</span>}
                                 </div>
                                 <div className="space-y-3 text-sm mb-6">
-                                    <div className="flex justify-between py-2 border-b border-neutral-100 dark:border-neutral-800">
-                                        <span className="text-neutral-500 dark:text-neutral-400">Revenue</span>
-                                        <span className="font-medium text-neutral-900 dark:text-white">{plan.revenue}</span>
+                                    <div className="flex justify-between py-2 border-b border-border">
+                                        <span className="text-muted-foreground">Revenue</span>
+                                        <span className="font-medium text-foreground">{plan.revenue}</span>
                                     </div>
-                                    <div className="flex justify-between py-2 border-b border-neutral-100 dark:border-neutral-800">
-                                        <span className="text-neutral-500 dark:text-neutral-400">Commission</span>
-                                        <span className="font-medium text-neutral-900 dark:text-white">{plan.commission}</span>
+                                    <div className="flex justify-between py-2 border-b border-border">
+                                        <span className="text-muted-foreground">Commission</span>
+                                        <span className="font-medium text-foreground">{plan.commission}</span>
                                     </div>
                                 </div>
                                 <ul className="space-y-2">
-                                    {plan.features.map((feature, i) => (
-                                        <li key={i} className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
-                                            <Check className="w-4 h-4 text-neutral-400" />
+                                    {plan.features.map((feature) => (
+                                        <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <Check className="w-4 h-4 text-emerald-500 shrink-0" />
                                             {feature}
                                         </li>
                                     ))}
@@ -261,34 +392,27 @@ export default function ReferralAffiliatePage() {
                         ))}
                     </div>
 
-                    {/* Commission Table */}
-                    <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden">
-                        <div className="p-6 sm:p-8 border-b border-neutral-200 dark:border-neutral-800">
-                            <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">
-                                Progressive Commission
-                            </h3>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Commission decreases as you scale. Calculated incrementally per slab.
+                    {/* Commission slabs */}
+                    <div className="rounded-xl border border-border bg-card overflow-hidden">
+                        <div className="p-6 sm:p-8 border-b border-border">
+                            <h3 className="text-xl font-semibold text-foreground mb-2">Progressive commission</h3>
+                            <p className="text-sm text-muted-foreground">
+                                Rates decrease as you scale, calculated incrementally per slab — like income tax, but in your favour.
                             </p>
                         </div>
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm">
                                 <thead>
-                                    <tr className="border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/50">
-                                        <th className="text-left py-4 px-6 font-medium text-neutral-600 dark:text-neutral-400">Revenue Slab</th>
-                                        <th className="text-right py-4 px-6 font-medium text-neutral-600 dark:text-neutral-400">Rate</th>
+                                    <tr className="border-b border-border bg-muted/50">
+                                        <th className="text-left py-4 px-6 font-medium text-muted-foreground">Revenue slab</th>
+                                        <th className="text-right py-4 px-6 font-medium text-muted-foreground">Rate</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {[
-                                        { slab: "Up to ₹20,00,000", rate: "1.8%" },
-                                        { slab: "₹20,00,001 – ₹50,00,000", rate: "1.0%" },
-                                        { slab: "₹50,00,001 – ₹1,00,00,000", rate: "0.75%" },
-                                        { slab: "Above ₹1,00,00,000", rate: "0.5%" },
-                                    ].map(({ slab, rate }, i, arr) => (
-                                        <tr key={slab} className={i !== arr.length - 1 ? "border-b border-neutral-100 dark:border-neutral-800/50" : ""}>
-                                            <td className="py-4 px-6 text-neutral-700 dark:text-neutral-300">{slab}</td>
-                                            <td className="py-4 px-6 text-right font-semibold text-neutral-900 dark:text-white">{rate}</td>
+                                    {slabs.map(({ slab, rate }, i) => (
+                                        <tr key={slab} className={i !== slabs.length - 1 ? "border-b border-border" : ""}>
+                                            <td className="py-4 px-6 text-foreground/80">{slab}</td>
+                                            <td className="py-4 px-6 text-right font-semibold text-foreground">{rate}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -296,53 +420,43 @@ export default function ReferralAffiliatePage() {
                         </div>
                     </div>
 
-                    {/* Example Calculation */}
-                    <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+                    {/* Example */}
+                    <div className="mt-8 rounded-xl border border-border bg-card p-6 sm:p-8">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                             <div>
-                                <h4 className="font-semibold text-neutral-900 dark:text-white">Example Calculation</h4>
-                                <p className="text-sm text-neutral-500 dark:text-neutral-400">Revenue: ₹75,00,000</p>
+                                <h4 className="font-semibold text-foreground">Example calculation</h4>
+                                <p className="text-sm text-muted-foreground">Annual revenue: ₹75,00,000</p>
                             </div>
-                            <div className="flex gap-6 text-sm">
+                            <div className="flex gap-8 text-sm">
                                 <div>
-                                    <span className="text-neutral-500 dark:text-neutral-400">Total Commission</span>
-                                    <p className="text-lg font-semibold text-neutral-900 dark:text-white">₹84,750</p>
+                                    <span className="text-muted-foreground">Total commission</span>
+                                    <p className="text-lg font-semibold text-foreground">₹84,750</p>
                                 </div>
                                 <div>
-                                    <span className="text-neutral-500 dark:text-neutral-400">Effective Rate</span>
-                                    <p className="text-lg font-semibold text-neutral-900 dark:text-white">1.13%</p>
+                                    <span className="text-muted-foreground">Effective rate</span>
+                                    <p className="text-lg font-semibold text-foreground">1.13%</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="overflow-x-auto rounded-lg border border-neutral-100 dark:border-neutral-800">
+                        <div className="overflow-x-auto rounded-lg border border-border">
                             <table className="w-full text-sm">
                                 <thead>
-                                    <tr className="bg-neutral-50 dark:bg-neutral-800/50">
-                                        <th className="text-left py-3 px-4 font-medium text-neutral-600 dark:text-neutral-400">Slab</th>
-                                        <th className="text-right py-3 px-4 font-medium text-neutral-600 dark:text-neutral-400">Amount</th>
-                                        <th className="text-right py-3 px-4 font-medium text-neutral-600 dark:text-neutral-400">Rate</th>
-                                        <th className="text-right py-3 px-4 font-medium text-neutral-600 dark:text-neutral-400">Commission</th>
+                                    <tr className="bg-muted/50">
+                                        <th className="text-left py-3 px-4 font-medium text-muted-foreground">Slab</th>
+                                        <th className="text-right py-3 px-4 font-medium text-muted-foreground">Amount</th>
+                                        <th className="text-right py-3 px-4 font-medium text-muted-foreground">Rate</th>
+                                        <th className="text-right py-3 px-4 font-medium text-muted-foreground">Commission</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="border-t border-neutral-100 dark:border-neutral-800/50">
-                                        <td className="py-3 px-4 text-neutral-700 dark:text-neutral-300">First ₹20L</td>
-                                        <td className="py-3 px-4 text-right text-neutral-600 dark:text-neutral-400">₹20,00,000</td>
-                                        <td className="py-3 px-4 text-right text-neutral-600 dark:text-neutral-400">1.8%</td>
-                                        <td className="py-3 px-4 text-right text-neutral-900 dark:text-white font-medium">₹36,000</td>
-                                    </tr>
-                                    <tr className="border-t border-neutral-100 dark:border-neutral-800/50">
-                                        <td className="py-3 px-4 text-neutral-700 dark:text-neutral-300">Next ₹30L</td>
-                                        <td className="py-3 px-4 text-right text-neutral-600 dark:text-neutral-400">₹30,00,000</td>
-                                        <td className="py-3 px-4 text-right text-neutral-600 dark:text-neutral-400">1.0%</td>
-                                        <td className="py-3 px-4 text-right text-neutral-900 dark:text-white font-medium">₹30,000</td>
-                                    </tr>
-                                    <tr className="border-t border-neutral-100 dark:border-neutral-800/50">
-                                        <td className="py-3 px-4 text-neutral-700 dark:text-neutral-300">Next ₹25L</td>
-                                        <td className="py-3 px-4 text-right text-neutral-600 dark:text-neutral-400">₹25,00,000</td>
-                                        <td className="py-3 px-4 text-right text-neutral-600 dark:text-neutral-400">0.75%</td>
-                                        <td className="py-3 px-4 text-right text-neutral-900 dark:text-white font-medium">₹18,750</td>
-                                    </tr>
+                                    {exampleRows.map((row) => (
+                                        <tr key={row.slab} className="border-t border-border">
+                                            <td className="py-3 px-4 text-foreground/80">{row.slab}</td>
+                                            <td className="py-3 px-4 text-right text-muted-foreground">{row.amount}</td>
+                                            <td className="py-3 px-4 text-right text-muted-foreground">{row.rate}</td>
+                                            <td className="py-3 px-4 text-right font-medium text-foreground">{row.commission}</td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </div>
@@ -356,37 +470,30 @@ export default function ReferralAffiliatePage() {
                             { icon: Eye, text: "Fully transparent" },
                             { icon: Users, text: "Partner-aligned" },
                         ].map(({ icon: Icon, text }) => (
-                            <div key={text} className="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-400">
-                                <div className="w-8 h-8 rounded-lg bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
-                                    <Icon className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
+                            <div key={text} className="flex items-center gap-3 text-sm text-muted-foreground">
+                                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border bg-background">
+                                    <Icon className="w-4 h-4" />
                                 </div>
                                 {text}
                             </div>
                         ))}
                     </div>
 
-                    {/* Notes */}
-                    <div className="mt-8 text-center text-sm text-neutral-500 dark:text-neutral-500">
-                        All fees exclusive of taxes • Commission on net eligible revenue • Annual billing discounts available
-                    </div>
+                    <p className="mt-8 text-center text-sm text-muted-foreground">
+                        All fees exclusive of taxes · Commission on net eligible revenue · Annual billing discounts available
+                    </p>
                 </div>
             </section>
 
             {/* FAQ */}
-            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-2xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-white text-center mb-12">
-                        Questions?
-                    </h2>
-
-                    <div className="space-y-4">
-                        {faqs.map(({ question, answer }, i) => (
-                            <div
-                                key={i}
-                                className="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors"
-                            >
-                                <h3 className="font-medium text-neutral-900 dark:text-white mb-2">{question}</h3>
-                                <p className="text-sm text-neutral-600 dark:text-neutral-400">{answer}</p>
+            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border">
+                <div className="max-w-3xl mx-auto">
+                    <h2 className="section-title text-center mb-12">Questions, answered</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {faqs.map(({ question, answer }) => (
+                            <div key={question} className="rounded-xl border border-border bg-card p-5">
+                                <h3 className="font-medium text-foreground mb-2">{question}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed">{answer}</p>
                             </div>
                         ))}
                     </div>
@@ -394,21 +501,15 @@ export default function ReferralAffiliatePage() {
             </section>
 
             {/* CTA */}
-            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-neutral-200 dark:border-neutral-800">
+            <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-white mb-4">
-                        Ready to get started?
-                    </h2>
-                    <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto">
-                        Join the beta and transform your customers into your sales channel.
+                    <h2 className="section-title mb-4">Launch your referral program this week</h2>
+                    <p className="section-subtitle mb-8 max-w-md mx-auto">
+                        Join the beta — ₹0 platform fee, full feature access, and hands-on onboarding.
                     </p>
-                    <Button
-                        asChild
-                        size="lg"
-                        className="h-12 px-8 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 rounded-full font-medium transition-all"
-                    >
-                        <Link href="/contact" className="inline-flex items-center gap-2">
-                            Join the Beta
+                    <Button asChild size="lg" className="rounded-full px-7 h-12 text-base bg-emerald-600 hover:bg-emerald-700 text-white">
+                        <Link href="/contact">
+                            Join the beta
                             <ArrowRight className="w-4 h-4" />
                         </Link>
                     </Button>

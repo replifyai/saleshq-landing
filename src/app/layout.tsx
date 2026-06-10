@@ -5,7 +5,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import ThemeProvider from "@/providers/theme-provider";
-import ThreeJSProvider from "@/providers/threejs-toys-loader";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -128,13 +127,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/icon/browserconfig.xml" />
-        {/* Preload critical resources for better performance */}
         <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preload" href="/initials.png" as="image" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        {/* Prefetch critical CSS */}
-        <link rel="prefetch" href="/_next/static/css/app/layout.css" as="style" />
       </head>
       <body
         suppressHydrationWarning
@@ -163,16 +156,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <ThemeProvider>
-          {/* <ThreeJSProvider /> */}
           <div className="min-h-screen bg-background">
-            <div className="px-4 sticky top-0 z-50">
-              <LandingNavigation />
-            </div>
+            <LandingNavigation />
             {children}
             <FooterSection />
           </div>
         </ThemeProvider>
-        {/* <Providers>{children}</Providers> */}
       </body>
     </html>
   );
