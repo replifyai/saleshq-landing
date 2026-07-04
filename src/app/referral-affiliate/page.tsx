@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ReferralCreative from "@/components/creatives/ReferralCreative";
+import JsonLd, { SITE_URL } from "@/components/seo/JsonLd";
 import {
     ArrowRight,
     Check,
@@ -31,10 +33,12 @@ export const metadata: Metadata = {
         "influencer marketing",
         "referral rewards",
     ],
+    alternates: { canonical: "/referral-affiliate" },
     openGraph: {
         title: "Referral & Affiliate for D2C Brands | SalesHQ",
         description:
             "Referral and affiliate platform for India's D2C brands. WhatsApp-first, UPI payouts, TDS/PAN/GST.",
+        url: "/referral-affiliate",
         type: "website",
     },
 };
@@ -187,21 +191,62 @@ const faqs = [
 ];
 
 export default function ReferralAffiliatePage() {
+    const schemas = [
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "SalesHQ Referral & Affiliate",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            description:
+                "Referral and affiliate platform for India's D2C brands with WhatsApp-first sharing, instant UPI payouts, and TDS/PAN/GST compliance.",
+            url: `${SITE_URL}/referral-affiliate`,
+            provider: { "@type": "Organization", name: "SalesHQ", url: SITE_URL },
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Products", item: `${SITE_URL}/#products` },
+                { "@type": "ListItem", position: 2, name: "Referral & Affiliate", item: `${SITE_URL}/referral-affiliate` },
+            ],
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(({ question, answer }) => ({
+                "@type": "Question",
+                name: question,
+                acceptedAnswer: { "@type": "Answer", text: answer },
+            })),
+        },
+    ];
+
     return (
         <div className="min-h-screen">
+            <JsonLd data={schemas} />
+            {/* Breadcrumb (mt-16 clears the fixed h-16 nav) */}
+            <div className="border-b border-border mt-16">
+                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-14 flex items-center text-[13px] text-muted-foreground">
+                    <Link href="/#products" className="hover:text-foreground">Products</Link>
+                    <span className="mx-2">/</span>
+                    <span className="font-medium text-foreground">Referral &amp; Affiliate</span>
+                </div>
+            </div>
+
             {/* Hero */}
-            <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <section className="relative pt-20 sm:pt-24 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="pointer-events-none absolute inset-0 -z-10">
-                    <div className="absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,hsl(160,84%,39%,0.08),transparent)]" />
+                    <div className="absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,hsl(221,83%,53%,0.08),transparent)]" />
                 </div>
 
                 <div className="max-w-3xl mx-auto text-center">
                     <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-sm text-muted-foreground mb-8">
-                        <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                        <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                         Now in beta — ₹0 platform fee for early partners
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+                    <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl mb-6">
                         Turn customers and creators into your best sales channel
                     </h1>
 
@@ -211,7 +256,7 @@ export default function ReferralAffiliatePage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                        <Button asChild size="lg" className="rounded-full px-7 h-12 text-base bg-emerald-600 hover:bg-emerald-700 text-white">
+                        <Button asChild size="lg" className="rounded-full px-7 h-12 text-base bg-primary hover:bg-primary/90 text-primary-foreground">
                             <Link href="/contact">
                                 Join the beta
                                 <ArrowRight className="w-4 h-4" />
@@ -222,6 +267,10 @@ export default function ReferralAffiliatePage() {
                                 Book a demo
                             </Link>
                         </Button>
+                    </div>
+
+                    <div className="mx-auto mt-14 max-w-lg">
+                        <ReferralCreative />
                     </div>
                 </div>
             </section>
@@ -250,7 +299,7 @@ export default function ReferralAffiliatePage() {
             <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="max-w-2xl mb-12 sm:mb-16">
-                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4">
+                        <p className="section-eyebrow">
                             How it works
                         </p>
                         <h2 className="section-title mb-4">From setup to first payout in three steps</h2>
@@ -258,8 +307,8 @@ export default function ReferralAffiliatePage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {steps.map(({ number, title, description }) => (
-                            <div key={number} className="rounded-xl border border-border bg-card p-6 sm:p-8">
-                                <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400 tabular-nums">
+                            <div key={number} className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+                                <span className="text-sm font-medium text-primary tabular-nums">
                                     {number}
                                 </span>
                                 <h3 className="text-lg font-semibold text-foreground mt-4 mb-2">{title}</h3>
@@ -274,7 +323,7 @@ export default function ReferralAffiliatePage() {
             <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
                 <div className="max-w-6xl mx-auto">
                     <div className="max-w-2xl mb-12 sm:mb-16">
-                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4">
+                        <p className="section-eyebrow">
                             Platform
                         </p>
                         <h2 className="section-title mb-4">Everything you need to run referrals at scale</h2>
@@ -285,8 +334,8 @@ export default function ReferralAffiliatePage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {features.map(({ icon: Icon, title, description, items }) => (
-                            <div key={title} className="rounded-xl border border-border bg-card p-6 sm:p-8">
-                                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                            <div key={title} className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+                                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                     <Icon className="w-5 h-5" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
@@ -294,7 +343,7 @@ export default function ReferralAffiliatePage() {
                                 <ul className="space-y-2.5">
                                     {items.map((item) => (
                                         <li key={item} className="flex items-start gap-2.5 text-sm text-foreground/80">
-                                            <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                                            <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                             {item}
                                         </li>
                                     ))}
@@ -309,7 +358,7 @@ export default function ReferralAffiliatePage() {
             <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border">
                 <div className="max-w-6xl mx-auto">
                     <div className="max-w-2xl mb-12 sm:mb-16">
-                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4">
+                        <p className="section-eyebrow">
                             For affiliates &amp; creators
                         </p>
                         <h2 className="section-title mb-4">An experience your partners will actually love</h2>
@@ -321,8 +370,8 @@ export default function ReferralAffiliatePage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {affiliatePerks.map(({ icon: Icon, title, description }) => (
-                            <div key={title} className="rounded-xl border border-border bg-card p-6 hover:border-foreground/20 transition-colors">
-                                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                            <div key={title} className="rounded-2xl border border-border bg-card p-6 hover:border-foreground/20 transition-colors">
+                                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                     <Icon className="w-5 h-5" />
                                 </div>
                                 <h3 className="text-base font-semibold text-foreground mb-2">{title}</h3>
@@ -337,7 +386,7 @@ export default function ReferralAffiliatePage() {
             <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
                 <div className="max-w-6xl mx-auto">
                     <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-                        <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-4 justify-center">
+                        <p className="section-eyebrow justify-center">
                             Pricing
                         </p>
                         <h2 className="section-title mb-4">Simple, transparent pricing</h2>
@@ -353,12 +402,12 @@ export default function ReferralAffiliatePage() {
                                 key={plan.name}
                                 className={`relative rounded-xl bg-card p-6 border transition-colors ${
                                     plan.popular
-                                        ? "border-emerald-500 shadow-[0_0_0_1px_theme(colors.emerald.500)]"
+                                        ? "border-primary shadow-[0_0_0_1px_var(--primary)]"
                                         : "border-border"
                                 }`}
                             >
                                 {plan.popular && (
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-3 py-1 text-xs font-medium text-white">
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-medium text-white">
                                         Most popular
                                     </div>
                                 )}
@@ -383,7 +432,7 @@ export default function ReferralAffiliatePage() {
                                 <ul className="space-y-2">
                                     {plan.features.map((feature) => (
                                         <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                                            <Check className="w-4 h-4 text-emerald-500 shrink-0" />
+                                            <Check className="w-4 h-4 text-primary shrink-0" />
                                             {feature}
                                         </li>
                                     ))}
@@ -393,7 +442,7 @@ export default function ReferralAffiliatePage() {
                     </div>
 
                     {/* Commission slabs */}
-                    <div className="rounded-xl border border-border bg-card overflow-hidden">
+                    <div className="rounded-2xl border border-border bg-card overflow-hidden">
                         <div className="p-6 sm:p-8 border-b border-border">
                             <h3 className="text-xl font-semibold text-foreground mb-2">Progressive commission</h3>
                             <p className="text-sm text-muted-foreground">
@@ -421,7 +470,7 @@ export default function ReferralAffiliatePage() {
                     </div>
 
                     {/* Example */}
-                    <div className="mt-8 rounded-xl border border-border bg-card p-6 sm:p-8">
+                    <div className="mt-8 rounded-2xl border border-border bg-card p-6 sm:p-8">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                             <div>
                                 <h4 className="font-semibold text-foreground">Example calculation</h4>
@@ -491,7 +540,7 @@ export default function ReferralAffiliatePage() {
                     <h2 className="section-title text-center mb-12">Questions, answered</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {faqs.map(({ question, answer }) => (
-                            <div key={question} className="rounded-xl border border-border bg-card p-5">
+                            <div key={question} className="rounded-2xl border border-border bg-card p-5">
                                 <h3 className="font-medium text-foreground mb-2">{question}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed">{answer}</p>
                             </div>
@@ -507,7 +556,7 @@ export default function ReferralAffiliatePage() {
                     <p className="section-subtitle mb-8 max-w-md mx-auto">
                         Join the beta — ₹0 platform fee, full feature access, and hands-on onboarding.
                     </p>
-                    <Button asChild size="lg" className="rounded-full px-7 h-12 text-base bg-emerald-600 hover:bg-emerald-700 text-white">
+                    <Button asChild size="lg" className="rounded-full px-7 h-12 text-base bg-primary hover:bg-primary/90 text-primary-foreground">
                         <Link href="/contact">
                             Join the beta
                             <ArrowRight className="w-4 h-4" />

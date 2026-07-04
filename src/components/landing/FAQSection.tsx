@@ -1,78 +1,119 @@
-'use client'
-import Link from "next/link";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+"use client";
+
+import { useState } from "react";
+import { Minus, Plus } from "lucide-react";
+import JsonLd from "@/components/seo/JsonLd";
 
 const faqs = [
   {
-    question: "What is SalesHQ and how does it work?",
+    question: "What is SalesHQ?",
     answer:
-      "SalesHQ is an AI sales assistant built on your own knowledge base. You upload product docs, pricing sheets, FAQs, and battlecards; SalesHQ indexes them and answers your team's questions in plain language, with citations back to the source document.",
+      "SalesHQ is an AI platform for commerce and revenue, made up of three products: SalesHQ for Shopify (an intent-driven AI shopping assistant for your storefront), Referral & Affiliate (a growth platform for D2C brands), and Sales Assistant (real-time, source-backed answers for sales teams). Together they're one AI layer from the first click to the closed deal.",
   },
   {
-    question: "How quickly can we get started?",
+    question: "What products does SalesHQ offer?",
     answer:
-      "Most teams are live the same day. Sign up, upload documents or connect Google Drive, Shopify, or your CRM, and start asking questions — no technical setup required.",
+      "Three. SalesHQ for Shopify turns storefront browsers into buyers with an AI shopping assistant. Referral & Affiliate turns customers and creators into a sales channel with WhatsApp-first sharing and instant UPI payouts. Sales Assistant gives reps instant, source-backed answers live on calls and in chat.",
   },
   {
-    question: "How is this different from searching our drive or wiki?",
+    question: "What is SalesHQ for Shopify?",
     answer:
-      "Search returns documents; SalesHQ returns answers. Instead of opening five PDFs to find a warranty clause, reps ask a question and get the specific answer with the source cited — fast enough to use mid-call.",
+      "SalesHQ for Shopify is an AI shopping assistant you add to your Shopify theme in one click. It reads each shopper's intent in real time, finds the right products from your live catalog, compares options side by side, and nudges at the right moment — grounded in your catalog with no hallucinated products.",
   },
   {
-    question: "What integrations are supported?",
+    question: "Who is SalesHQ for?",
     answer:
-      "Google Drive, Shopify, WhatsApp Business, Slack, and major CRMs including Salesforce and HubSpot. A REST API and webhooks are available for custom integrations.",
+      "Shopify merchants who want to convert more storefront visitors, D2C brands running referral and affiliate programs, and B2B revenue teams who need instant answers on live calls. You can use any one product on its own, or all three.",
   },
   {
-    question: "Is our data secure?",
+    question: "How is SalesHQ priced?",
     answer:
-      "Yes. Data is encrypted in transit and at rest, access is controlled with role-based permissions, and your content is never used to train shared models. SOC 2 certification is in progress.",
+      "Each product has its own plans. SalesHQ for Shopify is conversation-based, starting at $19/month with a 14-day free trial billed through Shopify. Referral & Affiliate uses a platform fee plus a progressive commission. Sales Assistant offers a free trial — talk to us for team pricing.",
   },
   {
-    question: "Do you offer a free trial?",
+    question: "How quickly can I get started?",
     answer:
-      "Yes — a 14-day free trial with full features and no credit card required. You can upgrade, downgrade, or cancel at any time.",
-  },
-  {
-    question: "What is the Referral & Affiliate platform?",
-    answer:
-      "It's our growth product for D2C brands: run customer referral and creator affiliate programs over WhatsApp with instant UPI payouts and built-in TDS/PAN/GST compliance. It's currently in beta — you can join from the Referral & Affiliate page.",
+      "SalesHQ for Shopify installs in one click from your theme editor. Referral & Affiliate programs launch in under 30 minutes. Sales Assistant is live in minutes once you connect your docs, pricing, and battlecards — no engineering required for any of them.",
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function FAQSection() {
+  const [open, setOpen] = useState<number>(0);
+
   return (
-    <section id="faq" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
-          <p className="section-eyebrow justify-center">FAQ</p>
-          <h2 className="section-title mb-4">Frequently asked questions</h2>
-          <p className="section-subtitle">
-            Can&apos;t find what you&apos;re looking for?{" "}
-            <Link href="/contact" className="text-primary font-medium hover:underline underline-offset-4">
-              Talk to us
-            </Link>
-            .
+    <section
+      id="faq"
+      className="border-t border-border bg-card px-4 sm:px-6 lg:px-8 py-20 sm:py-28"
+    >
+      <JsonLd data={faqSchema} />
+      <div className="mx-auto max-w-3xl">
+        <div className="mb-12 text-center">
+          <p className="font-mono-label mb-4 flex justify-center text-primary">
+            FAQ
           </p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-foreground">
+            Questions, answered
+          </h2>
         </div>
 
-        <Accordion type="single" collapsible className="w-full">
-          {faqs.map(({ question, answer }, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border-border">
-              <AccordionTrigger className="text-left text-base font-medium text-foreground hover:no-underline py-5">
-                {question}
-              </AccordionTrigger>
-              <AccordionContent className="text-sm sm:text-base text-muted-foreground leading-relaxed pb-5">
-                {answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="flex flex-col gap-3">
+          {faqs.map((faq, i) => {
+            const isOpen = i === open;
+            return (
+              <div
+                key={faq.question}
+                className="overflow-hidden rounded-2xl border border-border bg-background"
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left"
+                  aria-expanded={isOpen}
+                >
+                  <span className="text-base sm:text-[17px] font-semibold text-foreground">
+                    {faq.question}
+                  </span>
+                  <span
+                    className={`flex h-6.5 w-6.5 shrink-0 items-center justify-center rounded-lg transition-colors ${
+                      isOpen
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-primary/10 text-primary"
+                    }`}
+                  >
+                    {isOpen ? (
+                      <Minus className="h-4 w-4" />
+                    ) : (
+                      <Plus className="h-4 w-4" />
+                    )}
+                  </span>
+                </button>
+                <div
+                  className="grid transition-all duration-300 ease-out"
+                  style={{
+                    gridTemplateRows: isOpen ? "1fr" : "0fr",
+                    opacity: isOpen ? 1 : 0,
+                  }}
+                >
+                  <div className="overflow-hidden">
+                    <p className="px-5 pb-5 text-[15px] leading-relaxed text-muted-foreground">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

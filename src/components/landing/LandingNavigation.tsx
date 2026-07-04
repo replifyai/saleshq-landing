@@ -11,7 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, ArrowRight, Target, MessageSquare, Shield, Gift } from "lucide-react";
+import { Menu, ArrowRight, Headphones, ShoppingBag, Gift } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -23,22 +23,16 @@ import {
 
 const solutions = [
   {
-    label: "Sales Teams",
-    href: "/solutions/sales",
-    description: "Instant answers on every call",
-    icon: <Target className="w-4 h-4" />,
+    label: "Sales Assistant",
+    href: "/products/sales-assistant",
+    description: "Real-time answers for revenue teams",
+    icon: <Headphones className="w-4 h-4" />,
   },
   {
-    label: "Customer Support",
-    href: "/solutions/customer-support",
-    description: "Faster, consistent responses",
-    icon: <MessageSquare className="w-4 h-4" />,
-  },
-  {
-    label: "RevOps Teams",
-    href: "/solutions/revops",
-    description: "One source of truth for revenue",
-    icon: <Shield className="w-4 h-4" />,
+    label: "SalesHQ for Shopify",
+    href: "/products/shopify",
+    description: "AI shopping assistant that converts",
+    icon: <ShoppingBag className="w-4 h-4" />,
   },
   {
     label: "Referral & Affiliate",
@@ -49,8 +43,7 @@ const solutions = [
 ];
 
 const links = [
-  { label: "Features", href: "/features" },
-  { label: "Referral & Affiliate", href: "/referral-affiliate" },
+  { label: "SalesHQ for Shopify", href: "/products/shopify" },
   { label: "About", href: "/about" },
 ];
 
@@ -94,7 +87,7 @@ export default function LandingNavigation() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-muted-foreground hover:text-foreground data-[state=open]:text-foreground">
-                    Solutions
+                    Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid grid-cols-2 gap-1 p-2 w-[480px]">
@@ -169,7 +162,7 @@ export default function LandingNavigation() {
                 <div className="mt-8 flex flex-col gap-6">
                   <div className="flex flex-col gap-1">
                     <div className="px-1 pb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                      Solutions
+                      Products
                     </div>
                     {solutions.map((item) => (
                       <Link

@@ -22,7 +22,7 @@ export default function SolutionsPage() {
         </div>
         <div className="max-w-3xl mx-auto text-center">
           <p className="section-eyebrow justify-center">Solutions</p>
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+          <h1 className="hero-title text-4xl sm:text-5xl mb-6">
             Built for every team that talks to customers
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -38,7 +38,7 @@ export default function SolutionsPage() {
             {teamSolutions.map((solution) => (
               <div
                 key={solution.id}
-                className="flex flex-col rounded-xl border border-border bg-card p-6 sm:p-8 hover:border-foreground/20 transition-colors"
+                className="flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 hover:border-foreground/20 transition-colors"
               >
                 <h2 className="text-xl font-semibold text-foreground mb-3">{solution.name}</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
@@ -75,7 +75,7 @@ export default function SolutionsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {teamSolutions.map((solution) => (
-              <div key={solution.id} className="rounded-xl border border-border bg-card p-6">
+              <div key={solution.id} className="rounded-2xl border border-border bg-card p-6">
                 <h3 className="text-base font-semibold text-foreground mb-4">{solution.name}</h3>
                 <ul className="space-y-3">
                   {solution.problemsSolved.slice(0, 4).map((problem) => (
@@ -94,10 +94,10 @@ export default function SolutionsPage() {
       {/* D2C cross-link */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-xl border border-border bg-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12">
+          <div className="rounded-2xl border border-border bg-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12">
             <div className="flex-1">
-              <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-3">
-                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <p className="section-eyebrow mb-3">
+                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
                 For D2C brands
               </p>
               <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-2">
@@ -108,7 +108,7 @@ export default function SolutionsPage() {
                 payouts, full tax compliance.
               </p>
             </div>
-            <Button asChild className="rounded-full px-6 bg-emerald-600 hover:bg-emerald-700 text-white shrink-0">
+            <Button asChild className="rounded-full px-6 shrink-0">
               <Link href="/referral-affiliate">
                 Explore the platform
                 <ArrowRight className="w-4 h-4" />

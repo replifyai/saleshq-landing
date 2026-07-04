@@ -2,9 +2,29 @@ import { LandingNavigation } from "@/components/landing";
 import FooterSection from "@/components/landing/FooterSection";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { bricolage, jetbrainsMono } from "./fonts";
 import Script from "next/script";
 import "./globals.css";
 import ThemeProvider from "@/providers/theme-provider";
+import JsonLd, { SITE_URL } from "@/components/seo/JsonLd";
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SalesHQ",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  description:
+    "SalesHQ is an AI platform across the whole revenue motion: an intent-driven AI shopping assistant for Shopify, a referral & affiliate growth platform for D2C brands, and a real-time sales assistant for revenue teams.",
+  sameAs: ["https://twitter.com/SalesHQ"],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "SalesHQ",
+  url: SITE_URL,
+};
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,21 +37,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "SalesHQ – Real-Time AI Sales Assistant",
+    default: "SalesHQ – AI Shopping Assistant for Shopify, Referrals & Sales Teams",
     template: "%s | SalesHQ",
   },
-  description: "SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.",
+  description: "SalesHQ is an AI platform across your whole revenue motion: SalesHQ for Shopify (an intent-driven AI shopping assistant that turns browsers into buyers), a Referral & Affiliate growth platform for D2C brands, and a real-time Sales Assistant that gives reps instant, source-backed answers on live calls.",
   keywords: [
+    "AI shopping assistant",
+    "Shopify AI chatbot",
+    "Shopify shopping assistant",
+    "ecommerce AI assistant",
+    "referral and affiliate platform",
+    "D2C referral program",
+    "UPI affiliate payouts",
     "AI sales assistant",
+    "real-time call assistant",
     "sales enablement",
-    "real-time transcription",
-    "sales intelligence",
-    "product knowledge management",
-    "sales automation",
-    "AI-powered sales",
-    "sales productivity",
-    "customer relationship management",
-    "sales performance",
+    "conversational commerce",
+    "intent-driven chatbot",
   ],
   authors: [{ name: "SalesHQ" }],
   creator: "SalesHQ",
@@ -54,7 +76,7 @@ export const metadata: Metadata = {
     url: "https://SalesHQ.ai",
     siteName: "SalesHQ",
     title: "SalesHQ – Real-Time AI Sales Assistant",
-    description: "SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.",
+    description: "SalesHQ is an AI platform across your whole revenue motion: SalesHQ for Shopify (an intent-driven AI shopping assistant that turns browsers into buyers), a Referral & Affiliate growth platform for D2C brands, and a real-time Sales Assistant that gives reps instant, source-backed answers on live calls.",
     images: [
       {
         url: "https://SalesHQ.ai/og-image.png",
@@ -68,7 +90,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SalesHQ – Real-Time AI Sales Assistant",
-    description: "SalesHQ is an AI-powered sales enablement platform that transcribes calls live, surfaces instant suggestions, and connects to your product knowledge—helping reps respond faster and close more deals.",
+    description: "SalesHQ is an AI platform across your whole revenue motion: SalesHQ for Shopify (an intent-driven AI shopping assistant that turns browsers into buyers), a Referral & Affiliate growth platform for D2C brands, and a real-time Sales Assistant that gives reps instant, source-backed answers on live calls.",
     images: ["https://SalesHQ.ai/og-image.png"],
     creator: "@SalesHQ",
     site: "@SalesHQ",
@@ -131,8 +153,9 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <JsonLd data={[orgSchema, websiteSchema]} />
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"

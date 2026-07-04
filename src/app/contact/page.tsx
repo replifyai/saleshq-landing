@@ -12,9 +12,9 @@ import {
   Clock,
   Send,
   MessageSquare,
-  Users,
   Headphones,
-  CheckCircle2,
+  ShoppingBag,
+  Gift,
 } from "lucide-react";
 
 const contactInfo = [
@@ -49,10 +49,10 @@ const contactInfo = [
 ];
 
 const inquiryTypes = [
-  { value: "general", label: "General inquiry", icon: MessageSquare },
-  { value: "sales", label: "Sales & pricing", icon: Users },
-  { value: "support", label: "Technical support", icon: Headphones },
-  { value: "partnership", label: "Partnership", icon: CheckCircle2 },
+  { value: "shopify", label: "SalesHQ for Shopify", icon: ShoppingBag },
+  { value: "sales-assistant", label: "Sales Assistant", icon: Headphones },
+  { value: "referral", label: "Referral & Affiliate", icon: Gift },
+  { value: "other", label: "Something else", icon: MessageSquare },
 ];
 
 export default function ContactPage() {
@@ -62,7 +62,7 @@ export default function ContactPage() {
     company: "",
     subject: "",
     message: "",
-    inquiryType: "general",
+    inquiryType: "shopify",
   });
 
   const handleInputChange = (
@@ -92,12 +92,12 @@ export default function ContactPage() {
         </div>
         <div className="max-w-2xl mx-auto text-center">
           <p className="section-eyebrow justify-center">Contact</p>
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+          <h1 className="hero-title text-4xl sm:text-5xl mb-6">
             Get in touch
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Questions about SalesHQ or the Referral &amp; Affiliate beta? Send us a message
-            and we&apos;ll get back to you within 24 hours.
+            Questions about SalesHQ for Shopify, Referral &amp; Affiliate, or the Sales Assistant?
+            Send us a message and we&apos;ll get back to you within 24 hours.
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="lg:col-span-2">
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
                 <h2 className="text-lg font-semibold text-foreground mb-1">Send us a message</h2>
                 <p className="text-sm text-muted-foreground mb-6">
                   This opens your email client with everything pre-filled.

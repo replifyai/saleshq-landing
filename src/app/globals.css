@@ -106,16 +106,45 @@ section {
   ::selection {
     background-color: hsl(221, 83%, 53%, 0.15);
   }
+
+  /* Redesign: all headings use the display face for a consistent theme */
+  h1, h2, h3, h4 {
+    font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* New display + mono-label utilities (fonts wired in fonts.ts / layout.tsx) */
+.font-display {
+  font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-mono-label {
+  font-family: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 @layer components {
-  /* Shared section shell */
+  /* Eyebrow above section titles */
   .section-eyebrow {
-    @apply inline-flex items-center gap-2 text-sm font-medium text-primary mb-4;
+    font-family: var(--font-jetbrains), ui-monospace, monospace;
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-primary mb-4;
   }
 
+  /* Section titles now use the display face */
   .section-title {
-    @apply text-3xl sm:text-4xl font-semibold tracking-tight text-foreground;
+    font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+    @apply text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-[-0.025em] leading-[1.05] text-foreground;
+  }
+
+  /* Page hero headlines — matches landing HeroSection h1 */
+  .hero-title {
+    font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+    @apply font-bold leading-[1.02] tracking-[-0.03em] text-foreground text-balance;
   }
 
   .section-subtitle {

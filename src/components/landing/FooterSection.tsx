@@ -5,21 +5,19 @@ import { ArrowRight } from "lucide-react";
 
 const columns = [
   {
-    title: "Product",
+    title: "Products",
     links: [
-      { label: "Features", href: "/features" },
-      { label: "How it works", href: "/#how-it-works" },
-      { label: "Use cases", href: "/#use-cases" },
-      { label: "Case studies", href: "/case-studies" },
+      { label: "SalesHQ for Shopify", href: "/products/shopify" },
+      { label: "Sales Assistant", href: "/products/sales-assistant" },
+      { label: "Referral & Affiliate", href: "/referral-affiliate" },
     ],
   },
   {
-    title: "Solutions",
+    title: "Resources",
     links: [
-      { label: "Sales teams", href: "/solutions/sales" },
-      { label: "Customer support", href: "/solutions/customer-support" },
-      { label: "RevOps teams", href: "/solutions/revops" },
-      { label: "Referral & Affiliate", href: "/referral-affiliate" },
+      { label: "Features", href: "/features" },
+      { label: "Case studies", href: "/case-studies" },
+      { label: "Book a demo", href: "https://calendly.com/saleshqai/30min" },
     ],
   },
   {
@@ -39,11 +37,12 @@ export default function FooterSection() {
       {/* CTA band */}
       <div className="px-4 sm:px-6 lg:px-8 py-20 sm:py-24 border-b border-border">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-4">
-            Give every rep your best answers
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+            AI for every stage of the sale
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-            Start your free trial today, or talk to us about what SalesHQ can do for your team.
+            Convert more shoppers, grow through referrals, and close faster — start free, or talk to
+            us about what SalesHQ can do across your business.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" className="rounded-full px-7 h-12">
@@ -74,8 +73,9 @@ export default function FooterSection() {
                 className="h-7 w-auto mb-4 dark:bg-white dark:rounded-md dark:px-1.5 dark:py-0.5"
               />
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-                The AI assistant that gives sales teams instant, source-backed answers —
-                plus a referral &amp; affiliate platform for D2C brands.
+                The AI platform across your whole revenue motion — an AI shopping assistant for
+                Shopify, a referral &amp; affiliate growth engine, and a real-time assistant for
+                sales teams.
               </p>
             </div>
             {columns.map((column) => (

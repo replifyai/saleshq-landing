@@ -1,46 +1,41 @@
 const metrics = [
-  {
-    value: "3+ hrs",
-    label: "saved per rep, per day",
-    description: "No more digging through drives and threads for answers that should take seconds.",
-  },
-  {
-    value: "40%",
-    label: "faster deal cycles",
-    description: "Objections answered on the call instead of in next week's follow-up email.",
-  },
-  {
-    value: "95%",
-    label: "answer accuracy",
-    description: "Source-backed responses mean reps quote the right specs and pricing, every time.",
-  },
-  {
-    value: "<1 day",
-    label: "to get fully live",
-    description: "Upload your docs in the morning, answer customer questions with AI by afternoon.",
-  },
+  { value: "3", label: "products, one platform", sub: "storefront to sales team" },
+  { value: "+28%", label: "assisted-order conversion", sub: "on the storefront" },
+  { value: "40%", label: "faster deal closure", sub: "for sales teams" },
+  { value: "<30min", label: "from install to live", sub: "no engineering" },
 ];
 
 export default function ROISection() {
   return (
-    <section id="roi" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border">
-      <div className="max-w-6xl mx-auto">
-        <div className="max-w-2xl mb-12 sm:mb-16">
-          <p className="section-eyebrow">The payoff</p>
-          <h2 className="section-title mb-4">Less searching. More selling.</h2>
-          <p className="section-subtitle">
-            What teams measure after putting SalesHQ behind every rep.
+    <section
+      id="results"
+      className="relative overflow-hidden px-4 sm:px-6 lg:px-8 py-20 sm:py-28 bg-[#0B1120] text-slate-100"
+    >
+      {/* Blue glow */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_84%_0%,rgba(37,99,235,0.20),transparent_64%)]" />
+
+      <div className="relative mx-auto max-w-6xl">
+        <div className="mb-14 max-w-2xl">
+          <p className="font-mono-label mb-4 text-primary">Why SalesHQ</p>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.04] tracking-[-0.025em] text-slate-50 text-balance">
+            One AI platform. Every stage of the sale.
+          </h2>
+          <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-400">
+            From the shopper on your storefront, to the customer sharing your brand, to the rep on a
+            live call — SalesHQ is the AI that helps you convert at every step.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px rounded-xl border border-border bg-border overflow-hidden">
-          {metrics.map(({ value, label, description }) => (
-            <div key={label} className="bg-card p-6 sm:p-8">
-              <div className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-1">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-slate-800 bg-slate-800 sm:grid-cols-2 lg:grid-cols-4">
+          {metrics.map(({ value, label, sub }) => (
+            <div key={label} className="bg-[#0F1A2E] p-7 sm:p-8">
+              <div className="font-display text-4xl sm:text-5xl font-bold tracking-[-0.03em] leading-none text-primary">
                 {value}
               </div>
-              <div className="text-sm font-medium text-primary mb-3">{label}</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+              <div className="mt-2.5 text-sm font-medium text-slate-200">
+                {label}
+              </div>
+              <div className="mt-0.5 text-[13px] text-slate-500">{sub}</div>
             </div>
           ))}
         </div>

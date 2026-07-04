@@ -47,7 +47,7 @@ export default async function TeamSolutionPage({ params }: TeamSolutionPageProps
             All solutions
           </Link>
           <p className="section-eyebrow">{teamData.name}</p>
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+          <h1 className="hero-title text-4xl sm:text-5xl mb-6">
             SalesHQ for {teamData.name}
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
@@ -66,7 +66,7 @@ export default async function TeamSolutionPage({ params }: TeamSolutionPageProps
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {teamData.features.map((feature) => (
-              <div key={feature.id} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div key={feature.id} className="rounded-2xl border border-border bg-card p-6 sm:p-8">
                 <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                   {feature.description}
@@ -97,7 +97,7 @@ export default async function TeamSolutionPage({ params }: TeamSolutionPageProps
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {teamData.supportChannels.map((channel) => (
-                <div key={channel.name} className="rounded-xl border border-border bg-card p-6">
+                <div key={channel.name} className="rounded-2xl border border-border bg-card p-6">
                   <h3 className="text-base font-semibold text-foreground mb-2">{channel.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{channel.description}</p>
                 </div>
@@ -119,7 +119,7 @@ export default async function TeamSolutionPage({ params }: TeamSolutionPageProps
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {teamData.keyMetrics.map((metric) => (
-                <div key={metric.name} className="rounded-xl border border-border bg-card p-6">
+                <div key={metric.name} className="rounded-2xl border border-border bg-card p-6">
                   <h3 className="text-base font-semibold text-foreground mb-2">{metric.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{metric.description}</p>
                 </div>
@@ -139,7 +139,7 @@ export default async function TeamSolutionPage({ params }: TeamSolutionPageProps
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {teamData.problemsSolved.map((problem) => (
-              <div key={problem} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
+              <div key={problem} className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4">
                 <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
                 <p className="text-sm text-foreground/80">{problem}</p>
               </div>

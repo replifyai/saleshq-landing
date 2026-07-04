@@ -1,8 +1,6 @@
 import HeroSection from "@/components/landing/HeroSection";
-import FragmentedWorkflowSection from "@/components/landing/FragmentedWorkflowSection";
-import HowItWorksSection from "@/components/landing/HowItWorksSection";
-import UseCasesSection from "@/components/landing/UseCasesSection";
-import ReferralAffiliateSection from "@/components/landing/ReferralAffiliateSection";
+import ProductsSection from "@/components/landing/ProductsSection";
+import ShopifyChatbotSection from "@/components/landing/ShopifyChatbotSection";
 import ROISection from "@/components/landing/ROISection";
 import FAQSection from "@/components/landing/FAQSection";
 
@@ -10,10 +8,11 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <FragmentedWorkflowSection />
-      <HowItWorksSection />
-      <UseCasesSection />
-      <ReferralAffiliateSection />
+      {/* Platform overview — all three products */}
+      <ProductsSection />
+      {/* Flagship deep-dive: the homepage shows the complete feature set for the
+          Shopify chatbot only; Sales Assistant & Referral link out to their own pages. */}
+      <ShopifyChatbotSection />
       <ROISection />
       <FAQSection />
     </div>

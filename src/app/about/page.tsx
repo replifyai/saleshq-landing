@@ -7,14 +7,16 @@ import {
   TrendingUp,
   Users,
   ArrowRight,
-  Brain,
+  Headphones,
+  ShoppingBag,
   Gift,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "SalesHQ builds AI-powered sales enablement and referral & affiliate tools that help teams answer faster, sell smarter, and grow through their own customers.",
+    "SalesHQ builds an AI platform across the whole revenue motion: an AI shopping assistant for Shopify, a referral & affiliate growth platform for D2C brands, and a real-time sales assistant for revenue teams.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [
@@ -46,18 +48,26 @@ const values = [
 
 const products = [
   {
-    icon: Brain,
-    name: "SalesHQ Assistant",
+    icon: ShoppingBag,
+    name: "SalesHQ for Shopify",
     description:
-      "An AI assistant built on your own knowledge base. Reps ask questions in plain language and get instant, source-cited answers — on calls, in chats, wherever they sell.",
-    href: "/features",
-    cta: "Explore features",
+      "An intent-driven AI shopping assistant for Shopify. It reads each shopper's intent, finds the right products from your live catalog, compares options, and nudges at the right moment — installed in one click.",
+    href: "/products/shopify",
+    cta: "Explore SalesHQ for Shopify",
+  },
+  {
+    icon: Headphones,
+    name: "Sales Assistant",
+    description:
+      "An AI assistant built on your own knowledge base. Reps ask in plain language and get instant, source-cited answers — live on calls, in chats, wherever they sell.",
+    href: "/products/sales-assistant",
+    cta: "Explore Sales Assistant",
   },
   {
     icon: Gift,
     name: "Referral & Affiliate",
     description:
-      "A WhatsApp-first referral and affiliate platform for India's D2C brands, with instant UPI payouts and TDS/PAN/GST compliance built in. Currently in beta.",
+      "A WhatsApp-first referral and affiliate platform for India's D2C brands, with instant UPI payouts and TDS/PAN/GST compliance built in.",
     href: "/referral-affiliate",
     cta: "Explore the platform",
   },
@@ -73,13 +83,13 @@ export default function AboutPage() {
         </div>
         <div className="max-w-3xl mx-auto text-center">
           <p className="section-eyebrow justify-center">About SalesHQ</p>
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
-            We help teams sell with the best answer, every time
+          <h1 className="hero-title text-4xl sm:text-5xl mb-6">
+            AI behind everyone who sells your product
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            SalesHQ started with a simple observation: the answer that wins a deal usually
-            exists somewhere in the company — it just never reaches the rep in time. We&apos;re
-            fixing that.
+            SalesHQ is the AI layer across your whole revenue motion — the shopper on your
+            storefront, the customer sharing your brand, and the rep on a live call. One mission:
+            put the full power of your business behind every sale.
           </p>
         </div>
       </section>
@@ -96,15 +106,19 @@ export default function AboutPage() {
               close that gap with AI that answers in seconds and cites its sources.
             </p>
             <p>
-              Along the way, our D2C customers showed us a second gap: their happiest
-              customers and creator partners wanted to sell for them, but running referral
-              programs over spreadsheets and manual payouts didn&apos;t scale. So we built
-              our Referral &amp; Affiliate platform — WhatsApp-first, with instant UPI
-              payouts and Indian tax compliance handled automatically.
+              Then our D2C customers showed us a second gap: their happiest customers and creator
+              partners wanted to sell for them, but running referral programs over spreadsheets and
+              manual payouts didn&apos;t scale. So we built Referral &amp; Affiliate — WhatsApp-first,
+              with instant UPI payouts and Indian tax compliance handled automatically.
             </p>
             <p>
-              Two products, one mission: put the full power of your business behind every
-              person selling it — employees, customers, and creators alike.
+              And on the storefront itself, we saw shoppers leave because no one was there to help
+              them decide. So we built SalesHQ for Shopify — an AI shopping assistant that reads
+              intent, recommends from your real catalog, and turns browsers into buyers.
+            </p>
+            <p>
+              Three products, one mission: put the full power of your business behind every sale —
+              from the first click, to the referral, to the closed deal.
             </p>
           </div>
         </div>
@@ -115,11 +129,11 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="max-w-2xl mb-12">
             <p className="section-eyebrow">What we build</p>
-            <h2 className="section-title">Two products, one mission</h2>
+            <h2 className="section-title">Three products, one mission</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {products.map(({ icon: Icon, name, description, href, cta }) => (
-              <div key={name} className="flex flex-col rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div key={name} className="flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8">
                 <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <Icon className="w-5 h-5" />
                 </div>
@@ -147,7 +161,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="rounded-xl border border-border bg-card p-6">
+              <div key={title} className="rounded-2xl border border-border bg-card p-6">
                 <Icon className="w-5 h-5 text-primary mb-4" />
                 <h3 className="text-base font-semibold text-foreground mb-2">{title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>

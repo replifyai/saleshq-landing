@@ -106,7 +106,7 @@ export default function FeaturesPage() {
         </div>
         <div className="max-w-3xl mx-auto text-center">
           <p className="section-eyebrow justify-center">Features</p>
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6">
+          <h1 className="hero-title text-4xl sm:text-5xl mb-6">
             Everything your team needs to sell with confidence
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -121,7 +121,7 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {availableFeatures.map(({ icon: Icon, title, description, benefits }) => (
-              <div key={title} className="rounded-xl border border-border bg-card p-6 sm:p-8 hover:border-foreground/20 transition-colors">
+              <div key={title} className="rounded-2xl border border-border bg-card p-6 sm:p-8 hover:border-foreground/20 transition-colors">
                 <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <Icon className="w-5 h-5" />
                 </div>
