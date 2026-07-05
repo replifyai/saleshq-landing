@@ -73,7 +73,7 @@ export default function ShopifyCreative() {
         <span className="shpx-rl">Intent</span>
         <div className="shpx-chip shpx-c1"><span className="shpx-d" />Viewed</div>
         <div className="shpx-chip shpx-c2"><span className="shpx-d" />Compared</div>
-        <div className="shpx-chip shpx-c3"><span className="shpx-d" />Budget ₹1.5k</div>
+        <div className="shpx-chip shpx-c3"><span className="shpx-d" />In budget</div>
         <div className="shpx-meter"><i /></div>
       </div>
 
@@ -84,7 +84,7 @@ export default function ShopifyCreative() {
       <div className="shpx-pop">
         <div className="shpx-ph"><span className="shpx-pav"><svg viewBox="0 0 24 24"><path d="m12 3 1.9 5.8L20 10l-5.8 1.9L12 18l-1.9-5.8L4 10z" /></svg></span><span className="shpx-pt">Shopping assistant</span></div>
         <div className="shpx-pb">
-          <div className="shpx-bubble">Comparing travel pillows under ₹1.5k? I found 2 that pack small — want to see them side by side?</div>
+          <div className="shpx-bubble">Comparing two travel pillows? I can show them side by side — want a quick comparison?</div>
           <div className="shpx-typing"><i /><i /><i /></div>
         </div>
       </div>

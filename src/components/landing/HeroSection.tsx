@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const stats = [
-  { value: "3", label: "products, one login" },
-  { value: "40%", label: "faster deal closure" },
+  { value: "3", label: "products, one platform" },
+  { value: "+28%", label: "storefront conversion lift" },
   { value: "95%", label: "source-backed accuracy" },
   { value: "<30min", label: "to go live" },
 ];
@@ -25,19 +25,19 @@ export default function HeroSection() {
         {/* Announcement */}
         <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-background px-2.5 py-1.5 mb-7">
           <span className="font-mono-label rounded-md bg-primary/10 px-1.5 py-0.5 text-[10px] text-primary">NEW</span>
-          <span className="text-sm font-medium text-muted-foreground pr-2">Three products, one AI platform</span>
+          <span className="text-sm font-medium text-muted-foreground pr-2">AI for commerce &amp; revenue teams</span>
         </div>
 
         {/* Headline */}
         <h1 className="hero-title text-[2.5rem] sm:text-6xl lg:text-[4.75rem] mb-5">
-          AI that powers how you sell —{" "}
-          <span className="text-primary">from the first click</span> to the closed deal
+          The AI platform that helps you{" "}
+          <span className="text-primary">convert, grow, and close</span>
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8 text-pretty">
-          SalesHQ is the AI layer across your whole revenue motion — an intent-driven shopping
-          assistant on your storefront, a referral &amp; affiliate growth engine, and a real-time
-          assistant for your sales team.
+          SalesHQ is three products in one platform: an AI shopping assistant for Shopify stores,
+          a referral &amp; affiliate growth engine for D2C brands, and a real-time sales assistant
+          for revenue teams. Use one, or all three.
         </p>
 
         {/* CTAs */}
@@ -49,10 +49,10 @@ export default function HeroSection() {
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full px-7 h-12 text-base transition-transform hover:-translate-y-0.5">
-            <Link href="#products">See the products</Link>
+            <Link href="#platform">See what we offer</Link>
           </Button>
         </div>
-        <p className="text-sm text-muted-foreground mb-10">14-day free trial · No credit card required</p>
+        <p className="text-sm text-muted-foreground mb-10">Free trials on every product · No engineering required</p>
 
         {/* Stat band */}
         <div className="mx-auto flex max-w-2xl flex-wrap overflow-hidden rounded-2xl border border-border bg-card">

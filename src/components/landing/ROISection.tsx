@@ -18,11 +18,11 @@ export default function ROISection() {
         <div className="mb-14 max-w-2xl">
           <p className="font-mono-label mb-4 text-primary">Why SalesHQ</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.04] tracking-[-0.025em] text-slate-50 text-balance">
-            One AI platform. Every stage of the sale.
+            Built for the way you actually sell
           </h2>
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-400">
-            From the shopper on your storefront, to the customer sharing your brand, to the rep on a
-            live call — SalesHQ is the AI that helps you convert at every step.
+            Whether you run a Shopify store, a D2C referral program, or a B2B sales team — SalesHQ
+            gives you AI that converts visitors, grows word-of-mouth, and closes deals faster.
           </p>
         </div>
 

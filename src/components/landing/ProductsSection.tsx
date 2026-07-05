@@ -3,38 +3,38 @@ import { ArrowRight, Headphones, Share2, ShoppingBag } from "lucide-react";
 
 const products = [
   {
-    id: "sales-assistant",
-    tag: "For revenue teams",
-    name: "Sales Assistant",
+    id: "shopify",
+    tag: "For Shopify stores",
+    name: "SalesHQ for Shopify",
     tagline:
-      "Real-time, source-backed answers live on every call and chat — your reps never fumble a question again.",
-    points: ["Live call assist & transcription", "Instant battlecards & pricing", "95% source-backed accuracy"],
-    href: "/products/sales-assistant",
-    icon: Headphones,
-    cta: "Explore Sales Assistant",
+      "Intent-driven AI assistant that reads shopper intent, compares products, nudges on friction, and tracks orders — grounded in your live catalog.",
+    points: ["One-click install, no theme edits", "Proactive intent popups", "Intent analytics dashboard"],
+    href: "/products/shopify",
+    icon: ShoppingBag,
+    cta: "See SalesHQ for Shopify",
+    isNew: true,
   },
   {
     id: "referral-affiliate",
     tag: "For D2C growth",
     name: "Referral & Affiliate",
     tagline:
-      "Turn customers and creators into a 24/7 sales channel — WhatsApp-first sharing with instant UPI rewards.",
-    points: ["Referrals + affiliate programs", "WhatsApp-native onboarding", "Same-day UPI payouts, tax-compliant"],
+      "Turn customers and creators into a 24/7 sales channel — WhatsApp-first sharing with same-day UPI payouts and tax compliance.",
+    points: ["Referrals + affiliate programs", "WhatsApp-native onboarding", "TDS/PAN/GST compliance built in"],
     href: "/referral-affiliate",
     icon: Share2,
     cta: "Explore Referral & Affiliate",
   },
   {
-    id: "shopify",
-    tag: "For Shopify stores",
-    name: "SalesHQ for Shopify",
+    id: "sales-assistant",
+    tag: "For revenue teams",
+    name: "Sales Assistant",
     tagline:
-      "An intent-driven AI shopping assistant that reads what each shopper wants and turns browsers into buyers.",
-    points: ["Understands shopper intent live", "Personalized recs & comparisons", "Merchant-side intent analytics"],
-    href: "/products/shopify",
-    icon: ShoppingBag,
-    cta: "See SalesHQ for Shopify",
-    isNew: true,
+      "Real-time, source-backed answers live on every call and chat — pricing, specs, and battlecards cited back to your docs.",
+    points: ["Live call assist & transcription", "Instant battlecards & pricing", "95% source-backed accuracy"],
+    href: "/products/sales-assistant",
+    icon: Headphones,
+    cta: "Explore Sales Assistant",
   },
 ];
 
@@ -52,12 +52,10 @@ export default function ProductsSection() {
             One platform, three products
           </p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold leading-[1.06] tracking-[-0.025em] text-foreground text-balance mb-4">
-            Everywhere you sell, an AI that closes
+            Explore each product
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-pretty">
-            SalesHQ is no longer just a sales assistant. It&rsquo;s the AI layer across
-            your whole revenue motion — from the shopper on your storefront to the
-            rep on a live call.
+            Pick the product that matches where you sell today — or combine them as your business grows.
           </p>
         </div>
 

@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "What is SalesHQ for Shopify?",
     answer:
-      "SalesHQ for Shopify is an AI shopping assistant you add to your Shopify theme in one click. It reads each shopper's intent in real time, finds the right products from your live catalog, compares options side by side, and nudges at the right moment — grounded in your catalog with no hallucinated products.",
+      "SalesHQ for Shopify is an AI shopping assistant you add in one click. It reads shopper intent live, finds products from your catalog, compares options, fires proactive popups on real friction, tracks orders, and gives you intent analytics — grounded in your catalog with no hallucinated products.",
   },
   {
     question: "Who is SalesHQ for?",
@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "How is SalesHQ priced?",
     answer:
-      "Each product has its own plans. SalesHQ for Shopify is conversation-based, starting at $19/month with a 14-day free trial billed through Shopify. Referral & Affiliate uses a platform fee plus a progressive commission. Sales Assistant offers a free trial — talk to us for team pricing.",
+      "Each product has its own plans. SalesHQ for Shopify is reply-based, starting at $29/month with a 7-day free trial billed through Shopify. Referral & Affiliate uses a platform fee plus a progressive commission. Sales Assistant offers a free trial — talk to us for team pricing.",
   },
   {
     question: "How quickly can I get started?",
