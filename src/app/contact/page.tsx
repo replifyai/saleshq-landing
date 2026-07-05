@@ -11,6 +11,8 @@ import {
   MapPin,
   Clock,
   Send,
+  Loader2,
+  CheckCircle2,
   MessageSquare,
   Headphones,
   ShoppingBag,
@@ -64,23 +66,57 @@ export default function ContactPage() {
     message: "",
     inquiryType: "shopify",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (submitStatus !== "idle") {
+      setSubmitStatus("idle");
+      setErrorMessage("");
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const inquiryLabel =
-      inquiryTypes.find((t) => t.value === formData.inquiryType)?.label ?? "General inquiry";
-    const subject = encodeURIComponent(`[${inquiryLabel}] ${formData.subject}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "—"}\n\n${formData.message}`
-    );
-    window.location.href = `mailto:shubham@saleshq.ai?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = (await res.json()) as { error?: string };
+
+      if (!res.ok) {
+        setSubmitStatus("error");
+        setErrorMessage(data.error ?? "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        subject: "",
+        message: "",
+        inquiryType: "shopify",
+      });
+    } catch {
+      setSubmitStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -135,7 +171,7 @@ export default function ContactPage() {
               <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
                 <h2 className="text-lg font-semibold text-foreground mb-1">Send us a message</h2>
                 <p className="text-sm text-muted-foreground mb-6">
-                  This opens your email client with everything pre-filled.
+                  Fill out the form below and we&apos;ll get back to you within 24 hours.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -235,9 +271,26 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full">
-                    <Send className="w-4 h-4" />
-                    Send message
+                  {submitStatus === "success" && (
+                    <div className="flex items-start gap-2 rounded-lg border border-green-200 bg-green-50 p-3 text-sm text-green-800 dark:border-green-900 dark:bg-green-950 dark:text-green-200">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
+                      <p>Thanks for reaching out! We&apos;ll reply to your email within 24 hours.</p>
+                    </div>
+                  )}
+
+                  {submitStatus === "error" && (
+                    <div className="rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">
+                      {errorMessage}
+                    </div>
+                  )}
+
+                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Send className="w-4 h-4" />
+                    )}
+                    {isSubmitting ? "Sending…" : "Send message"}
                   </Button>
                 </form>
               </div>
