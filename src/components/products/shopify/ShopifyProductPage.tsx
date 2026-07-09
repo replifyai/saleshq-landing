@@ -61,6 +61,7 @@ export default function ShopifyProductPage() {
     operatingSystem: "Web",
     description: SHOPIFY_SEO_DESCRIPTION,
     url: URL,
+    installUrl: "https://apps.shopify.com/saleshq-chatbot",
     provider: { "@type": "Organization", name: "SalesHQ", url: SITE_URL },
     offers: SHOPIFY_PRICING.map((t) => ({
       "@type": "Offer",
@@ -134,9 +135,9 @@ export default function ShopifyProductPage() {
             </ul>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild className="h-11 rounded-full px-6 transition-transform hover:-translate-y-0.5">
-                <Link href="/contact">
+                <a href="https://apps.shopify.com/saleshq-chatbot" target="_blank" rel="noopener noreferrer">
                   Add to your store <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </Button>
               <Button asChild variant="outline" className="h-11 rounded-full px-6 transition-transform hover:-translate-y-0.5">
                 <a href="https://calendly.com/saleshqai/30min" target="_blank" rel="noopener noreferrer">
@@ -414,9 +415,9 @@ export default function ShopifyProductPage() {
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild className="h-11 rounded-full px-6">
-              <Link href="/contact">
+              <a href="https://apps.shopify.com/saleshq-chatbot" target="_blank" rel="noopener noreferrer">
                 Add to your store <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </Button>
             <Button asChild variant="outline" className="h-11 rounded-full px-6">
               <a href="https://calendly.com/saleshqai/30min" target="_blank" rel="noopener noreferrer">

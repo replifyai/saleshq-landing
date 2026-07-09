@@ -69,10 +69,10 @@ export default function ShopifyChatbotSection({ compact = false }: Props) {
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild className="rounded-full px-6 transition-transform hover:-translate-y-0.5">
-                <Link href="/contact">
+                <a href="https://apps.shopify.com/saleshq-chatbot" target="_blank" rel="noopener noreferrer">
                   Add to your store
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </Button>
               <Button
                 asChild
