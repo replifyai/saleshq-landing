@@ -1,13 +1,14 @@
 // Shared copy + pricing for SalesHQ for Shopify (aligned with saleshq-chatbot/app/intent/plans.ts).
 
 export const SHOPIFY_SEO_DESCRIPTION =
-  "SalesHQ for Shopify is an intent-driven AI shopping assistant that reads each shopper's intent in real time, finds products from your live catalog, compares options, nudges on real friction, tracks orders, and gives merchants intent analytics — one-click install with a 7-day free trial billed through Shopify.";
+  "SalesHQ for Shopify is an intent-driven AI shopping assistant that reads each shopper's intent in real time, finds products from your live catalog, compares options, answers from your own policies and FAQs (upload a PDF — done), nudges on real friction, tracks orders, and matches your brand automatically — one-click install with a 7-day free trial billed through Shopify.";
 
 export const SHOPIFY_TRIAL_DAYS = 7;
 
 export const SHOPIFY_HERO_BULLETS = [
   "One-click install — no theme edits",
   "Grounded in your live catalog — zero hallucinated products",
+  "Answers from your own policies & FAQs — upload a PDF, done",
   "7-day free trial · billed through Shopify",
 ] as const;
 
@@ -68,21 +69,52 @@ export const SHOPIFY_FEATURES = [
     text: "Semantic ranking with in-budget cues and what similar shoppers actually bought.",
   },
   {
+    title: "Your store's knowledge base",
+    text: "Returns, shipping, warranty, FAQs, live offers — the assistant answers from your own documents, word for word.",
+  },
+  {
+    title: "PDF import, AI-converted",
+    text: "Drop in your policy or FAQ PDF — it's converted to clean, editable sections you review before publishing.",
+  },
+  {
     title: "Proactive, never pushy",
     text: "Nudges only on real friction — not in the first 8s, per-trigger cooldown, one dismissal quiets the session.",
   },
   {
-    title: "Order tracking",
-    text: "Signed-in shoppers check order status and tracking links right in chat.",
+    title: "Cart-aware, one-tap add",
+    text: "Adds to cart from chat (variant-aware), reads what's in the cart, and updates your cart UI live — no refresh.",
   },
   {
-    title: "Cross-sell & add to cart",
-    text: "Grounded product cards with one-tap add — cross-sell from cart context and chat.",
+    title: "Order tracking & reorder",
+    text: "Signed-in shoppers check status, get tracking links, and re-order past purchases right in chat.",
+  },
+  {
+    title: "Streams like a human",
+    text: "Replies stream word by word with a typing indicator — no dead air, no loading spinners.",
+  },
+  {
+    title: "Matches your brand",
+    text: "Auto-matches your theme's colors, or pick your own — plus launcher icon, position, header, and welcome message.",
   },
   {
     title: "Merchant intent analytics",
     text: "Intent cohorts, conversion funnel, assisted orders, and an analytics assistant you can ask.",
   },
+] as const;
+
+export const SHOPIFY_KNOWLEDGE_BULLETS = [
+  "Upload a PDF — AI converts it to clean, editable sections you approve",
+  "Grounded answers: your exact return window, shipping times, warranty terms",
+  "Offers auto-expire — the assistant never quotes a dead promo",
+  "Drafts stay invisible until you publish; edit anything, anytime",
+] as const;
+
+export const SHOPIFY_CUSTOMIZE_BULLETS = [
+  "Auto-matches your theme's brand color — or set your own",
+  "Launcher icon, position, header title & welcome message — all yours",
+  "Brand voice grounding: it sells the way you talk",
+  "Full nudge control: timing, cooldowns, caps, sound, badge",
+  "Privacy switch for customer data · master kill switch",
 ] as const;
 
 export const SHOPIFY_STEPS = [
@@ -91,8 +123,8 @@ export const SHOPIFY_STEPS = [
     text: "Enable the app embed in your theme editor — no code, no theme file changes, disable anytime.",
   },
   {
-    title: "It learns your catalog",
-    text: "SalesHQ syncs live products, stock, and variants — and picks up your brand voice automatically.",
+    title: "Teach it your store",
+    text: "It syncs live products, stock, and variants automatically — then add your policies and FAQs (or just upload the PDF).",
   },
   {
     title: "Shoppers get an assistant",
@@ -101,16 +133,32 @@ export const SHOPIFY_STEPS = [
 ] as const;
 
 export const SHOPIFY_PRICING = [
-  { name: "Starter", price: "$29", blurb: "For new stores getting started", detail: "500 AI replies / month" },
+  {
+    name: "Starter",
+    price: "$29",
+    blurb: "For new stores getting started",
+    detail: "500 AI replies / month",
+    knowledge: "200 PDF pages / month",
+  },
   {
     name: "Growth",
     price: "$79",
     blurb: "For growing stores with steady traffic",
     detail: "1,500 AI replies / month",
+    knowledge: "600 PDF pages / month",
     featured: true,
   },
-  { name: "Pro", price: "$199", blurb: "For high-volume stores", detail: "4,000 AI replies / month" },
+  {
+    name: "Pro",
+    price: "$199",
+    blurb: "For high-volume stores",
+    detail: "4,000 AI replies / month",
+    knowledge: "2,000 PDF pages / month",
+  },
 ] as const;
+
+export const SHOPIFY_TOPUP_NOTE =
+  "Busy month? Top-up packs from $35 for 500 extra replies — they stack on your plan and never expire.";
 
 export const SHOPIFY_FAQS = [
   {
@@ -122,12 +170,20 @@ export const SHOPIFY_FAQS = [
     a: "No. Answers are grounded in your live catalog including stock and variants, so shoppers only see what they can actually buy.",
   },
   {
-    q: "How is billing measured?",
-    a: "Plans are based on AI replies — one assistant answer counts as one reply. Billed through Shopify with a 7-day free trial on every plan.",
+    q: "How does it answer policy and FAQ questions?",
+    a: "You add your own documents — returns, shipping, warranty, FAQs, offers — in a built-in editor, or upload a PDF and AI converts it into clean sections you review before publishing. The assistant answers from your exact text and says so when it doesn't know, instead of guessing.",
+  },
+  {
+    q: "Can I make it match my brand?",
+    a: "Yes. It auto-matches your theme's colors out of the box, and everything is adjustable: brand color, launcher icon, position, header title, welcome message, and a brand-voice description that grounds every reply.",
   },
   {
     q: "What triggers the proactive popups?",
-    a: "Real intent signals: product dwell, comparison loops, cart idle, search refinement, browse friction, and exit intent — never generic spam.",
+    a: "Real intent signals: product dwell, comparison loops, cart idle, search refinement, browse friction, and exit intent — never generic spam. You control timing, cooldowns, and per-session caps.",
+  },
+  {
+    q: "How is billing measured?",
+    a: "Plans are based on AI replies — one assistant answer counts as one reply. Billed through Shopify with a 7-day free trial on every plan, and one-time top-up packs if you need more mid-month.",
   },
   {
     q: "Do I get analytics?",

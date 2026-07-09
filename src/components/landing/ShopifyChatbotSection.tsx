@@ -10,6 +10,10 @@ import {
   Package,
   ShoppingCart,
   BarChart3,
+  BookOpen,
+  FileUp,
+  Zap,
+  Palette,
   ShieldCheck,
   Check,
 } from "lucide-react";
@@ -23,7 +27,8 @@ import {
   SHOPIFY_TRIAL_DAYS,
 } from "@/data/shopifyProduct";
 
-const FEATURE_ICONS = [Sparkles, Search, Columns3, Target, BellRing, Package, ShoppingCart, BarChart3];
+// Order-matched to SHOPIFY_FEATURES.
+const FEATURE_ICONS = [Sparkles, Search, Columns3, Target, BookOpen, FileUp, BellRing, ShoppingCart, Package, Zap, Palette, BarChart3];
 
 type Props = {
   compact?: boolean;
@@ -163,8 +168,9 @@ export default function ShopifyChatbotSection({ compact = false }: Props) {
                       <span className="text-[13px] text-muted-foreground">/mo</span>
                     </div>
                     <p className="mb-4 text-[13px] text-muted-foreground">{tier.blurb}</p>
-                    <div className="flex items-center gap-2 rounded-lg bg-muted/50 px-3 py-2 text-[13px] font-medium text-foreground">
-                      {tier.detail}
+                    <div className="flex flex-col gap-1.5">
+                      <div className="rounded-lg bg-muted/50 px-3 py-2 text-[13px] font-medium text-foreground">{tier.detail}</div>
+                      <div className="rounded-lg bg-muted/50 px-3 py-2 text-[13px] font-medium text-foreground">{tier.knowledge}</div>
                     </div>
                   </div>
                 ))}

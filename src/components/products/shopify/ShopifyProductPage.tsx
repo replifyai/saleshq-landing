@@ -10,6 +10,10 @@ import {
   Package,
   ShoppingCart,
   BarChart3,
+  BookOpen,
+  FileUp,
+  Zap,
+  Palette,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import JsonLd, { SITE_URL } from "@/components/seo/JsonLd";
@@ -17,6 +21,8 @@ import ShopifyCreative from "@/components/creatives/ShopifyCreative";
 import ShopifyIntentTriggersCreative from "@/components/creatives/ShopifyIntentTriggersCreative";
 import ShopifyChatCreative from "@/components/creatives/ShopifyChatCreative";
 import ShopifyAnalyticsCreative from "@/components/creatives/ShopifyAnalyticsCreative";
+import ShopifyKnowledgeCreative from "@/components/creatives/ShopifyKnowledgeCreative";
+import ShopifyCustomizeCreative from "@/components/creatives/ShopifyCustomizeCreative";
 import {
   SHOPIFY_SEO_DESCRIPTION,
   SHOPIFY_TRIAL_DAYS,
@@ -24,14 +30,18 @@ import {
   SHOPIFY_FEATURES,
   SHOPIFY_STEPS,
   SHOPIFY_PRICING,
+  SHOPIFY_TOPUP_NOTE,
   SHOPIFY_FAQS,
   SHOPIFY_MERCHANT_BULLETS,
+  SHOPIFY_KNOWLEDGE_BULLETS,
+  SHOPIFY_CUSTOMIZE_BULLETS,
 } from "@/data/shopifyProduct";
 
 const CANONICAL = "/products/shopify";
 const URL = `${SITE_URL}${CANONICAL}`;
 
-const FEATURE_ICONS = [Sparkles, Search, Columns3, Target, BellRing, Package, ShoppingCart, BarChart3];
+// Order-matched to SHOPIFY_FEATURES.
+const FEATURE_ICONS = [Sparkles, Search, Columns3, Target, BookOpen, FileUp, BellRing, ShoppingCart, Package, Zap, Palette, BarChart3];
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -193,6 +203,64 @@ export default function ShopifyProductPage() {
         </div>
       </section>
 
+      {/* Knowledge base — the assistant answers from YOUR documents */}
+      <section className="border-y border-border bg-card px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <Eyebrow>Store knowledge</Eyebrow>
+            <h2 className="font-display mb-4 text-3xl sm:text-[2rem] font-bold tracking-[-0.025em] text-foreground">
+              It answers with <span className="text-primary">your</span> policies — not a guess
+            </h2>
+            <p className="mb-6 text-base leading-relaxed text-muted-foreground">
+              Returns, shipping, warranty, FAQs, live offers — feed the assistant your own documents and it
+              answers from your exact words. Drop in a PDF and AI converts it into clean, editable sections;
+              nothing reaches shoppers until you hit publish.
+            </p>
+            <ul className="space-y-3">
+              {SHOPIFY_KNOWLEDGE_BULLETS.map((b) => (
+                <li key={b} className="flex items-start gap-3 text-[15px] text-foreground/85">
+                  <span className="mt-0.5 flex h-5.5 w-5.5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <ShopifyKnowledgeCreative />
+        </div>
+      </section>
+
+      {/* Customization — make it unmistakably yours */}
+      <section className="px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="order-2 lg:order-1">
+            <ShopifyCustomizeCreative />
+          </div>
+          <div className="order-1 lg:order-2">
+            <Eyebrow>Fully customizable</Eyebrow>
+            <h2 className="font-display mb-4 text-3xl sm:text-[2rem] font-bold tracking-[-0.025em] text-foreground">
+              Looks like your brand. Sells in your voice.
+            </h2>
+            <p className="mb-6 text-base leading-relaxed text-muted-foreground">
+              The widget auto-matches your theme the moment it&apos;s installed — then every detail is yours to
+              tune, from colors and icons to how often it speaks up. Changes go live in about a minute, no
+              redeploys, no code.
+            </p>
+            <ul className="space-y-3">
+              {SHOPIFY_CUSTOMIZE_BULLETS.map((b) => (
+                <li key={b} className="flex items-start gap-3 text-[15px] text-foreground/85">
+                  <span className="mt-0.5 flex h-5.5 w-5.5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Merchant analytics */}
       <section className="border-y border-border bg-card px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -307,10 +375,14 @@ export default function ShopifyProductPage() {
                   <span className="text-[13px] text-muted-foreground">/mo</span>
                 </div>
                 <p className="mb-4 text-[13px] text-muted-foreground">{t.blurb}</p>
-                <div className="rounded-lg bg-muted/60 px-3 py-2 text-[13px] font-medium text-foreground">{t.detail}</div>
+                <div className="flex flex-col gap-1.5">
+                  <div className="rounded-lg bg-muted/60 px-3 py-2 text-[13px] font-medium text-foreground">{t.detail}</div>
+                  <div className="rounded-lg bg-muted/60 px-3 py-2 text-[13px] font-medium text-foreground">{t.knowledge}</div>
+                </div>
               </div>
             ))}
           </div>
+          <p className="mt-6 text-center text-[13px] text-muted-foreground">{SHOPIFY_TOPUP_NOTE}</p>
         </div>
       </section>
 
