@@ -159,11 +159,13 @@ export default function ShopifyProductPage() {
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <Eyebrow>Proactive intent engine</Eyebrow>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-[-0.025em] text-foreground text-balance">
-              Reads intent live. Nudges only when it helps.
+              Four moments of real friction. Four perfectly-timed nudges.
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-              Smart popups fire on real shopper friction — never in the first 8 seconds, never twice for the
-              same trigger, and one dismissal quiets the session.
+              Every visit streams live intent signals — dwell, comparison loops, cart hesitation, stalling
+              searches — and the assistant steps in only at those moments. Never in the first 8 seconds,
+              never twice for the same trigger, one dismissal quiets the whole session, and you control the
+              timing, cooldowns, and caps.
             </p>
           </div>
           <ShopifyIntentTriggersCreative />
