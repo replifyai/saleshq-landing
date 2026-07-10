@@ -1,32 +1,52 @@
-// Animated chat: user question → typing → comparison table → follow-up. Pure CSS, `shch-` prefix.
+// Faithful replica of the real SalesHQ storefront widget (chrome, bubbles,
+// product card, comparison table match the shipped theme-extension design) —
+// real copy and prices, no wireframe placeholders. Animated as a live
+// conversation: question → typing → comparison → product card + chips.
+// Pure CSS, `shch-` prefix.
 const css = `
-.shch-scene{position:relative;width:100%;max-width:480px;aspect-ratio:480/420;margin:0 auto}
-.shch-win{position:absolute;inset:0;border:1px solid var(--border);border-radius:16px;background:var(--background);box-shadow:0 30px 70px -34px rgba(15,23,42,.32);overflow:hidden;display:flex;flex-direction:column}
-.shch-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--border);background:var(--muted)}
-.shch-av{width:28px;height:28px;border-radius:50%;background:hsl(221,83%,53%,.14);color:var(--primary);font-size:13px;display:flex;align-items:center;justify-content:center}
-.shch-title{font-size:12px;font-weight:700;color:var(--foreground)}.shch-sub{font-size:9px;color:var(--muted-foreground)}
-.shch-body{flex:1;padding:14px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
-.shch-msg{max-width:88%;font-size:11.5px;line-height:1.45;padding:9px 11px;border-radius:12px;opacity:0;transform:translateY(8px)}
-.shch-user{align-self:flex-end;background:var(--primary);color:var(--primary-foreground);border-radius:12px 12px 4px 12px;animation:shch-u 10s infinite .5s}
-.shch-bot{align-self:flex-start;background:var(--muted);color:var(--foreground);border-radius:12px 12px 12px 4px}
-.shch-m1{animation:shch-b1 10s infinite 1.2s}
-.shch-m2{animation:shch-b2 10s infinite 3.8s}
-.shch-m3{animation:shch-b3 10s infinite 6.8s}
-@keyframes shch-u{0%,4%{opacity:0;transform:translateY(8px)}8%,92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-@keyframes shch-b1{0%,10%{opacity:0;transform:translateY(8px)}14%,92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-@keyframes shch-b2{0%,36%{opacity:0;transform:translateY(8px)}40%,92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-@keyframes shch-b3{0%,64%{opacity:0;transform:translateY(8px)}68%,92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-.shch-typ{align-self:flex-start;display:flex;gap:4px;padding:10px 14px;background:var(--muted);border-radius:12px;opacity:0;animation:shch-typ 10s infinite 2.2s}
+.shch-scene{position:relative;width:100%;max-width:400px;margin:0 auto}
+.shch-win{border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 34px 80px -36px rgba(15,23,42,.45),0 8px 24px -12px rgba(15,23,42,.18);overflow:hidden;display:flex;flex-direction:column}
+.shch-head{display:flex;align-items:center;gap:10px;padding:13px 14px;background:var(--primary)}
+.shch-av{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.shch-ht{color:#fff;font-size:13px;font-weight:700;line-height:1.2}
+.shch-hs{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,.85);font-size:9.5px}
+.shch-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 2px rgba(74,222,128,.3)}
+.shch-x{margin-left:auto;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center}
+.shch-body{background:#f6f7f9;padding:13px;display:flex;flex-direction:column;gap:9px;min-height:340px}
+.shch-msg{max-width:88%;font-size:11.5px;line-height:1.5;padding:9px 11px;opacity:0;transform:translateY(8px)}
+.shch-user{align-self:flex-end;background:var(--primary);color:#fff;border-radius:12px 12px 5px 12px;animation:shch-u 12s infinite .4s}
+.shch-bot{align-self:flex-start;background:#fff;color:#1f2226;border-radius:12px 12px 12px 5px;box-shadow:0 1px 2px rgba(15,23,42,.06)}
+.shch-m1{animation:shch-b1 12s infinite 2.6s}
+.shch-m2{animation:shch-b2 12s infinite 5.4s}
+@keyframes shch-u{0%,3%{opacity:0;transform:translateY(8px)}6%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes shch-b1{0%,21%{opacity:0;transform:translateY(8px)}25%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes shch-b2{0%,44%{opacity:0;transform:translateY(8px)}48%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.shch-typ{align-self:flex-start;display:flex;gap:4px;padding:10px 13px;background:#fff;border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.06);opacity:0;animation:shch-typ 12s infinite 1.2s}
 .shch-typ i{width:5px;height:5px;border-radius:50%;background:var(--primary);opacity:.5;animation:shch-blink 1s infinite}
 .shch-typ i:nth-child(2){animation-delay:.15s}.shch-typ i:nth-child(3){animation-delay:.3s}
-@keyframes shch-typ{0%,18%{opacity:0}22%,32%{opacity:1}36%,100%{opacity:0}}
+@keyframes shch-typ{0%,9%{opacity:0}12%,22%{opacity:1}25%,100%{opacity:0}}
 @keyframes shch-blink{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-2px)}}
-.shch-tbl{width:100%;border-collapse:collapse;font-size:10px;margin-top:6px}
-.shch-tbl th,.shch-tbl td{border:1px solid var(--border);padding:5px 7px;text-align:left}
-.shch-tbl th{background:var(--background);font-weight:600}
-.shch-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
-.shch-chip{border:1px solid hsl(221,83%,53%,.35);border-radius:999px;padding:3px 8px;font-size:9px;font-weight:600;color:var(--primary);background:var(--background)}
-@media (prefers-reduced-motion:reduce){.shch-scene *{animation:none!important}.shch-msg,.shch-typ{opacity:1!important;transform:none!important}}
+.shch-tbl{width:100%;border-collapse:collapse;font-size:9.5px;margin-top:7px;background:#fff}
+.shch-tbl th,.shch-tbl td{border:1px solid #e5e7eb;padding:5px 7px;text-align:left;color:#1f2226}
+.shch-tbl th{background:#f6f7f9;font-weight:700}
+.shch-tbl td:first-child,.shch-tbl th:first-child{font-weight:600;background:#fafbfc}
+.shch-card{align-self:flex-start;width:200px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px -6px rgba(15,23,42,.14);opacity:0;transform:translateY(10px);animation:shch-card 12s infinite 7.6s}
+@keyframes shch-card{0%,62%{opacity:0;transform:translateY(10px)}66%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.shch-img{height:86px;background:linear-gradient(140deg,#e8ecf3 0%,#d7dde8 45%,#c6cedd 100%);position:relative}
+.shch-img::after{content:"";position:absolute;left:50%;top:50%;width:84px;height:44px;transform:translate(-50%,-50%) rotate(-4deg);border-radius:22px 22px 18px 18px;background:linear-gradient(160deg,#8792a8,#5d6880)}
+.shch-best{position:absolute;top:7px;left:7px;background:var(--primary);color:#fff;font-size:7.5px;font-weight:700;padding:2px 7px;border-radius:99px;letter-spacing:.04em}
+.shch-cb{padding:9px 10px}
+.shch-cn{font-size:11px;font-weight:700;color:#1f2226;line-height:1.3}
+.shch-cp{font-size:11.5px;font-weight:700;color:#1f2226;margin-top:3px}
+.shch-atc{margin-top:7px;background:#111;color:#fff;font-size:10px;font-weight:600;text-align:center;border-radius:8px;padding:7px 0}
+.shch-chips{display:flex;flex-wrap:wrap;gap:5px;opacity:0;animation:shch-card 12s infinite 8.2s}
+.shch-chip{border:1px solid var(--border);border-radius:999px;padding:4px 9px;font-size:9.5px;font-weight:600;color:var(--primary);background:#fff}
+.shch-foot{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#f6f7f9;border-top:1px solid #eceef1}
+.shch-in{flex:1;height:34px;border-radius:17px;background:#fff;border:1px solid #e5e7eb;font-size:10.5px;color:#9aa1ab;display:flex;align-items:center;padding:0 12px}
+.shch-send{width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.shch-pow{text-align:center;font-size:8px;color:#9aa1ab;padding:0 0 8px;background:#f6f7f9}
+.shch-pow b{color:#6b7280}
+@media (prefers-reduced-motion:reduce){.shch-scene *{animation:none!important}.shch-msg,.shch-card,.shch-chips{opacity:1!important;transform:none!important}.shch-typ{display:none}}
 `;
 
 export default function ShopifyChatCreative() {
@@ -35,36 +55,50 @@ export default function ShopifyChatCreative() {
       <style>{css}</style>
       <div className="shch-win">
         <div className="shch-head">
-          <span className="shch-av">✦</span>
+          <span className="shch-av">💬</span>
           <div>
-            <div className="shch-title">Shopping assistant</div>
-            <div className="shch-sub">Grounded in your catalog</div>
+            <div className="shch-ht">SalesHQ Assistant</div>
+            <div className="shch-hs"><i className="shch-dot" />Always here to help</div>
           </div>
+          <span className="shch-x">✕</span>
         </div>
         <div className="shch-body">
-          <div className="shch-msg shch-user">Compare travel pillows</div>
+          <div className="shch-msg shch-user">Compare the two travel pillows</div>
           <div className="shch-typ"><i /><i /><i /></div>
           <div className="shch-msg shch-bot shch-m1">
             Side-by-side on the two you&apos;ve been viewing:
             <table className="shch-tbl">
               <thead>
-                <tr><th /><th>Pillow A</th><th>Pillow B</th></tr>
+                <tr><th /><th>Cuddle Sleep</th><th>Travel Neck</th></tr>
               </thead>
               <tbody>
-                <tr><td>Best for</td><td>Neck support</td><td>Compact pack</td></tr>
-                <tr><td>Stock</td><td>In stock</td><td>In stock</td></tr>
+                <tr><td>Best for</td><td>Side sleepers</td><td>Long flights</td></tr>
+                <tr><td>Material</td><td>Memory foam</td><td>Micro-beads</td></tr>
+                <tr><td>Price</td><td>₹1,499</td><td>₹1,699</td></tr>
+                <tr><td>In stock</td><td>Yes</td><td>Yes</td></tr>
               </tbody>
             </table>
           </div>
-          <div className="shch-msg shch-bot shch-m2">
-            Pillow A wins on support; B packs smaller.
-            <div className="shch-chips">
-              <span className="shch-chip">Add Pillow A</span>
-              <span className="shch-chip">Tell me more</span>
+          <div className="shch-msg shch-bot shch-m2">For flights, the Travel Neck wins on support. Want it in your cart?</div>
+          <div className="shch-card">
+            <div className="shch-img"><span className="shch-best">BEST MATCH</span></div>
+            <div className="shch-cb">
+              <div className="shch-cn">Frido Travel Neck Pillow</div>
+              <div className="shch-cp">₹1,699</div>
+              <div className="shch-atc">Add to Cart</div>
             </div>
           </div>
-          <div className="shch-msg shch-bot shch-m3">Track my order? Sign in and I&apos;ll pull up status &amp; tracking.</div>
+          <div className="shch-chips">
+            <span className="shch-chip">Add to cart</span>
+            <span className="shch-chip">Show colors</span>
+            <span className="shch-chip">Return policy?</span>
+          </div>
         </div>
+        <div className="shch-foot">
+          <div className="shch-in">Type your message…</div>
+          <div className="shch-send">➤</div>
+        </div>
+        <div className="shch-pow">Powered by <b>SalesHQ</b></div>
       </div>
     </div>
   );
