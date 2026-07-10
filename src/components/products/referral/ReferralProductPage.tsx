@@ -82,16 +82,8 @@ export default function ReferralProductPage() {
     <div className="min-h-screen">
       <JsonLd data={[appSchema, breadcrumbSchema, faqSchema]} />
 
-      <div className="mt-16 border-b border-border">
-        <div className="mx-auto flex h-14 max-w-6xl items-center px-4 text-[13px] text-muted-foreground sm:px-6 lg:px-8">
-          <Link href="/#products" className="hover:text-foreground">Products</Link>
-          <span className="mx-2">/</span>
-          <span className="font-medium text-foreground">Referral &amp; Affiliate</span>
-        </div>
-      </div>
-
       {/* Hero — split */}
-      <section className="relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-16">
+      <section className="relative overflow-hidden mt-16 px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-16">
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[560px] bg-[radial-gradient(ellipse_70%_50%_at_50%_-8%,hsl(221,83%,53%,0.12),transparent_68%)]" />
         <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-2 lg:gap-16">
           <div>
