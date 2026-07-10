@@ -113,15 +113,15 @@ export default function ShopifyProductPage() {
           <div>
             <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-border bg-background px-2.5 py-1.5">
               <span className="font-mono-label rounded-md bg-primary/10 px-1.5 py-0.5 text-[10px] text-primary">NEW</span>
-              <span className="pr-2 text-sm font-medium text-muted-foreground">AI shopping assistant for Shopify</span>
+              <span className="pr-2 text-sm font-medium text-muted-foreground">The AI sales associate for Shopify</span>
             </div>
             <h1 className="hero-title text-[2.25rem] sm:text-5xl lg:text-[3.25rem] mb-5 text-balance">
-              Turn browsers into buyers,{" "}
-              <span className="text-primary">one conversation</span> at a time
+              Your store&apos;s <span className="text-primary">best salesperson</span> — on every visit
             </h1>
             <p className="mb-8 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
-              SalesHQ reads each shopper&apos;s intent in real time, finds products from your live catalog,
-              compares options, nudges on real friction, tracks orders, and shows you what shoppers want.
+              Like the top associate in a physical store: SalesHQ reads each shopper&apos;s buying intent,
+              recommends products with reasons, compares options side by side, answers objections from your
+              own policies, and closes the sale — right in the conversation.
             </p>
             <ul className="mb-8 space-y-3">
               {SHOPIFY_HERO_BULLETS.map((point) => (

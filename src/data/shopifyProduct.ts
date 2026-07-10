@@ -1,15 +1,15 @@
 // Shared copy + pricing for SalesHQ for Shopify (aligned with saleshq-chatbot/app/intent/plans.ts).
 
 export const SHOPIFY_SEO_DESCRIPTION =
-  "SalesHQ for Shopify is an intent-driven AI shopping assistant that reads each shopper's intent in real time, finds products from your live catalog, compares options, answers from your own policies and FAQs (upload a PDF — done), nudges on real friction, tracks orders, and matches your brand automatically — one-click install with a 7-day free trial billed through Shopify.";
+  "SalesHQ is the AI sales associate for Shopify: it reads each shopper's buying intent in real time, recommends products with reasons from your live catalog, compares options side by side, answers objections from your own policies and FAQs (upload a PDF — done), rescues hesitating carts, and shows you exactly why shoppers do or don't buy — one-click install with a 7-day free trial billed through Shopify.";
 
 export const SHOPIFY_TRIAL_DAYS = 7;
 
 export const SHOPIFY_HERO_BULLETS = [
-  "One-click install — no theme edits",
-  "Grounded in your live catalog — zero hallucinated products",
-  "Answers from your own policies & FAQs — upload a PDF, done",
-  "7-day free trial · billed through Shopify",
+  "More conversions — nudges fire at the exact moment of buying friction",
+  "Higher order values — reasons-based recommendations, comparisons & cross-sell in chat",
+  "Fewer support tickets — grounded answers from your live catalog and your own policies",
+  "One-click install · 7-day free trial · billed through Shopify",
 ] as const;
 
 export const SHOPIFY_INTENT_TRIGGERS = [

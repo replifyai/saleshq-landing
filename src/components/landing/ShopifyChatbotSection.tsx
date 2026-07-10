@@ -49,11 +49,12 @@ export default function ShopifyChatbotSection({ compact = false }: Props) {
               New from SalesHQ · for Shopify
             </p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold leading-[1.06] tracking-[-0.025em] text-foreground text-balance mb-4">
-              SalesHQ for Shopify — the AI shopping assistant that turns browsers into buyers
+              SalesHQ for Shopify — the AI sales associate that turns browsers into buyers
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-7 text-pretty">
-              Drop one app embed into your theme and every shopper gets a personal assistant that reads
-              intent, compares products, nudges on real friction, tracks orders, and shows you what they want.
+              Like your best salesperson working every visit: it reads buying intent, recommends with
+              reasons, compares products, answers objections from your own policies, and shows you exactly
+              why shoppers do or don&apos;t buy.
             </p>
 
             <ul className="mb-8 space-y-3">
