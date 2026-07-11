@@ -15,26 +15,29 @@ const css = `
 .shch-body{background:#f6f7f9;padding:13px;display:flex;flex-direction:column;gap:9px;min-height:340px}
 .shch-msg{max-width:88%;font-size:11.5px;line-height:1.5;padding:9px 11px;opacity:0;transform:translateY(8px)}
 .shch-user{align-self:flex-end;background:var(--primary);color:#fff;border-radius:12px 12px 5px 12px}
-.shch-u1{animation:shch-u1 16s infinite .4s}
-.shch-u2{animation:shch-u2 16s infinite 6.2s}
+/* One shared 18s timeline, no per-element delays — every element runs the same
+   cycle and reveals at its own keyframe %, so the conversation always plays in
+   order: user → typing → bot+table → user → bot → product card → chips → reset. */
+.shch-u1{animation:shch-u1 18s infinite}
+.shch-u2{animation:shch-u2 18s infinite}
 .shch-bot{align-self:flex-start;background:#fff;color:#1f2226;border-radius:12px 12px 12px 5px;box-shadow:0 1px 2px rgba(15,23,42,.06)}
-.shch-m1{animation:shch-b1 16s infinite 2.6s}
-.shch-m2{animation:shch-b2 16s infinite 8s}
-@keyframes shch-u1{0%,2%{opacity:0;transform:translateY(8px)}5%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-@keyframes shch-u2{0%,38%{opacity:0;transform:translateY(8px)}41%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-@keyframes shch-b1{0%,15%{opacity:0;transform:translateY(8px)}19%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-@keyframes shch-b2{0%,49%{opacity:0;transform:translateY(8px)}53%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-.shch-typ{align-self:flex-start;display:flex;gap:4px;padding:10px 13px;background:#fff;border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.06);opacity:0;animation:shch-typ 16s infinite 1.2s}
+.shch-m1{animation:shch-b1 18s infinite}
+.shch-m2{animation:shch-b2 18s infinite}
+@keyframes shch-u1{0%,3%{opacity:0;transform:translateY(8px)}6%,94%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}}
+@keyframes shch-u2{0%,39%{opacity:0;transform:translateY(8px)}42%,94%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}}
+@keyframes shch-b1{0%,16%{opacity:0;transform:translateY(8px)}19%,94%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}}
+@keyframes shch-b2{0%,51%{opacity:0;transform:translateY(8px)}54%,94%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}}
+.shch-typ{align-self:flex-start;display:flex;gap:4px;padding:10px 13px;background:#fff;border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.06);opacity:0;animation:shch-typ 18s infinite}
 .shch-typ i{width:5px;height:5px;border-radius:50%;background:var(--primary);opacity:.5;animation:shch-blink 1s infinite}
 .shch-typ i:nth-child(2){animation-delay:.15s}.shch-typ i:nth-child(3){animation-delay:.3s}
-@keyframes shch-typ{0%,7%{opacity:0}9%,15%{opacity:1}17%,100%{opacity:0}}
+@keyframes shch-typ{0%,6%{opacity:0}8%,14%{opacity:1}16%,100%{opacity:0}}
 @keyframes shch-blink{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-2px)}}
 .shch-tbl{width:100%;border-collapse:collapse;font-size:9.5px;margin-top:7px;background:#fff}
 .shch-tbl th,.shch-tbl td{border:1px solid #e5e7eb;padding:5px 7px;text-align:left;color:#1f2226}
 .shch-tbl th{background:#f6f7f9;font-weight:700}
 .shch-tbl td:first-child,.shch-tbl th:first-child{font-weight:600;background:#fafbfc}
-.shch-card{align-self:flex-start;width:200px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px -6px rgba(15,23,42,.14);opacity:0;transform:translateY(10px);animation:shch-card 16s infinite 9.6s}
-@keyframes shch-card{0%,58%{opacity:0;transform:translateY(10px)}62%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.shch-card{align-self:flex-start;width:200px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px -6px rgba(15,23,42,.14);opacity:0;transform:translateY(10px);animation:shch-card 18s infinite}
+@keyframes shch-card{0%,63%{opacity:0;transform:translateY(10px)}66%,94%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}}
 .shch-img{height:86px;background:linear-gradient(140deg,#e8ecf3 0%,#d7dde8 45%,#c6cedd 100%);position:relative}
 .shch-img::after{content:"";position:absolute;left:50%;top:50%;width:84px;height:44px;transform:translate(-50%,-50%) rotate(-4deg);border-radius:22px 22px 18px 18px;background:linear-gradient(160deg,#8792a8,#5d6880)}
 .shch-best{position:absolute;top:7px;left:7px;background:var(--primary);color:#fff;font-size:7.5px;font-weight:700;padding:2px 7px;border-radius:99px;letter-spacing:.04em}
@@ -42,7 +45,8 @@ const css = `
 .shch-cn{font-size:11px;font-weight:700;color:#1f2226;line-height:1.3}
 .shch-cp{font-size:11.5px;font-weight:700;color:#1f2226;margin-top:3px}
 .shch-atc{margin-top:7px;background:#111;color:#fff;font-size:10px;font-weight:600;text-align:center;border-radius:8px;padding:7px 0}
-.shch-chips{display:flex;flex-wrap:wrap;gap:5px;opacity:0;animation:shch-card 16s infinite 10.2s}
+.shch-chips{display:flex;flex-wrap:wrap;gap:5px;opacity:0;animation:shch-chips 18s infinite}
+@keyframes shch-chips{0%,69%{opacity:0}72%,94%{opacity:1}97%,100%{opacity:0}}
 .shch-chip{border:1px solid var(--border);border-radius:999px;padding:4px 9px;font-size:9.5px;font-weight:600;color:var(--primary);background:#fff}
 .shch-foot{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#f6f7f9;border-top:1px solid #eceef1}
 .shch-in{flex:1;height:34px;border-radius:17px;background:#fff;border:1px solid #e5e7eb;font-size:10.5px;color:#9aa1ab;display:flex;align-items:center;padding:0 12px}
